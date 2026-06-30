@@ -1,0 +1,13 @@
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+yfinance
+pycoingecko
+requests
+jupyter
+ipykernel
+python-dotenv
+PyYAML
+setuptools
