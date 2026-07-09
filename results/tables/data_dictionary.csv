@@ -1,0 +1,15 @@
+Dataset,Variable,Description,Data Type,Unit / Scale
+Bitcoin,event_date,Observation date,Datetime,Date
+Bitcoin,close_price_usd,Daily closing price,Float,USD
+Bitcoin,market_cap_usd,Daily market capitalisation,Float,USD
+Bitcoin,volume_usd,Daily trading volume,Float,USD
+Ethereum,event_date,Observation date,Datetime,Date
+Ethereum,close_price_usd,Daily closing price,Float,USD
+Ethereum,market_cap_usd,Daily market capitalisation,Float,USD
+Ethereum,volume_usd,Daily trading volume,Float,USD
+Google Trends,date,Observation date,Datetime,Date
+Google Trends,Bitcoin,Google search interest for Bitcoin,Integer,0–100
+Google Trends,Ethereum,Google search interest for Ethereum,Integer,0–100
+Fear & Greed,Date,Observation date,Datetime,Date
+Fear & Greed,Fear_Greed_Index,Crypto Fear & Greed Index score,Integer,0–100
+Fear & Greed,Classification,Market sentiment classification,String,Categorical

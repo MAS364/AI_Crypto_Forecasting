@@ -1,0 +1,5 @@
+Dataset,Number of Rows,Number of Columns,Missing Values,Duplicate Rows,Duplicate Dates,Frequency,Invalid Negative Values
+Bitcoin,4810,4,1,0,0,Daily,0
+Ethereum,3980,4,1,0,0,Daily,0
+Google Trends,1801,3,0,0,0,Daily,0
+Fear & Greed,1826,3,0,0,0,Daily,0
