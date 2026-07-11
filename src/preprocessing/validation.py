@@ -77,7 +77,7 @@ def check_data_types(df: pd.DataFrame) -> Dict[str, str]:
     if not pd.api.types.is_datetime64_any_dtype(df["Date"]):
         problems["Date"] = f"expected datetime, found {df['Date'].dtype}"
 
-    for column in config.NON_NEGATIVE_COLUMNS + config.BOUNDED_COLUMNS:
+    for column in config.NON_NEGATIVE_COLUMNS + list(config.VALID_RANGES.keys()):
         if not pd.api.types.is_numeric_dtype(df[column]):
             problems[column] = f"expected numeric, found {df[column].dtype}"
 
@@ -88,7 +88,8 @@ def check_variable_ranges(df: pd.DataFrame) -> Dict[str, str]:
     """Confirm every variable sits inside its plausible range.
 
     Prices, market caps and volumes must not be negative. Search interest and
-    the Fear & Greed Index are defined on a 0-100 scale.
+    the Fear & Greed Index are defined on their own bounded scales, given in
+    config.VALID_RANGES.
 
     Returns:
         A column-to-problem map. Empty when all values are valid.
@@ -100,10 +101,10 @@ def check_variable_ranges(df: pd.DataFrame) -> Dict[str, str]:
         if negatives:
             problems[column] = f"{negatives} negative value(s)"
 
-    for column in config.BOUNDED_COLUMNS:
-        out_of_range = (~df[column].between(0, 100)).sum()
+    for column, (low, high) in config.VALID_RANGES.items():
+        out_of_range = (~df[column].between(low, high)).sum()
         if out_of_range:
-            problems[column] = f"{out_of_range} value(s) outside 0-100"
+            problems[column] = f"{out_of_range} value(s) outside {low}-{high}"
 
     return problems
 
