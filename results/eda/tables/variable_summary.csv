@@ -1,0 +1,12 @@
+Variable,Category,Data Type
+Bitcoin_Price,Target,Continuous
+Ethereum_Price,Target,Continuous
+Bitcoin_Market_Cap,Market,Continuous
+Ethereum_Market_Cap,Market,Continuous
+Bitcoin_Volume,Market,Continuous
+Ethereum_Volume,Market,Continuous
+Bitcoin_Search_Interest,External,Continuous
+Ethereum_Search_Interest,External,Continuous
+Fear_Greed_Index,External,Continuous
+Market_Sentiment,External,Categorical
+Market_Sentiment_Encoded,External,Ordinal

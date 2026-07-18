@@ -1,0 +1,13 @@
+Variable,Data Type
+Date,datetime64[us]
+Bitcoin_Price,float64
+Bitcoin_Market_Cap,float64
+Bitcoin_Volume,float64
+Ethereum_Price,float64
+Ethereum_Market_Cap,float64
+Ethereum_Volume,float64
+Bitcoin_Search_Interest,int64
+Ethereum_Search_Interest,int64
+Fear_Greed_Index,int64
+Market_Sentiment,str
+Market_Sentiment_Encoded,int64
