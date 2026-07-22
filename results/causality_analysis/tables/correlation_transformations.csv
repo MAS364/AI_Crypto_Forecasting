@@ -1,0 +1,8 @@
+Variable,Original Stationarity Conclusion,Transformation Applied
+Bitcoin_Price,Non-Stationary,Log return
+Ethereum_Price,Non-Stationary,Log return
+Bitcoin_Volume,Inconclusive,First difference
+Ethereum_Volume,Inconclusive,First difference
+Bitcoin_Search_Interest,Inconclusive,First difference
+Ethereum_Search_Interest,Inconclusive,First difference
+Fear_Greed_Index,Inconclusive,First difference

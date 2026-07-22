@@ -127,3 +127,69 @@ FINAL_COLUMNS = [
     "Market_Sentiment",
     "Market_Sentiment_Encoded",
 ]
+
+
+# ---------------------------------------------------------------------
+# Statistical analysis (Chapter 4.7): stationarity, correlation, causality
+# ---------------------------------------------------------------------
+
+CAUSALITY_RESULTS_DIR = RESULTS_DIR / "causality_analysis"
+
+# All nine variables tested for stationarity.
+STATIONARITY_VARIABLES = [
+    "Bitcoin_Price",
+    "Ethereum_Price",
+    "Bitcoin_Volume",
+    "Ethereum_Volume",
+    "Bitcoin_Market_Cap",
+    "Ethereum_Market_Cap",
+    "Bitcoin_Search_Interest",
+    "Ethereum_Search_Interest",
+    "Fear_Greed_Index",
+]
+
+# Google Trends search interest and the Fear & Greed Index are the only
+# variables treated as external factors in this dissertation (Section 3.3.3).
+# Market capitalisation and trading volume are market variables, not
+# external ones, and market capitalisation is additionally excluded from
+# correlation and Granger causality because it is calculated directly from
+# price (r ~ 0.9997), which would add no genuine information.
+EXTERNAL_FACTORS = [
+    "Bitcoin_Search_Interest",
+    "Ethereum_Search_Interest",
+    "Fear_Greed_Index",
+]
+
+PRICE_VARIABLES = ["Bitcoin_Price", "Ethereum_Price"]
+
+# Variables used in the correlation analysis (market cap excluded, as above).
+CORRELATION_VARIABLES = [
+    "Bitcoin_Price",
+    "Ethereum_Price",
+    "Bitcoin_Volume",
+    "Ethereum_Volume",
+] + EXTERNAL_FACTORS
+
+# Granger causality: each coin's return is a target, tested against the
+# external factors. Search interest is tested only against its own asset;
+# the Fear & Greed Index, being market-wide, is tested against both.
+GRANGER_TARGET_VARIABLES = PRICE_VARIABLES
+GRANGER_PREDICTOR_VARIABLES = EXTERNAL_FACTORS
+
+GRANGER_PAIRS = [
+    ("Bitcoin_Search_Interest", "Bitcoin_Price"),
+    ("Ethereum_Search_Interest", "Ethereum_Price"),
+    ("Fear_Greed_Index", "Bitcoin_Price"),
+    ("Fear_Greed_Index", "Ethereum_Price"),
+]
+
+# Reader-friendly labels used only when plotting, never for calculations.
+DISPLAY_LABELS = {
+    "Bitcoin_Price": "Bitcoin Return",
+    "Ethereum_Price": "Ethereum Return",
+    "Bitcoin_Volume": "Bitcoin Volume Change",
+    "Ethereum_Volume": "Ethereum Volume Change",
+    "Bitcoin_Search_Interest": "Bitcoin Search Interest Change",
+    "Ethereum_Search_Interest": "Ethereum Search Interest Change",
+    "Fear_Greed_Index": "Fear and Greed Change",
+}

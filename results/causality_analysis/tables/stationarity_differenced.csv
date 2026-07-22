@@ -1,0 +1,10 @@
+Variable,ADF Statistic,ADF p-value,ADF Stationary,KPSS Statistic,KPSS p-value,KPSS Stationary,Overall Conclusion
+Bitcoin_Price,-43.8428,0.0,Yes,0.1111,0.1,Yes,Stationary
+Ethereum_Price,-42.739,0.0,Yes,0.0486,0.1,Yes,Stationary
+Bitcoin_Volume,-12.8172,0.0,Yes,0.0484,0.1,Yes,Stationary
+Ethereum_Volume,-12.6446,0.0,Yes,0.1312,0.1,Yes,Stationary
+Bitcoin_Market_Cap,-43.996,0.0,Yes,0.1127,0.1,Yes,Stationary
+Ethereum_Market_Cap,-42.6309,0.0,Yes,0.048,0.1,Yes,Stationary
+Bitcoin_Search_Interest,-12.0767,0.0,Yes,0.1062,0.1,Yes,Stationary
+Ethereum_Search_Interest,-11.6917,0.0,Yes,0.0579,0.1,Yes,Stationary
+Fear_Greed_Index,-13.0976,0.0,Yes,0.0253,0.1,Yes,Stationary

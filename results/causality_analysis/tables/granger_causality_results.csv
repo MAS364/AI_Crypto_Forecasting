@@ -1,0 +1,5 @@
+Predictor,Target,Selected Lag,F-statistic,p-value,Test Status,Adjusted p-value (FDR),"Significant (raw, 5%)",Significant (FDR-corrected)
+Ethereum_Search_Interest,Ethereum_Price,2,2.220855457187352,0.10881499613724321,Successful,0.27054475219696295,False,False
+Bitcoin_Search_Interest,Bitcoin_Price,2,2.002701024866009,0.13527237609848147,Successful,0.27054475219696295,False,False
+Fear_Greed_Index,Ethereum_Price,2,0.3338262091053156,0.7162227891595939,Successful,0.9193107408877711,False,False
+Fear_Greed_Index,Bitcoin_Price,2,0.08413503654072416,0.9193107408877711,Successful,0.9193107408877711,False,False
