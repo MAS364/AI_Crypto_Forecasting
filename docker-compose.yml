@@ -2,9 +2,10 @@
 #
 # Usage:
 #   docker compose up --build
-#   Then open http://localhost:8501 (Streamlit) -- it talks to the API
-#   container at http://api:8000 internally, http://localhost:8000/docs
-#   externally for the API's own interactive documentation.
+#
+# Then open http://localhost:8501 for Streamlit.
+# The frontend talks to the API container at http://api:8080 internally.
+# FastAPI docs are available externally at http://localhost:8000/docs.
 
 services:
   api:
@@ -12,9 +13,15 @@ services:
       context: .
       dockerfile: deployment/Dockerfile
     ports:
-      - "8000:8000"
+      - "8000:8080"
     healthcheck:
-      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      test:
+        [
+          "CMD",
+          "python3",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8080/health')"
+        ]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -24,9 +31,9 @@ services:
       context: .
       dockerfile: deployment/Dockerfile.streamlit
     ports:
-      - "8501:8501"
+      - "8501:8080"
     environment:
-      - CRYPTO_API_URL=http://api:8000
+      - CRYPTO_API_URL=http://api:8080
     depends_on:
       api:
         condition: service_healthy
