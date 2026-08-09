@@ -1,7 +1,7 @@
 feature,mean_importance,std_importance,baseline_rmse,rank,n_repeats,asset,horizon,feature_set_key,model_name,representation,matched_variable,correlation_r,granger_significant
 Bitcoin_Volume_pct_change_lag_1,2.3417871323176773e-05,1.6778592094771356e-05,0.024612741603284596,1,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_lag_7,1.7281149673493718e-05,1.0009960078428595e-05,0.024612741603284596,2,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_rolling_mean_30,7.059195365936768e-06,3.1459609902925925e-06,0.024612741603284596,3,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_rolling_mean_30,7.0591953659372014e-06,3.14596099029316e-06,0.024612741603284596,3,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_rolling_std_30,6.692136489686289e-06,6.989895215698206e-06,0.024612741603284596,4,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_raw_lag_7,2.5756950593255196e-06,6.151355996284061e-06,0.024612741603284596,5,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_rolling_mean_30,1.2788799084581179e-06,5.258048212963294e-06,0.024612741603284596,6,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Price,,
@@ -10,7 +10,7 @@ Bitcoin_Price_log_return_lag_1,-2.5869214631112775e-08,5.785164997891086e-06,0.0
 Bitcoin_Price_log_return_lag_2,-1.0510953586847106e-05,6.4620477684804995e-06,0.024612741603284596,9,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_pct_change_lag_7,-1.1499219246378315e-05,4.319755922526244e-06,0.024612741603284596,10,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return,-1.6781079756106234e-05,7.600824329906247e-06,0.024612741603284596,11,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_log,-1.695466933443251e-05,1.4573342208839193e-05,0.024612741603284596,12,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_log,-1.6954669334432078e-05,1.4573342208838772e-05,0.024612741603284596,12,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_raw_lag_1,-4.168383255040301e-05,4.5344320280947615e-05,0.024612741603284596,13,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_momentum_7,-7.27904679322074e-05,4.129166458380447e-05,0.024612741603284596,14,8,Bitcoin,1,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_rolling_std_30,2.014378180793504e-05,1.7942975852165007e-05,0.02456922503899514,1,8,Bitcoin,1,primary,XGBoost,Original,Bitcoin_Volume,0.0426670448872938,
@@ -35,9 +35,9 @@ Bitcoin_Volume_raw_lag_7,3.972274613857785e-06,3.82001192400491e-06,0.0247116829
 Bitcoin_Volume_rolling_std_30,3.1302085558957034e-06,3.188452959603323e-06,0.024711682943792213,6,8,Bitcoin,1,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_rolling_mean_30,1.9288977743917197e-06,2.2518902684227692e-06,0.024711682943792213,7,8,Bitcoin,1,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Search_Interest_lag_1,8.583980583808104e-08,2.6637133213187812e-06,0.024711682943792213,8,8,Bitcoin,1,candidate,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
-Bitcoin_Price_log_return_rolling_std_30,-1.8031972610814753e-06,6.6111303498790796e-06,0.024711682943792213,9,8,Bitcoin,1,candidate,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_rolling_std_30,-1.8031972610810416e-06,6.611130349878808e-06,0.024711682943792213,9,8,Bitcoin,1,candidate,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_pct_change_lag_7,-2.914506545299324e-06,4.550590792870398e-06,0.024711682943792213,10,8,Bitcoin,1,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_log_return_lag_1,-5.981690265624562e-06,6.534803491863984e-06,0.024711682943792213,11,8,Bitcoin,1,candidate,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_lag_1,-5.981690265624128e-06,6.534803491864606e-06,0.024711682943792213,11,8,Bitcoin,1,candidate,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Search_Interest_lag_2,-6.858618353173997e-06,6.4662143356400994e-06,0.024711682943792213,12,8,Bitcoin,1,candidate,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Bitcoin_Price_log_return_lag_2,-8.307108904434014e-06,2.9030801210120245e-06,0.024711682943792213,13,8,Bitcoin,1,candidate,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_log,-1.0037253299169033e-05,1.5350916306734282e-05,0.024711682943792213,14,8,Bitcoin,1,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
@@ -64,22 +64,22 @@ Bitcoin_Search_Interest_lag_1,-1.649294935745062e-05,5.1801959319826935e-06,0.02
 Bitcoin_Search_Interest_diff_lag_2,-2.9607803310773874e-05,4.580418957514559e-05,0.024616622758866308,17,8,Bitcoin,1,candidate,XGBoost,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Bitcoin_Volume_raw_lag_1,-8.704847605111405e-05,4.879981698765713e-05,0.024616622758866308,18,8,Bitcoin,1,candidate,XGBoost,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_pct_change_lag_1,1.3262492248696228e-05,7.550587565075171e-06,0.024687252540708252,1,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_log_return_rolling_std_30,9.641038693498395e-06,4.370338911202672e-06,0.024687252540708252,2,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_rolling_std_30,9.641038693498829e-06,4.370338911202483e-06,0.024687252540708252,2,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_lag_7,4.977408714494733e-06,6.445227688773096e-06,0.024687252540708252,3,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Price,,
 Fear_Greed_Index_diff_lag_2,3.361531468104237e-06,7.189627339020352e-06,0.024687252540708252,4,8,Bitcoin,1,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
-Bitcoin_Price_log_return_rolling_mean_30,2.2040520171098116e-06,9.994887514195319e-06,0.024687252540708252,5,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_rolling_mean_30,2.2040520171102453e-06,9.994887514195544e-06,0.024687252540708252,5,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_rolling_mean_30,4.058999248704974e-07,1.7465464248800678e-06,0.024687252540708252,6,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Volume_rolling_std_30,1.6037864823160997e-07,2.365771559154581e-06,0.024687252540708252,7,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_rolling_std_30,1.6037864823204365e-07,2.3657715591537764e-06,0.024687252540708252,7,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Market_Sentiment_Encoded_lag_1,-8.781224079060235e-07,7.546613631359473e-07,0.024687252540708252,8,8,Bitcoin,1,ablation,Random Forest,Original,,,
 Bitcoin_Volume_raw_lag_7,-1.8879006876120624e-06,1.5064191645345885e-06,0.024687252540708252,9,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_log_return_lag_1,-4.059279615062708e-06,5.189151718782387e-06,0.024687252540708252,10,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_lag_1,-4.059279615062274e-06,5.189151718782566e-06,0.024687252540708252,10,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_lag_2,-4.190007065264876e-06,5.389173865147698e-06,0.024687252540708252,11,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_log,-7.067287144788773e-06,2.0645695121651256e-05,0.024687252540708252,12,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Volume_pct_change_lag_7,-1.1877602383811216e-05,5.799101734140294e-06,0.024687252540708252,13,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_log,-7.0672871447883395e-06,2.0645695121650673e-05,0.024687252540708252,12,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_pct_change_lag_7,-1.187760238381165e-05,5.799101734140663e-06,0.024687252540708252,13,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Fear_Greed_Index_diff_lag_1,-1.1995780857569464e-05,4.674450860973287e-06,0.024687252540708252,14,8,Bitcoin,1,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
 Bitcoin_Price_log_return,-1.823715794800661e-05,7.13174089242479e-06,0.024687252540708252,15,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Price,,
 Fear_Greed_Index_lag_2,-2.0538893793681495e-05,4.373028725059261e-06,0.024687252540708252,16,8,Bitcoin,1,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
-Bitcoin_Volume_raw_lag_1,-3.360521364091391e-05,3.232361639518103e-05,0.024687252540708252,17,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_raw_lag_1,-3.3605213640913473e-05,3.232361639518117e-05,0.024687252540708252,17,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Fear_Greed_Index_rolling_mean_7,-3.958989470614774e-05,4.6161845886552014e-05,0.024687252540708252,18,8,Bitcoin,1,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
 Bitcoin_Price_momentum_7,-5.205767849400479e-05,3.575621522885215e-05,0.024687252540708252,19,8,Bitcoin,1,ablation,Random Forest,Original,Bitcoin_Price,,
 Fear_Greed_Index_lag_1,-6.945267308066782e-05,3.3948184877808125e-05,0.024687252540708252,20,8,Bitcoin,1,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
@@ -109,7 +109,7 @@ Bitcoin_Price_log_return_rolling_mean_30,3.178273270991721e-06,2.741102209577012
 Bitcoin_Search_Interest_lag_1,2.8619575864799983e-06,2.9833069684128538e-06,0.024690348338149083,4,8,Bitcoin,1,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Bitcoin_Volume_rolling_std_30,2.507666917990134e-06,6.067937238274323e-06,0.024690348338149083,5,8,Bitcoin,1,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_rolling_mean_30,1.1045579211628638e-06,1.1022834516845591e-06,0.024690348338149083,6,8,Bitcoin,1,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Volume_pct_change_lag_7,1.701561215053382e-07,3.7608466541062854e-06,0.024690348338149083,7,8,Bitcoin,1,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_pct_change_lag_7,1.701561215057719e-07,3.7608466541062456e-06,0.024690348338149083,7,8,Bitcoin,1,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_rolling_std_30,1.3911051291188442e-07,2.189907367696823e-06,0.024690348338149083,8,8,Bitcoin,1,combined,Random Forest,Original,Bitcoin_Price,,
 Fear_Greed_Index_diff_lag_2,-6.581542159652537e-07,4.838173417835238e-06,0.024690348338149083,9,8,Bitcoin,1,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
 Market_Sentiment_Encoded_lag_1,-1.445699358183436e-06,9.963481296468258e-07,0.024690348338149083,10,8,Bitcoin,1,combined,Random Forest,Original,,,
@@ -120,7 +120,7 @@ Fear_Greed_Index_diff_lag_1,-8.140097389215846e-06,6.598400609648014e-06,0.02469
 Bitcoin_Price_log_return_lag_2,-8.141697375391947e-06,4.540523554713387e-06,0.024690348338149083,15,8,Bitcoin,1,combined,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_lag_1,-1.0733395838304592e-05,6.0174254428155055e-06,0.024690348338149083,16,8,Bitcoin,1,combined,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_log,-1.4428592267180535e-05,1.4339123030372492e-05,0.024690348338149083,17,8,Bitcoin,1,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Search_Interest_diff_lag_2,-1.8312967131922653e-05,2.852609440412131e-05,0.024690348338149083,18,8,Bitcoin,1,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
+Bitcoin_Search_Interest_diff_lag_2,-1.831296713192352e-05,2.8526094404122148e-05,0.024690348338149083,18,8,Bitcoin,1,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Fear_Greed_Index_lag_2,-2.0663904591613613e-05,5.376373948865266e-06,0.024690348338149083,19,8,Bitcoin,1,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
 Bitcoin_Price_log_return,-2.3182303815197456e-05,8.846231358525714e-06,0.024690348338149083,20,8,Bitcoin,1,combined,Random Forest,Original,Bitcoin_Price,,
 Fear_Greed_Index_rolling_mean_7,-2.5138961383718364e-05,2.8945424219665748e-05,0.024690348338149083,21,8,Bitcoin,1,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
@@ -153,7 +153,7 @@ Bitcoin_Search_Interest_diff_lag_2,-2.1657019362907124e-05,2.7763796329016378e-0
 Fear_Greed_Index_lag_1,-2.2574555548026017e-05,1.7979194776478876e-05,0.02449326795445668,24,8,Bitcoin,1,combined,XGBoost,Original,Fear_Greed_Index,-0.0049898489306861,False
 Ethereum_Price_log_return_lag_1,4.782545542445123e-05,2.6723600309646937e-05,0.03676452369313428,1,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_lag_7,3.328888572990546e-05,1.360075241182198e-05,0.03676452369313428,2,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Price,,
-Ethereum_Volume_pct_change_lag_1,2.991478826590982e-05,1.6497725678369278e-05,0.03676452369313428,3,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_pct_change_lag_1,2.9914788265908952e-05,1.6497725678370013e-05,0.03676452369313428,3,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_momentum_7,9.084123749727828e-06,2.092791980477607e-05,0.03676452369313428,4,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_rolling_std_30,7.337498325978194e-06,4.906512374402301e-06,0.03676452369313428,5,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_raw_lag_7,6.3047632483312355e-06,5.105574823875614e-06,0.03676452369313428,6,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
@@ -162,7 +162,7 @@ Ethereum_Volume_rolling_std_30,5.0497700550319186e-06,5.461577540829293e-06,0.03
 Ethereum_Volume_rolling_mean_30,1.3019438451812582e-07,3.90523741740096e-06,0.03676452369313428,9,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_raw_lag_1,-4.77063653531954e-06,2.4213079512394993e-05,0.03676452369313428,10,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_pct_change_lag_7,-2.3190146872933276e-05,2.705681195649424e-05,0.03676452369313428,11,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Price_log_return,-2.4659626751039748e-05,2.7745788163985306e-05,0.03676452369313428,12,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_log_return,-2.4659626751040616e-05,2.7745788163984025e-05,0.03676452369313428,12,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_log,-5.209846460273084e-05,1.840990058158784e-05,0.03676452369313428,13,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_lag_2,-7.139216145082491e-05,2.9796719200837696e-05,0.03676452369313428,14,8,Ethereum,1,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_rolling_mean_30,2.6887727647622456e-05,1.2291594880958509e-05,0.03663169290485745,1,8,Ethereum,1,primary,XGBoost,Original,Ethereum_Price,,
@@ -180,7 +180,7 @@ Ethereum_Price_log_return_lag_2,-2.495146214521321e-06,8.966213856356496e-06,0.0
 Ethereum_Volume_raw_lag_1,-7.395402041233956e-06,1.2594260944925998e-05,0.03663169290485745,13,8,Ethereum,1,primary,XGBoost,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_pct_change_lag_7,-8.695167321998674e-06,1.4413939206827183e-05,0.03663169290485745,14,8,Ethereum,1,primary,XGBoost,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_pct_change_lag_1,4.214085625257706e-05,1.5117064886164971e-05,0.03669082110235589,1,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Price_log_return_lag_1,2.8053255240258722e-05,1.4588765648194415e-05,0.03669082110235589,2,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_log_return_lag_1,2.805325524025959e-05,1.4588765648196189e-05,0.03669082110235589,2,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return,2.4699310768215403e-05,3.332147786501118e-05,0.03669082110235589,3,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_rolling_mean_30,1.8106937808166565e-05,3.203307585747478e-05,0.03669082110235589,4,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Search_Interest_lag_2,1.4486789501881592e-05,1.880342637362944e-05,0.03669082110235589,5,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
@@ -194,7 +194,7 @@ Ethereum_Search_Interest_lag_1,2.886986396409552e-06,6.711652371758123e-06,0.036
 Ethereum_Price_log_return_rolling_std_30,2.3025768713181086e-06,7.6731468887849e-06,0.03669082110235589,13,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_raw_lag_1,2.1810195502142832e-07,1.9217411622684338e-05,0.03669082110235589,14,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Search_Interest_diff_lag_1,-8.342326291653143e-06,5.244414288781585e-06,0.03669082110235589,15,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
-Ethereum_Volume_pct_change_lag_7,-2.3701161801474233e-05,3.08106993345137e-05,0.03669082110235589,16,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_pct_change_lag_7,-2.3701161801472498e-05,3.081069933451241e-05,0.03669082110235589,16,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_log,-2.83170740504185e-05,1.5600424724506504e-05,0.03669082110235589,17,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_lag_2,-6.664586156114333e-05,3.120615781803421e-05,0.03669082110235589,18,8,Ethereum,1,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return,1.8577976937540937e-05,1.2298575734888988e-05,0.03663534834521492,1,8,Ethereum,1,candidate,XGBoost,Original,Ethereum_Price,,
@@ -222,16 +222,16 @@ Ethereum_Volume_pct_change_lag_1,1.0531321887138727e-05,6.791966265039325e-06,0.
 Ethereum_Volume_raw_lag_1,9.371514356032798e-06,2.9938939827462697e-05,0.037013507582196674,5,8,Ethereum,1,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_rolling_std_30,2.5697461342151853e-06,2.715843386217755e-06,0.037013507582196674,6,8,Ethereum,1,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_momentum_7,1.8570901374210386e-06,8.762428171939929e-06,0.037013507582196674,7,8,Ethereum,1,ablation,Random Forest,Original,Ethereum_Price,,
-Ethereum_Volume_rolling_mean_30,1.0795898115435396e-06,3.935994139475404e-06,0.037013507582196674,8,8,Ethereum,1,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_rolling_mean_30,1.079589811544407e-06,3.935994139476463e-06,0.037013507582196674,8,8,Ethereum,1,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_rolling_std_30,-2.502211367064189e-07,6.07834676208804e-06,0.037013507582196674,9,8,Ethereum,1,ablation,Random Forest,Original,Ethereum_Price,,
-Market_Sentiment_Encoded_lag_1,-7.535089896048425e-06,3.211986738208855e-06,0.037013507582196674,10,8,Ethereum,1,ablation,Random Forest,Original,,,
-Ethereum_Volume_raw_lag_7,-8.414098689304983e-06,9.344315554092204e-06,0.037013507582196674,11,8,Ethereum,1,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Market_Sentiment_Encoded_lag_1,-7.535089896047557e-06,3.211986738209008e-06,0.037013507582196674,10,8,Ethereum,1,ablation,Random Forest,Original,,,
+Ethereum_Volume_raw_lag_7,-8.414098689304983e-06,9.344315554091152e-06,0.037013507582196674,11,8,Ethereum,1,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Fear_Greed_Index_lag_2,-1.3796037160845528e-05,1.4397760187039893e-05,0.037013507582196674,12,8,Ethereum,1,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
 Fear_Greed_Index_diff_lag_2,-1.4925981726775228e-05,8.336855482541172e-06,0.037013507582196674,13,8,Ethereum,1,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
 Ethereum_Price_log_return,-2.1521291499303034e-05,1.4109028770412564e-05,0.037013507582196674,14,8,Ethereum,1,ablation,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_pct_change_lag_7,-2.2395365884443977e-05,3.2171526530698755e-05,0.037013507582196674,15,8,Ethereum,1,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_lag_2,-4.234901329113437e-05,2.678881352503059e-05,0.037013507582196674,16,8,Ethereum,1,ablation,Random Forest,Original,Ethereum_Price,,
-Fear_Greed_Index_rolling_mean_7,-4.667397900050968e-05,6.981595712492438e-05,0.037013507582196674,17,8,Ethereum,1,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
+Fear_Greed_Index_rolling_mean_7,-4.667397900050881e-05,6.981595712492525e-05,0.037013507582196674,17,8,Ethereum,1,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
 Ethereum_Volume_log,-6.034494029538359e-05,1.4318767325039377e-05,0.037013507582196674,18,8,Ethereum,1,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Fear_Greed_Index_diff_lag_1,-7.224626379951238e-05,2.6727692789830617e-05,0.037013507582196674,19,8,Ethereum,1,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
 Fear_Greed_Index_lag_1,-0.0001330960026957517,6.706464991335434e-05,0.037013507582196674,20,8,Ethereum,1,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
@@ -257,17 +257,17 @@ Ethereum_Price_log_return_lag_2,-2.325645167549229e-05,1.0815742952491624e-05,0.
 Ethereum_Volume_raw_lag_7,-2.5729275658760084e-05,2.722495762112084e-05,0.03666973762483074,20,8,Ethereum,1,ablation,XGBoost,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_lag_1,3.466840016782841e-05,1.3081456364910547e-05,0.036859397287784826,1,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_pct_change_lag_1,2.4839867711766613e-05,1.2673297170412525e-05,0.036859397287784826,2,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Price_momentum_7,1.7503493211774683e-05,1.0494984688407276e-05,0.036859397287784826,3,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_momentum_7,1.750349321177555e-05,1.049498468840581e-05,0.036859397287784826,3,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_lag_7,1.682829315606104e-05,1.3024468520845951e-05,0.036859397287784826,4,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return,1.016223872838621e-05,1.4660701318274471e-05,0.036859397287784826,5,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Search_Interest_diff_lag_1,8.650137960278421e-06,2.587767008523743e-06,0.036859397287784826,6,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Price_log_return_rolling_mean_30,7.989361696831253e-06,2.2142818627661233e-05,0.036859397287784826,7,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Price,,
-Ethereum_Search_Interest_diff_lag_2,7.27843779482415e-06,1.570258456156184e-05,0.036859397287784826,8,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
+Ethereum_Search_Interest_diff_lag_2,7.27843779482415e-06,1.570258456156287e-05,0.036859397287784826,8,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Volume_rolling_std_30,6.866338141999981e-06,2.941473216232978e-06,0.036859397287784826,9,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Search_Interest_lag_1,5.481082121979244e-06,6.949337195326048e-06,0.036859397287784826,10,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
-Ethereum_Volume_rolling_mean_30,-5.501911041856308e-07,6.440867434814269e-06,0.036859397287784826,11,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_rolling_mean_30,-5.501911041847635e-07,6.440867434813809e-06,0.036859397287784826,11,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_rolling_std_30,-1.0131566642408371e-06,4.6408853113574586e-06,0.036859397287784826,12,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Price,,
-Market_Sentiment_Encoded_lag_1,-2.3777511631902642e-06,6.38181087543242e-06,0.036859397287784826,13,8,Ethereum,1,combined,Random Forest,Original,,,
+Market_Sentiment_Encoded_lag_1,-2.377751163189397e-06,6.381810875432735e-06,0.036859397287784826,13,8,Ethereum,1,combined,Random Forest,Original,,,
 Ethereum_Volume_raw_lag_7,-5.661056754871323e-06,7.749347667336746e-06,0.036859397287784826,14,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_raw_lag_1,-5.717254468492854e-06,2.639795225276776e-05,0.036859397287784826,15,8,Ethereum,1,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Fear_Greed_Index_diff_lag_2,-5.780045087546044e-06,6.742718319173155e-06,0.036859397287784826,16,8,Ethereum,1,combined,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
@@ -303,10 +303,10 @@ Fear_Greed_Index_diff_lag_2,-3.5630126170140344e-06,1.8132723596588958e-06,0.036
 Fear_Greed_Index_lag_1,-1.3990076120356729e-05,2.2721205884710154e-05,0.03666332608998634,22,8,Ethereum,1,combined,XGBoost,Original,Fear_Greed_Index,0.0077462447203101,False
 Ethereum_Search_Interest_diff_lag_2,-1.6771635741227517e-05,1.3012634964964309e-05,0.03666332608998634,23,8,Ethereum,1,combined,XGBoost,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Volume_raw_lag_7,-2.38389989238013e-05,2.1376377234840438e-05,0.03666332608998634,24,8,Ethereum,1,combined,XGBoost,Original,Ethereum_Volume,-0.035611674223248,
-Bitcoin_Volume_rolling_std_30,0.00010903281492555695,1.6589785693232605e-05,0.05847461899877158,1,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_log_return_lag_7,6.560280857222881e-05,4.792280161455793e-05,0.05847461899877158,2,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Volume_rolling_std_30,0.00010903281492555608,1.6589785693233164e-05,0.05847461899877158,1,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Price_log_return_lag_7,6.560280857222968e-05,4.792280161455802e-05,0.05847461899877158,2,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_log,4.676808724155771e-05,3.903480771970878e-05,0.05847461899877158,3,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_log_return_lag_1,1.6662514865587418e-05,2.1622947148620487e-05,0.05847461899877158,4,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_lag_1,1.6662514865585683e-05,2.1622947148619352e-05,0.05847461899877158,4,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_raw_lag_1,1.6117187163062346e-05,2.9544256027222772e-05,0.05847461899877158,5,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_lag_2,1.3790310315133468e-05,1.2699074469435735e-05,0.05847461899877158,6,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_pct_change_lag_1,7.498870610738763e-06,1.238991224977994e-05,0.05847461899877158,7,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
@@ -315,7 +315,7 @@ Bitcoin_Volume_rolling_mean_30,-8.36017531477204e-06,2.127635767566894e-05,0.058
 Bitcoin_Price_log_return_rolling_mean_30,-8.712015301465086e-06,1.3334779761877167e-05,0.05847461899877158,10,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_raw_lag_7,-9.897423108810172e-06,2.1074773043493065e-05,0.05847461899877158,11,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_pct_change_lag_7,-1.2054450231056488e-05,1.1189135122750871e-05,0.05847461899877158,12,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_trailing_7day_return,-5.937275248522195e-05,1.6869528553192388e-05,0.05847461899877158,13,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_trailing_7day_return,-5.9372752485222814e-05,1.686952855319067e-05,0.05847461899877158,13,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_rolling_std_30,-6.159978893628421e-05,3.555574236624874e-05,0.05847461899877158,14,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_momentum_7,-0.00013718279982224534,3.976743167477695e-05,0.05847461899877158,15,8,Bitcoin,7,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_rolling_std_30,0.00023515816865137505,0.00010063206938973256,0.05821232414805851,1,8,Bitcoin,7,primary,XGBoost,Original,Bitcoin_Price,,
@@ -342,16 +342,16 @@ Bitcoin_Volume_raw_lag_7,5.7553115707410785e-06,3.4569224707526316e-05,0.0582039
 Bitcoin_Volume_pct_change_lag_1,3.40700802710283e-06,8.067195692032397e-06,0.05820394848657159,7,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Search_Interest_lag_1,2.000890051943871e-06,1.9556693784539323e-05,0.05820394848657159,8,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Bitcoin_Volume_raw_lag_1,4.2328191729099074e-07,2.0377073658575236e-05,0.05820394848657159,9,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Volume_pct_change_lag_7,-5.414122684578235e-07,7.21413140028415e-06,0.05820394848657159,10,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_pct_change_lag_7,-5.414122684586908e-07,7.214131400283759e-06,0.05820394848657159,10,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Search_Interest_diff_lag_1,-9.553285559901065e-07,4.771938542774275e-06,0.05820394848657159,11,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Bitcoin_Price_log_return,-2.6693732629685593e-06,9.936313613589771e-06,0.05820394848657159,12,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_rolling_mean_30,-2.891960660709493e-06,1.4798543731383588e-05,0.05820394848657159,13,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Search_Interest_diff_lag_2,-4.6007097299124305e-06,4.162944474308088e-06,0.05820394848657159,14,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
-Bitcoin_Search_Interest_lag_2,-1.057915213324278e-05,6.337999368694829e-06,0.05820394848657159,15,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
+Bitcoin_Search_Interest_lag_2,-1.0579152133241912e-05,6.337999368696138e-06,0.05820394848657159,15,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Bitcoin_Price_log_return_rolling_std_30,-1.7204491243080766e-05,4.265247691009215e-05,0.05820394848657159,16,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Price_log_return_rolling_mean_30,-1.856105683868854e-05,1.684920889435454e-05,0.05820394848657159,17,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_rolling_mean_30,-1.8561056838687674e-05,1.68492088943532e-05,0.05820394848657159,17,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_trailing_7day_return,-2.8002066688991196e-05,9.674815541819155e-06,0.05820394848657159,18,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Price_momentum_7,-0.0001155350473936844,1.472097065100642e-05,0.05820394848657159,19,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_momentum_7,-0.00011553504739368527,1.4720970651005181e-05,0.05820394848657159,19,8,Bitcoin,7,candidate,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_rolling_std_30,0.00012058477121320785,6.503763524591927e-05,0.05825081875303865,1,8,Bitcoin,7,candidate,XGBoost,Original,Bitcoin_Price,,
 Bitcoin_Volume_rolling_std_30,7.662365033557234e-05,9.062451970622065e-06,0.05825081875303865,2,8,Bitcoin,7,candidate,XGBoost,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_lag_7,3.037748429401011e-05,2.4918696354907247e-05,0.05825081875303865,3,8,Bitcoin,7,candidate,XGBoost,Original,Bitcoin_Price,,
@@ -372,24 +372,24 @@ Bitcoin_Price_log_return,-2.2352165012107066e-05,2.5219536791577785e-05,0.058250
 Bitcoin_Search_Interest_lag_2,-4.03184160487997e-05,1.4904592273110696e-05,0.05825081875303865,18,8,Bitcoin,7,candidate,XGBoost,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Bitcoin_Price_trailing_7day_return,-7.062688224198591e-05,9.869033219513311e-05,0.05825081875303865,19,8,Bitcoin,7,candidate,XGBoost,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_rolling_mean_30,0.00022336028782937202,7.028358664869663e-05,0.06059200025184507,1,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_rolling_std_30,0.0001689254406775243,3.2693634702094715e-05,0.06059200025184507,2,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_rolling_std_30,0.00016892544067752344,3.2693634702094254e-05,0.06059200025184507,2,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_lag_7,6.917887279495397e-05,3.671096577379722e-05,0.06059200025184507,3,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_log,2.5502290115033723e-05,1.74975126497675e-05,0.06059200025184507,4,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_raw_lag_1,2.0967692425473937e-05,2.23306193920015e-05,0.06059200025184507,5,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_log_return_rolling_std_30,1.6082398199245874e-05,4.01829429960205e-05,0.06059200025184507,6,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_rolling_std_30,1.6082398199245007e-05,4.018294299602053e-05,0.06059200025184507,6,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return,8.667017115846463e-06,7.725294152899883e-06,0.06059200025184507,7,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_lag_1,3.5739977524932437e-06,9.81568136089708e-06,0.06059200025184507,8,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Price,,
 Fear_Greed_Index_diff_lag_1,2.6344428941471945e-06,3.4202561330906504e-06,0.06059200025184507,9,8,Bitcoin,7,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
-Bitcoin_Volume_raw_lag_7,2.5819314288964487e-06,3.766186812511402e-05,0.06059200025184507,10,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_raw_lag_7,2.581931428897316e-06,3.7661868125115235e-05,0.06059200025184507,10,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_pct_change_lag_1,2.1575181899449736e-06,5.553051490916335e-06,0.06059200025184507,11,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_lag_2,-9.537151307581482e-07,6.2507994205305174e-06,0.06059200025184507,12,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Price,,
-Market_Sentiment_Encoded_lag_1,-1.6952861388057003e-06,1.585077131102026e-06,0.06059200025184507,13,8,Bitcoin,7,ablation,Random Forest,Original,,,
+Market_Sentiment_Encoded_lag_1,-1.695286138804833e-06,1.5850771311050423e-06,0.06059200025184507,13,8,Bitcoin,7,ablation,Random Forest,Original,,,
 Bitcoin_Volume_pct_change_lag_7,-5.294885203171486e-06,9.894088078762185e-06,0.06059200025184507,14,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_trailing_7day_return,-2.1463089936409226e-05,4.5076064637665385e-05,0.06059200025184507,15,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_trailing_7day_return,-2.1463089936408358e-05,4.507606463766617e-05,0.06059200025184507,15,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_rolling_mean_30,-2.337040669120067e-05,2.217827761038955e-05,0.06059200025184507,16,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Fear_Greed_Index_diff_lag_2,-4.5978620005542904e-05,2.2733634298011028e-05,0.06059200025184507,17,8,Bitcoin,7,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
-Bitcoin_Price_momentum_7,-0.00013281032807974536,2.5629269653704257e-05,0.06059200025184507,18,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Price,,
-Fear_Greed_Index_lag_1,-0.0005031237371138295,0.0001785840551966353,0.06059200025184507,19,8,Bitcoin,7,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
+Bitcoin_Price_momentum_7,-0.00013281032807974363,2.5629269653703105e-05,0.06059200025184507,18,8,Bitcoin,7,ablation,Random Forest,Original,Bitcoin_Price,,
+Fear_Greed_Index_lag_1,-0.0005031237371138303,0.00017858405519663686,0.06059200025184507,19,8,Bitcoin,7,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
 Fear_Greed_Index_lag_2,-0.0005729944195349643,0.00017367757833180428,0.06059200025184507,20,8,Bitcoin,7,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
 Fear_Greed_Index_rolling_mean_7,-0.0016373504959327472,0.00044177381096641627,0.06059200025184507,21,8,Bitcoin,7,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
 Bitcoin_Price_log_return_rolling_mean_30,0.0004199263496506532,0.00011457981594938349,0.060490684736615376,1,8,Bitcoin,7,ablation,XGBoost,Original,Bitcoin_Price,,
@@ -413,31 +413,31 @@ Bitcoin_Price_log_return_lag_2,0.0,0.0,0.060490684736615376,3,8,Bitcoin,7,ablati
 Bitcoin_Price_log_return_lag_1,0.0,0.0,0.060490684736615376,3,8,Bitcoin,7,ablation,XGBoost,Original,Bitcoin_Price,,
 Market_Sentiment_Encoded_lag_1,0.0,0.0,0.060490684736615376,3,8,Bitcoin,7,ablation,XGBoost,Original,,,
 Fear_Greed_Index_rolling_mean_7,-0.001597226418053107,0.0006240840316270588,0.060490684736615376,21,8,Bitcoin,7,ablation,XGBoost,Original,Fear_Greed_Index,-0.0049898489306861,False
-Bitcoin_Price_log_return_rolling_mean_30,0.0002853365061653594,8.466511987174222e-05,0.06140347320415745,1,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_rolling_std_30,0.00017683705581658053,2.6402011004380057e-05,0.06140347320415745,2,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Search_Interest_lag_2,8.962357997218881e-05,6.502801992087996e-05,0.06140347320415745,3,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
-Bitcoin_Price_log_return_lag_7,8.020706638515313e-05,3.950628065553697e-05,0.06140347320415745,4,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_rolling_mean_30,6.352750944065878e-06,2.5659548408531904e-05,0.06140347320415745,5,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Fear_Greed_Index_diff_lag_1,5.368165778216194e-06,1.8697637523860686e-05,0.06140347320415745,6,8,Bitcoin,7,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
-Bitcoin_Price_log_return_lag_2,4.9952850610310295e-06,9.750357696463135e-06,0.06140347320415745,7,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_pct_change_lag_7,4.1120040773136995e-06,7.170939742634241e-06,0.06140347320415745,8,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Search_Interest_diff_lag_1,2.441033770885122e-06,5.698870275019574e-06,0.06140347320415745,9,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
-Bitcoin_Volume_pct_change_lag_1,1.7512467704204268e-06,8.874792638039675e-06,0.06140347320415745,10,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Search_Interest_diff_lag_2,3.5840294048891663e-07,1.4365084175468765e-06,0.06140347320415745,11,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
-Bitcoin_Search_Interest_lag_1,1.2912635706692488e-07,3.516343290107804e-05,0.06140347320415745,12,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
-Market_Sentiment_Encoded_lag_1,-2.0845805416645075e-07,1.6147091443031024e-07,0.06140347320415745,13,8,Bitcoin,7,combined,Random Forest,Original,,,
-Bitcoin_Price_log_return_lag_1,-1.069386793466423e-06,5.75525080782973e-06,0.06140347320415745,14,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_raw_lag_1,-4.9151539504447075e-06,2.1391433836712867e-05,0.06140347320415745,15,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_log_return,-5.3582764005782185e-06,4.712579909670653e-06,0.06140347320415745,16,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_raw_lag_7,-5.41770783837707e-06,4.903387156169784e-05,0.06140347320415745,17,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_trailing_7day_return,-1.398736734489845e-05,7.466992281928873e-06,0.06140347320415745,18,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_log,-1.735508249405774e-05,2.1120194959945314e-05,0.06140347320415745,19,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_momentum_7,-2.4558243848453627e-05,1.7629361004299262e-05,0.06140347320415745,20,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
-Fear_Greed_Index_diff_lag_2,-2.6421151965389487e-05,1.2035290699361868e-05,0.06140347320415745,21,8,Bitcoin,7,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
-Bitcoin_Price_log_return_rolling_std_30,-2.6532002837616545e-05,4.5107446047559464e-05,0.06140347320415745,22,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
-Fear_Greed_Index_lag_1,-0.00036634246951986697,0.00014034156484732957,0.06140347320415745,23,8,Bitcoin,7,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
-Fear_Greed_Index_lag_2,-0.0005249582958564434,0.00019269611451221423,0.06140347320415745,24,8,Bitcoin,7,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
-Fear_Greed_Index_rolling_mean_7,-0.0021711031379285095,0.0007145995711686635,0.06140347320415745,25,8,Bitcoin,7,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
+Bitcoin_Price_log_return_rolling_mean_30,0.0002853365061653663,8.466511987174222e-05,0.06140347320415745,1,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Volume_rolling_std_30,0.0001768370558165866,2.6402011004379583e-05,0.06140347320415745,2,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Search_Interest_lag_2,8.962357997219575e-05,6.502801992087996e-05,0.06140347320415745,3,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
+Bitcoin_Price_log_return_lag_7,8.020706638516006e-05,3.950628065553697e-05,0.06140347320415745,4,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Volume_rolling_mean_30,6.352750944072817e-06,2.5659548408531904e-05,0.06140347320415745,5,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Fear_Greed_Index_diff_lag_1,5.368165778223133e-06,1.8697637523860686e-05,0.06140347320415745,6,8,Bitcoin,7,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
+Bitcoin_Price_log_return_lag_2,4.9952850610379684e-06,9.750357696463135e-06,0.06140347320415745,7,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Volume_pct_change_lag_7,4.1120040773206384e-06,7.170939742634241e-06,0.06140347320415745,8,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Search_Interest_diff_lag_1,2.4410337708920607e-06,5.698870275019574e-06,0.06140347320415745,9,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
+Bitcoin_Volume_pct_change_lag_1,1.7512467704273657e-06,8.874792638039675e-06,0.06140347320415745,10,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Search_Interest_diff_lag_2,3.5840294049585553e-07,1.4365084175468765e-06,0.06140347320415745,11,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
+Bitcoin_Search_Interest_lag_1,1.291263570729964e-07,3.5163432901078695e-05,0.06140347320415745,12,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
+Market_Sentiment_Encoded_lag_1,-2.0845805416037921e-07,1.614709144291905e-07,0.06140347320415745,13,8,Bitcoin,7,combined,Random Forest,Original,,,
+Bitcoin_Price_log_return_lag_1,-1.0693867934594842e-06,5.75525080782973e-06,0.06140347320415745,14,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Volume_raw_lag_1,-4.915153950437769e-06,2.1391433836712867e-05,0.06140347320415745,15,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Price_log_return,-5.358276400572147e-06,4.712579909670281e-06,0.06140347320415745,16,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Volume_raw_lag_7,-5.417707838369264e-06,4.9033871561697734e-05,0.06140347320415745,17,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Price_trailing_7day_return,-1.3987367344891512e-05,7.466992281928873e-06,0.06140347320415745,18,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Volume_log,-1.73550824940508e-05,2.1120194959945314e-05,0.06140347320415745,19,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Price_momentum_7,-2.4558243848447556e-05,1.7629361004300323e-05,0.06140347320415745,20,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
+Fear_Greed_Index_diff_lag_2,-2.6421151965383416e-05,1.2035290699362074e-05,0.06140347320415745,21,8,Bitcoin,7,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
+Bitcoin_Price_log_return_rolling_std_30,-2.6532002837608738e-05,4.5107446047560514e-05,0.06140347320415745,22,8,Bitcoin,7,combined,Random Forest,Original,Bitcoin_Price,,
+Fear_Greed_Index_lag_1,-0.00036634246951986,0.00014034156484732957,0.06140347320415745,23,8,Bitcoin,7,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
+Fear_Greed_Index_lag_2,-0.0005249582958564373,0.00019269611451221393,0.06140347320415745,24,8,Bitcoin,7,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
+Fear_Greed_Index_rolling_mean_7,-0.0021711031379285026,0.0007145995711686635,0.06140347320415745,25,8,Bitcoin,7,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
 Bitcoin_Price_log_return_rolling_mean_30,0.0007784677546452748,0.0001366931821894917,0.06148045167326498,1,8,Bitcoin,7,combined,XGBoost,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_rolling_std_30,2.696728285875652e-05,7.78842337352559e-05,0.06148045167326498,2,8,Bitcoin,7,combined,XGBoost,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return,1.2639807303903468e-05,1.237129794438543e-05,0.06148045167326498,3,8,Bitcoin,7,combined,XGBoost,Original,Bitcoin_Price,,
@@ -468,14 +468,14 @@ Ethereum_Price_log_return_rolling_std_30,1.5033734303553092e-05,6.98140292302256
 Ethereum_Volume_log,1.2493511679732144e-05,8.060028753606952e-06,0.08578410327412624,3,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return,1.0589781978655524e-05,1.5586162252647478e-05,0.08578410327412624,4,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_rolling_std_30,-1.0374216132709446e-06,9.31554652960233e-05,0.08578410327412624,5,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Volume_pct_change_lag_1,-1.1687116164404293e-06,2.485709781869144e-05,0.08578410327412624,6,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_pct_change_lag_1,-1.168711616442164e-06,2.4857097818688702e-05,0.08578410327412624,6,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_lag_7,-3.6848219443046115e-06,1.2218376854100588e-05,0.08578410327412624,7,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_lag_1,-1.4520415122619076e-05,9.95178832411874e-06,0.08578410327412624,8,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_lag_2,-1.479069334832557e-05,1.541386930489079e-05,0.08578410327412624,9,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_pct_change_lag_7,-1.5449586282552732e-05,1.626964343706979e-05,0.08578410327412624,10,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_momentum_7,-4.655673672068067e-05,2.2211438035529603e-05,0.08578410327412624,11,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_trailing_7day_return,-5.531184555396772e-05,1.0194299964894186e-05,0.08578410327412624,12,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Price,,
-Ethereum_Volume_raw_lag_7,-6.741825503733812e-05,4.099314893837329e-05,0.08578410327412624,13,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_raw_lag_7,-6.741825503733985e-05,4.099314893837444e-05,0.08578410327412624,13,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_rolling_mean_30,-7.114249113166458e-05,2.874530927108537e-05,0.08578410327412624,14,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_rolling_mean_30,-0.0003070479720905378,0.00026259641718446745,0.08578410327412624,15,8,Ethereum,7,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return,0.0,0.0,0.08727878907456466,1,8,Ethereum,7,primary,XGBoost,Original,Ethereum_Price,,
@@ -498,19 +498,19 @@ Ethereum_Volume_rolling_std_30,4.386074469395207e-05,0.00010313445831197633,0.08
 Ethereum_Search_Interest_lag_2,2.776811157710092e-05,5.117597215822636e-05,0.08549007492194488,3,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Search_Interest_lag_1,2.5324475940557978e-05,2.662743691959755e-05,0.08549007492194488,4,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Volume_raw_lag_1,2.0266251153521278e-05,4.8728186709712846e-06,0.08549007492194488,5,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Price_log_return_lag_7,8.85824138259668e-06,1.0809597375491926e-05,0.08549007492194488,6,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Price,,
-Ethereum_Price_log_return,3.63077428206654e-06,1.1132403420273744e-05,0.08549007492194488,7,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_log_return_lag_7,8.858241382598414e-06,1.0809597375491316e-05,0.08549007492194488,6,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_log_return,3.6307742820648053e-06,1.11324034202715e-05,0.08549007492194488,7,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_lag_1,3.95474927143008e-07,4.365417178359944e-06,0.08549007492194488,8,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_pct_change_lag_7,-2.405075870811832e-06,6.9130317158765034e-06,0.08549007492194488,9,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_log,-5.559395847887921e-06,9.518645682510416e-06,0.08549007492194488,10,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_pct_change_lag_1,-1.0606936675809642e-05,2.146535665664277e-05,0.08549007492194488,11,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Search_Interest_diff_lag_1,-1.0815492865733425e-05,1.2783626972341101e-05,0.08549007492194488,12,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Search_Interest_diff_lag_2,-1.2872553598209518e-05,1.1659365212397157e-05,0.08549007492194488,13,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
-Ethereum_Price_log_return_lag_2,-2.0010797053689536e-05,1.0381878698715995e-05,0.08549007492194488,14,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_log_return_lag_2,-2.001079705369127e-05,1.0381878698715184e-05,0.08549007492194488,14,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_rolling_mean_30,-2.4140332298706532e-05,1.0048995338557452e-05,0.08549007492194488,15,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_momentum_7,-2.7164918142178265e-05,1.4876428553965777e-05,0.08549007492194488,16,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_raw_lag_7,-3.9282324940430324e-05,3.601603462115628e-05,0.08549007492194488,17,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Price_trailing_7day_return,-4.393194923618671e-05,2.111533887125677e-05,0.08549007492194488,18,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_trailing_7day_return,-4.393194923618844e-05,2.1115338871256573e-05,0.08549007492194488,18,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_rolling_mean_30,-0.0002985710808770647,0.00029496952683140084,0.08549007492194488,19,8,Ethereum,7,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Search_Interest_lag_2,0.00014506195834552461,8.722613559445847e-05,0.08680202723970354,1,8,Ethereum,7,candidate,XGBoost,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Search_Interest_lag_1,3.863129353019225e-05,3.724400567443271e-05,0.08680202723970354,2,8,Ethereum,7,candidate,XGBoost,Original,Ethereum_Search_Interest,-0.0017280284252801,False
@@ -532,26 +532,26 @@ Ethereum_Volume_rolling_mean_30,-0.00045576502854584484,0.00019840818633845307,0
 Ethereum_Price_log_return_rolling_std_30,-0.000635362148707139,0.00023591838474523039,0.08680202723970354,18,8,Ethereum,7,candidate,XGBoost,Original,Ethereum_Price,,
 Ethereum_Price_log_return_rolling_mean_30,-0.0009842506166131883,0.0006435801611638828,0.08680202723970354,19,8,Ethereum,7,candidate,XGBoost,Original,Ethereum_Price,,
 Ethereum_Volume_rolling_std_30,4.624061417108326e-05,7.547170186242675e-05,0.08827577615152758,1,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Volume_log,3.693498363774826e-05,1.533581870792975e-05,0.08827577615152758,2,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_log,3.693498363774653e-05,1.5335818707927934e-05,0.08827577615152758,2,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_raw_lag_1,2.167826801579252e-05,6.885743018927377e-06,0.08827577615152758,3,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_lag_7,3.961778667380816e-06,7.0030754710253945e-06,0.08827577615152758,4,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Price,,
-Fear_Greed_Index_diff_lag_1,2.9471186937749666e-06,1.0094807544327884e-05,0.08827577615152758,5,8,Ethereum,7,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
-Ethereum_Price_log_return_lag_1,2.3572892235354526e-06,3.972177276824448e-06,0.08827577615152758,6,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Price,,
+Fear_Greed_Index_diff_lag_1,2.9471186937767013e-06,1.009480754432895e-05,0.08827577615152758,5,8,Ethereum,7,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
+Ethereum_Price_log_return_lag_1,2.357289223533718e-06,3.972177276826115e-06,0.08827577615152758,6,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return,-6.606824912956666e-07,8.136481430947403e-06,0.08827577615152758,7,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_pct_change_lag_1,-2.614451057220829e-06,1.6717165080058665e-05,0.08827577615152758,8,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_lag_2,-6.357278084722154e-06,1.1436616269693312e-05,0.08827577615152758,9,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Price,,
-Ethereum_Volume_pct_change_lag_7,-8.232897831455394e-06,1.6723233496601342e-05,0.08827577615152758,10,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_pct_change_lag_7,-8.232897831453659e-06,1.6723233496599154e-05,0.08827577615152758,10,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_momentum_7,-1.9883239361138602e-05,2.241229380298212e-05,0.08827577615152758,11,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Price,,
-Fear_Greed_Index_diff_lag_2,-3.767530978001851e-05,1.4517214523640708e-05,0.08827577615152758,12,8,Ethereum,7,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
-Ethereum_Price_trailing_7day_return,-4.7978723171011525e-05,2.469897397165574e-05,0.08827577615152758,13,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Price,,
+Fear_Greed_Index_diff_lag_2,-3.767530978002025e-05,1.4517214523643858e-05,0.08827577615152758,12,8,Ethereum,7,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
+Ethereum_Price_trailing_7day_return,-4.7978723171011525e-05,2.469897397165653e-05,0.08827577615152758,13,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_raw_lag_7,-5.1602063925255265e-05,3.245067818719783e-05,0.08827577615152758,14,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_rolling_mean_30,-5.314762540428036e-05,4.816928161709897e-05,0.08827577615152758,15,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Market_Sentiment_Encoded_lag_1,-8.439857615748746e-05,1.8932902389256063e-05,0.08827577615152758,16,8,Ethereum,7,ablation,Random Forest,Original,,,
-Ethereum_Price_log_return_rolling_std_30,-9.91565008783106e-05,0.00010018892794181524,0.08827577615152758,17,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Price,,
+Market_Sentiment_Encoded_lag_1,-8.439857615748919e-05,1.893290238925689e-05,0.08827577615152758,16,8,Ethereum,7,ablation,Random Forest,Original,,,
+Ethereum_Price_log_return_rolling_std_30,-9.915650087831233e-05,0.00010018892794181586,0.08827577615152758,17,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_rolling_mean_30,-0.0003778232297582257,0.00031453277454346356,0.08827577615152758,18,8,Ethereum,7,ablation,Random Forest,Original,Ethereum_Price,,
 Fear_Greed_Index_lag_1,-0.0006558239893782753,0.00013005290064772157,0.08827577615152758,19,8,Ethereum,7,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
 Fear_Greed_Index_lag_2,-0.0007761775426463457,0.00017429241534335025,0.08827577615152758,20,8,Ethereum,7,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
-Fear_Greed_Index_rolling_mean_7,-0.0018624318829365601,0.0003703360896491311,0.08827577615152758,21,8,Ethereum,7,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
+Fear_Greed_Index_rolling_mean_7,-0.0018624318829365619,0.0003703360896491342,0.08827577615152758,21,8,Ethereum,7,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
 Fear_Greed_Index_lag_2,0.00017416748618464227,5.048153239832536e-05,0.08546560381823104,1,8,Ethereum,7,ablation,XGBoost,Original,Fear_Greed_Index,0.0077462447203101,False
 Ethereum_Price_log_return_rolling_mean_30,0.0001669363425849165,6.249343256448594e-05,0.08546560381823104,2,8,Ethereum,7,ablation,XGBoost,Original,Ethereum_Price,,
 Ethereum_Price_log_return_rolling_std_30,6.813661204755836e-05,1.417677522480382e-05,0.08546560381823104,3,8,Ethereum,7,ablation,XGBoost,Original,Ethereum_Price,,
@@ -574,13 +574,13 @@ Ethereum_Price_log_return_lag_1,0.0,0.0,0.08546560381823104,6,8,Ethereum,7,ablat
 Ethereum_Volume_log,0.0,0.0,0.08546560381823104,6,8,Ethereum,7,ablation,XGBoost,Original,Ethereum_Volume,-0.035611674223248,
 Market_Sentiment_Encoded_lag_1,0.0,0.0,0.08546560381823104,6,8,Ethereum,7,ablation,XGBoost,Original,,,
 Ethereum_Volume_log,3.4848837710342584e-05,7.428923875914265e-06,0.08895336670610315,1,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Volume_raw_lag_1,1.9037497402726172e-05,7.007907795853202e-06,0.08895336670610315,2,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_raw_lag_1,1.9037497402722703e-05,7.007907795854229e-06,0.08895336670610315,2,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Fear_Greed_Index_diff_lag_1,8.78540148378619e-06,1.0834183319941785e-05,0.08895336670610315,3,8,Ethereum,7,combined,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
 Ethereum_Price_log_return_lag_2,7.354483823086844e-06,7.057087168743483e-06,0.08895336670610315,4,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return,5.992699132784454e-06,5.771064485021344e-06,0.08895336670610315,5,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Search_Interest_diff_lag_2,3.865059762924242e-06,7.787614190195166e-06,0.08895336670610315,6,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Volume_pct_change_lag_1,3.072834910763586e-06,1.208266790491067e-05,0.08895336670610315,7,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Volume_rolling_std_30,2.871238853239047e-06,4.693227441601471e-05,0.08895336670610315,8,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_rolling_std_30,2.871238853239047e-06,4.693227441601207e-05,0.08895336670610315,8,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_lag_7,-1.5326526474502417e-06,4.0562215733826315e-06,0.08895336670610315,9,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_lag_1,-2.519680162170815e-06,6.0994919535318254e-06,0.08895336670610315,10,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_rolling_std_30,-7.270808388788394e-06,8.295969718713669e-05,0.08895336670610315,11,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Price,,
@@ -589,14 +589,14 @@ Ethereum_Volume_pct_change_lag_7,-1.2353357638239873e-05,1.1807986046111653e-05,
 Market_Sentiment_Encoded_lag_1,-1.9162974507784883e-05,1.1403442448608478e-05,0.08895336670610315,14,8,Ethereum,7,combined,Random Forest,Original,,,
 Ethereum_Volume_raw_lag_7,-2.197259855001195e-05,4.252569611994564e-05,0.08895336670610315,15,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Fear_Greed_Index_diff_lag_2,-2.5605978730343024e-05,8.786452965904004e-06,0.08895336670610315,16,8,Ethereum,7,combined,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
-Ethereum_Price_trailing_7day_return,-3.887356259593862e-05,1.640372082614349e-05,0.08895336670610315,17,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_trailing_7day_return,-3.887356259594035e-05,1.6403720826143856e-05,0.08895336670610315,17,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_momentum_7,-4.4228209971110266e-05,1.9254999820044128e-05,0.08895336670610315,18,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Price,,
-Ethereum_Volume_rolling_mean_30,-5.430740576554266e-05,3.419117155705762e-05,0.08895336670610315,19,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_rolling_mean_30,-5.4307405765540925e-05,3.419117155705736e-05,0.08895336670610315,19,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Search_Interest_lag_1,-0.00015310440834564489,3.11910261935285e-05,0.08895336670610315,20,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Price_log_return_rolling_mean_30,-0.0003467349987088808,0.0003046848157356381,0.08895336670610315,21,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Search_Interest_lag_2,-0.0003560763327806367,8.368880890477547e-05,0.08895336670610315,22,8,Ethereum,7,combined,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Fear_Greed_Index_lag_1,-0.0006871119179700617,0.00013818322579546458,0.08895336670610315,23,8,Ethereum,7,combined,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
-Fear_Greed_Index_lag_2,-0.000712169085004757,0.00016600368880391846,0.08895336670610315,24,8,Ethereum,7,combined,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
+Fear_Greed_Index_lag_2,-0.0007121690850047588,0.00016600368880392098,0.08895336670610315,24,8,Ethereum,7,combined,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
 Fear_Greed_Index_rolling_mean_7,-0.002448034769657388,0.0005001739181692499,0.08895336670610315,25,8,Ethereum,7,combined,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
 Ethereum_Price_log_return,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combined,XGBoost,Original,Ethereum_Price,,
 Fear_Greed_Index_diff_lag_2,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combined,XGBoost,Original,Fear_Greed_Index,0.0077462447203101,False
@@ -626,16 +626,16 @@ Market_Sentiment_Encoded_lag_1,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combin
 Bitcoin_Volume_log,3.592802600708468e-05,6.032345734441101e-05,0.08411298143537611,1,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return,2.3821870049310634e-05,1.1351825114129887e-05,0.08411298143537611,2,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_lag_1,1.2706725786492887e-05,8.939582708351601e-06,0.08411298143537611,3,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Price_log_return_lag_2,1.0443006284263645e-05,1.0436240278289068e-05,0.08411298143537611,4,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Price_log_return_lag_7,3.4171541670405953e-06,6.102537448854279e-06,0.08411298143537611,5,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_lag_2,1.044300628426538e-05,1.0436240278291897e-05,0.08411298143537611,4,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_lag_7,3.417154167037126e-06,6.102537448849291e-06,0.08411298143537611,5,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_pct_change_lag_7,-3.1564239524311394e-06,1.810745221922327e-05,0.08411298143537611,6,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_trailing_14day_return,-6.8871460300046206e-06,1.4861968374497764e-05,0.08411298143537611,7,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_trailing_14day_return,-6.887146030002886e-06,1.4861968374498684e-05,0.08411298143537611,7,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_pct_change_lag_1,-2.217004553170185e-05,1.5618332405707772e-05,0.08411298143537611,8,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Volume_raw_lag_1,-3.3328653156045746e-05,4.147900413772779e-05,0.08411298143537611,9,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_raw_lag_1,-3.332865315604401e-05,4.1479004137729934e-05,0.08411298143537611,9,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_rolling_mean_30,-4.321283886556289e-05,3.705974057861456e-05,0.08411298143537611,10,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_rolling_std_30,-7.469372236095645e-05,5.368210750776793e-05,0.08411298143537611,11,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_raw_lag_7,-8.201666291202808e-05,6.108983645706446e-05,0.08411298143537611,12,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Price_momentum_7,-9.00436354586108e-05,3.496787889859923e-05,0.08411298143537611,13,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_momentum_7,-9.004363545860906e-05,3.496787889859747e-05,0.08411298143537611,13,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_rolling_mean_30,-0.0002105786024228437,6.70249487903975e-05,0.08411298143537611,14,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_rolling_std_30,-0.00025193776313182925,0.00010295257006643493,0.08411298143537611,15,8,Bitcoin,14,primary,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_rolling_std_30,0.00048244001997832346,0.00018553923773957813,0.08482033014287782,1,8,Bitcoin,14,primary,XGBoost,Original,Bitcoin_Price,,
@@ -654,13 +654,13 @@ Bitcoin_Volume_raw_lag_1,-3.631449565802587e-05,2.1921889588550622e-05,0.0848203
 Bitcoin_Volume_log,-5.335031099591887e-05,1.9642342437159083e-05,0.08482033014287782,14,8,Bitcoin,14,primary,XGBoost,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_rolling_mean_30,-0.0008409382985802225,0.0001543209817778677,0.08482033014287782,15,8,Bitcoin,14,primary,XGBoost,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return,1.01363964951761e-05,1.5094343779235673e-05,0.0835110520511147,1,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Price_log_return_lag_1,5.696984615839729e-06,6.003459938701861e-06,0.0835110520511147,2,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_lag_1,5.696984615837994e-06,6.0034599387012725e-06,0.0835110520511147,2,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_lag_7,4.226435629179834e-06,3.2348524470128543e-06,0.0835110520511147,3,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Search_Interest_diff_lag_1,3.2059103395407768e-06,4.145572577143558e-06,0.0835110520511147,4,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Bitcoin_Search_Interest_diff_lag_2,5.191677342284567e-07,2.875308235544141e-06,0.0835110520511147,5,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Bitcoin_Volume_pct_change_lag_7,-7.5398472716183e-07,1.2714557528994636e-05,0.0835110520511147,6,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_lag_2,-2.4316210464388893e-06,9.737258930759634e-06,0.0835110520511147,7,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Price_trailing_14day_return,-5.396571587741941e-06,9.009433313923123e-06,0.0835110520511147,8,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_trailing_14day_return,-5.3965715877402065e-06,9.009433313921929e-06,0.0835110520511147,8,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_pct_change_lag_1,-8.860460959145278e-06,8.175232484054655e-06,0.0835110520511147,9,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Search_Interest_lag_1,-9.846587686981531e-06,1.1070238765840028e-05,0.0835110520511147,10,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Bitcoin_Search_Interest_lag_2,-1.193793202094659e-05,9.234105761863629e-06,0.0835110520511147,11,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
@@ -669,7 +669,7 @@ Bitcoin_Volume_log,-5.044989736851385e-05,3.0511750817166005e-05,0.0835110520511
 Bitcoin_Volume_raw_lag_1,-6.257454491079804e-05,4.1564866263433155e-05,0.0835110520511147,14,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_raw_lag_7,-7.137675485115527e-05,5.490587635092378e-05,0.0835110520511147,15,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_momentum_7,-0.00010663210443462127,1.7568007954366775e-05,0.0835110520511147,16,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_rolling_std_30,-0.0001495400335904274,4.427198473545318e-05,0.0835110520511147,17,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_rolling_std_30,-0.00014954003359042914,4.427198473545241e-05,0.0835110520511147,17,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_rolling_mean_30,-0.00016470308465822876,7.135799295043966e-05,0.0835110520511147,18,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_rolling_std_30,-0.00018460937284827186,6.743761794761093e-05,0.0835110520511147,19,8,Bitcoin,14,candidate,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_rolling_std_30,0.0006337880545815161,0.0002655482031292778,0.08615655728160888,1,8,Bitcoin,14,candidate,XGBoost,Original,Bitcoin_Price,,
@@ -692,23 +692,23 @@ Bitcoin_Volume_raw_lag_7,-3.5092550819614335e-05,3.491672627341073e-05,0.0861565
 Bitcoin_Volume_rolling_mean_30,-0.000368533673387279,0.00011062268718484473,0.08615655728160888,18,8,Bitcoin,14,candidate,XGBoost,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_rolling_std_30,-0.0026167421689823646,0.00037972581883300024,0.08615655728160888,19,8,Bitcoin,14,candidate,XGBoost,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_rolling_mean_30,0.0005136629880356878,8.74889481504356e-05,0.08963280417142298,1,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_rolling_std_30,0.00046311263715978317,4.90678379304881e-05,0.08963280417142298,2,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_rolling_std_30,0.00046311263715978143,4.9067837930484625e-05,0.08963280417142298,2,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_trailing_14day_return,0.0001838805699440147,5.352582713087125e-05,0.08963280417142298,3,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_lag_7,3.800769647705274e-05,1.7502999654607488e-05,0.08963280417142298,4,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_momentum_7,2.882123199358412e-05,6.337269366921467e-05,0.08963280417142298,5,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Volume_log,2.474444651695204e-05,2.8521708870045535e-05,0.08963280417142298,6,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return,1.820402710930001e-05,1.3282470862005013e-05,0.08963280417142298,7,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Price_log_return_lag_1,6.905123615915873e-06,6.573051897787732e-06,0.08963280417142298,8,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Price_log_return_rolling_std_30,4.4338969746246515e-06,8.438570383980241e-05,0.08963280417142298,9,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_pct_change_lag_1,4.298707033402113e-06,8.72451606602578e-06,0.08963280417142298,10,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Fear_Greed_Index_diff_lag_1,3.919140005810562e-06,1.8775863071793225e-05,0.08963280417142298,11,8,Bitcoin,14,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
-Fear_Greed_Index_diff_lag_2,-2.5552021765060107e-06,9.64951708024614e-06,0.08963280417142298,12,8,Bitcoin,14,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
-Bitcoin_Price_log_return_lag_2,-4.148662057373159e-06,6.831377298686299e-06,0.08963280417142298,13,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Volume_pct_change_lag_7,-4.308876744395576e-06,4.870732193681903e-06,0.08963280417142298,14,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Price_log_return_lag_1,6.905123615914138e-06,6.5730518977868285e-06,0.08963280417142298,8,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_rolling_std_30,4.433896974622917e-06,8.438570383980533e-05,0.08963280417142298,9,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Volume_pct_change_lag_1,4.298707033403848e-06,8.724516066025157e-06,0.08963280417142298,10,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Fear_Greed_Index_diff_lag_1,3.919140005805358e-06,1.8775863071789986e-05,0.08963280417142298,11,8,Bitcoin,14,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
+Fear_Greed_Index_diff_lag_2,-2.555202176504276e-06,9.649517080245727e-06,0.08963280417142298,12,8,Bitcoin,14,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
+Bitcoin_Price_log_return_lag_2,-4.148662057376629e-06,6.83137729868371e-06,0.08963280417142298,13,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Volume_pct_change_lag_7,-4.3088767443990456e-06,4.8707321936851955e-06,0.08963280417142298,14,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_raw_lag_7,-3.5698625545144136e-05,6.1251715473671e-05,0.08963280417142298,15,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Market_Sentiment_Encoded_lag_1,-4.092782387756476e-05,1.1205543340719661e-05,0.08963280417142298,16,8,Bitcoin,14,ablation,Random Forest,Original,,,
 Bitcoin_Volume_raw_lag_1,-6.186421580570318e-05,5.137226437496846e-05,0.08963280417142298,17,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
-Bitcoin_Volume_rolling_mean_30,-8.903080788246961e-05,6.876908719800701e-05,0.08963280417142298,18,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
+Bitcoin_Volume_rolling_mean_30,-8.903080788246788e-05,6.87690871980064e-05,0.08963280417142298,18,8,Bitcoin,14,ablation,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Fear_Greed_Index_lag_1,-0.0022199684513062676,0.0002626251867987751,0.08963280417142298,19,8,Bitcoin,14,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
 Fear_Greed_Index_lag_2,-0.0022640919175484844,0.00037492196374381003,0.08963280417142298,20,8,Bitcoin,14,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
 Fear_Greed_Index_rolling_mean_7,-0.0038143479753856655,0.0007849594887656974,0.08963280417142298,21,8,Bitcoin,14,ablation,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
@@ -737,13 +737,13 @@ Bitcoin_Price_log_return_rolling_mean_30,0.0006025767530593099,7.796731157323887
 Bitcoin_Volume_rolling_std_30,0.0004196587789897805,4.7355478609601024e-05,0.09066281509577603,2,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Search_Interest_lag_2,0.00017174328900319488,0.00014305014988706967,0.09066281509577603,3,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Bitcoin_Search_Interest_lag_1,9.319135975649658e-05,9.455592759541993e-05,0.09066281509577603,4,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
-Bitcoin_Price_trailing_14day_return,6.114471090176883e-05,4.924722684955649e-05,0.09066281509577603,5,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_trailing_14day_return,6.114471090177057e-05,4.924722684955771e-05,0.09066281509577603,5,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_momentum_7,2.0836378492962437e-05,4.597497881196081e-05,0.09066281509577603,6,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Price_log_return_lag_2,1.0907267951056412e-05,6.943415829958042e-06,0.09066281509577603,7,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Price_log_return,1.0789343318211297e-05,7.292311836747964e-06,0.09066281509577603,8,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Price,,
-Bitcoin_Price_log_return_lag_1,6.17495726764998e-06,4.016322729902663e-06,0.09066281509577603,9,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return,1.0789343318213032e-05,7.2923118367474776e-06,0.09066281509577603,8,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_lag_1,6.174957267648246e-06,4.016322729905026e-06,0.09066281509577603,9,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Price,,
 Fear_Greed_Index_diff_lag_1,5.486111704634117e-06,4.494270547856455e-06,0.09066281509577603,10,8,Bitcoin,14,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
-Bitcoin_Price_log_return_lag_7,5.184049944526037e-06,3.9375181828825364e-06,0.09066281509577603,11,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Price,,
+Bitcoin_Price_log_return_lag_7,5.1840499445277716e-06,3.9375181828839484e-06,0.09066281509577603,11,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Price,,
 Bitcoin_Search_Interest_diff_lag_1,0.0,0.0,0.09066281509577603,12,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
 Bitcoin_Volume_pct_change_lag_7,-1.5375594780014934e-08,3.9264100152969865e-06,0.09066281509577603,13,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Fear_Greed_Index_diff_lag_2,-1.1930729058983597e-06,1.1654652585460695e-06,0.09066281509577603,14,8,Bitcoin,14,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
@@ -755,8 +755,8 @@ Market_Sentiment_Encoded_lag_1,-5.1134771299289616e-05,1.3005726613313036e-05,0.
 Bitcoin_Volume_log,-6.297611314919939e-05,1.2573108699688112e-05,0.09066281509577603,20,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Volume_rolling_mean_30,-0.00012919081264270438,6.818175154388519e-05,0.09066281509577603,21,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Volume,0.0426670448872938,
 Bitcoin_Price_log_return_rolling_std_30,-0.0002295275171948618,9.187869684330737e-05,0.09066281509577603,22,8,Bitcoin,14,combined,Random Forest,Original,Bitcoin_Price,,
-Fear_Greed_Index_lag_2,-0.0017624134913706707,0.00025614986359962503,0.09066281509577603,23,8,Bitcoin,14,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
-Fear_Greed_Index_lag_1,-0.0020156170629372257,0.0002880002131601486,0.09066281509577603,24,8,Bitcoin,14,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
+Fear_Greed_Index_lag_2,-0.001762413491370669,0.00025614986359962514,0.09066281509577603,23,8,Bitcoin,14,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
+Fear_Greed_Index_lag_1,-0.0020156170629372274,0.00028800021316014964,0.09066281509577603,24,8,Bitcoin,14,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
 Fear_Greed_Index_rolling_mean_7,-0.00464528081158422,0.0011135860308876893,0.09066281509577603,25,8,Bitcoin,14,combined,Random Forest,Original,Fear_Greed_Index,-0.0049898489306861,False
 Bitcoin_Price_log_return_rolling_mean_30,0.00013833522233460023,2.780900543318914e-05,0.08804032570426369,1,8,Bitcoin,14,combined,XGBoost,Original,Bitcoin_Price,,
 Bitcoin_Search_Interest_lag_2,9.306817650426256e-05,0.00017670706994130832,0.08804032570426369,2,8,Bitcoin,14,combined,XGBoost,Original,Bitcoin_Search_Interest,-0.0561881147875134,False
@@ -784,20 +784,20 @@ Bitcoin_Volume_rolling_mean_30,-7.018541043800688e-05,5.264496921441876e-05,0.08
 Bitcoin_Volume_rolling_std_30,-0.00146022570243951,0.0002613206932836509,0.08804032570426369,24,8,Bitcoin,14,combined,XGBoost,Original,Bitcoin_Volume,0.0426670448872938,
 Fear_Greed_Index_rolling_mean_7,-0.0024258698487422473,0.000702688457466524,0.08804032570426369,25,8,Bitcoin,14,combined,XGBoost,Original,Fear_Greed_Index,-0.0049898489306861,False
 Ethereum_Volume_rolling_std_30,0.00047671527632238767,0.00014586085287550808,0.12319714211152132,1,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Price_log_return_lag_7,1.900605017730178e-05,5.412608590728139e-05,0.12319714211152132,2,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_log_return_lag_7,1.9006050177300046e-05,5.4126085907282484e-05,0.12319714211152132,2,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_lag_1,1.7219043584069255e-05,1.8178492334115745e-05,0.12319714211152132,3,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_lag_2,7.941314054387555e-06,2.5176493927346937e-05,0.12319714211152132,4,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return,7.790572625048647e-06,2.1443076191382906e-05,0.12319714211152132,5,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_log,-1.5514223998567417e-05,4.144163205583856e-05,0.12319714211152132,6,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Price_momentum_7,-2.024417555029044e-05,8.768024877864905e-06,0.12319714211152132,7,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_momentum_7,-2.0244175550292176e-05,8.768024877863287e-06,0.12319714211152132,7,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_pct_change_lag_7,-2.3347958581936e-05,1.5525239538458867e-05,0.12319714211152132,8,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Volume_raw_lag_1,-4.6737923930976685e-05,5.165754500008035e-05,0.12319714211152132,9,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_raw_lag_1,-4.673792393097495e-05,5.165754500008039e-05,0.12319714211152132,9,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_trailing_14day_return,-5.423352570293333e-05,5.025710840291515e-05,0.12319714211152132,10,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Price,,
-Ethereum_Volume_pct_change_lag_1,-6.579422731932578e-05,3.7938637926537626e-05,0.12319714211152132,11,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_pct_change_lag_1,-6.579422731932752e-05,3.7938637926536074e-05,0.12319714211152132,11,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_rolling_std_30,-6.589422307021545e-05,2.8840600879203163e-05,0.12319714211152132,12,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_raw_lag_7,-0.00010537003441193037,2.5700683565492338e-05,0.12319714211152132,13,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_rolling_mean_30,-0.00019330685355570948,0.0001020020200093783,0.12319714211152132,14,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Price_log_return_rolling_mean_30,-0.0008770128471326868,0.0006891663929439726,0.12319714211152132,15,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_log_return_rolling_mean_30,-0.0008770128471326851,0.0006891663929439719,0.12319714211152132,15,8,Ethereum,14,primary,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_rolling_std_30,0.0009946440484656163,0.0001458265579165832,0.1239506724251246,1,8,Ethereum,14,primary,XGBoost,Original,Ethereum_Price,,
 Ethereum_Volume_rolling_std_30,0.00028637064220321355,4.097068191573353e-05,0.1239506724251246,2,8,Ethereum,14,primary,XGBoost,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_rolling_mean_30,8.622806963193112e-05,9.199066930927652e-05,0.1239506724251246,3,8,Ethereum,14,primary,XGBoost,Original,Ethereum_Volume,-0.035611674223248,
@@ -813,24 +813,24 @@ Ethereum_Volume_log,-3.2358681918004395e-08,6.268712759802342e-07,0.123950672425
 Ethereum_Price_momentum_7,-2.689277137518306e-05,4.712024894636104e-05,0.1239506724251246,13,8,Ethereum,14,primary,XGBoost,Original,Ethereum_Price,,
 Ethereum_Price_trailing_14day_return,-0.0005180683995355331,0.0002151220528954416,0.1239506724251246,14,8,Ethereum,14,primary,XGBoost,Original,Ethereum_Price,,
 Ethereum_Price_log_return_rolling_mean_30,-0.0011500213269634626,0.0009576310795569902,0.1239506724251246,15,8,Ethereum,14,primary,XGBoost,Original,Ethereum_Price,,
-Ethereum_Volume_rolling_std_30,0.0003521820620902699,0.00010369742383865842,0.12124969761759434,1,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_rolling_std_30,0.00035218206209027166,0.00010369742383865737,0.12124969761759434,1,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_rolling_std_30,7.97252396652088e-05,2.452660081346637e-05,0.12124969761759434,2,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Price,,
-Ethereum_Volume_pct_change_lag_7,1.4573060559290585e-05,2.7009121000796563e-05,0.12124969761759434,3,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Price_log_return_lag_7,1.4415098152156802e-05,2.1871600355456132e-05,0.12124969761759434,4,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Price,,
-Ethereum_Price_log_return,9.416844893606405e-06,7.962842872131788e-06,0.12124969761759434,5,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Price,,
+Ethereum_Volume_pct_change_lag_7,1.457306055929232e-05,2.7009121000798718e-05,0.12124969761759434,3,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Price_log_return_lag_7,1.4415098152158537e-05,2.1871600355458653e-05,0.12124969761759434,4,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_log_return,9.41684489360814e-06,7.962842872133054e-06,0.12124969761759434,5,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_lag_2,9.385751304347503e-06,1.2195619735773739e-05,0.12124969761759434,6,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Price,,
-Ethereum_Price_log_return_lag_1,5.287250829617146e-06,8.055707038664295e-06,0.12124969761759434,7,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_log_return_lag_1,5.287250829615411e-06,8.055707038666321e-06,0.12124969761759434,7,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Search_Interest_diff_lag_1,-8.991515297427852e-06,6.1766650338381495e-06,0.12124969761759434,8,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Volume_pct_change_lag_1,-1.222258601752367e-05,2.7320743063779275e-05,0.12124969761759434,9,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Search_Interest_diff_lag_2,-1.51606376561364e-05,7.5847952953295155e-06,0.12124969761759434,10,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Volume_raw_lag_1,-2.842147637065369e-05,3.073854826597779e-05,0.12124969761759434,11,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_momentum_7,-3.777420787914702e-05,7.481595243310666e-06,0.12124969761759434,12,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_trailing_14day_return,-4.334771960174712e-05,5.609797817099916e-05,0.12124969761759434,13,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Price,,
-Ethereum_Volume_log,-4.864365537645028e-05,1.3333077688904173e-05,0.12124969761759434,14,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_log,-4.864365537644681e-05,1.3333077688902931e-05,0.12124969761759434,14,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Search_Interest_lag_1,-5.0400275277643486e-05,2.4001065724972203e-05,0.12124969761759434,15,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Search_Interest_lag_2,-5.492712242749845e-05,8.276377780219125e-05,0.12124969761759434,16,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
-Ethereum_Volume_raw_lag_7,-5.6150573469606474e-05,1.641904227033799e-05,0.12124969761759434,17,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Volume_rolling_mean_30,-0.00016351420364737503,6.0859386698579626e-05,0.12124969761759434,18,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_raw_lag_7,-5.6150573469603005e-05,1.6419042270339836e-05,0.12124969761759434,17,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_rolling_mean_30,-0.0001635142036473733,6.085938669857904e-05,0.12124969761759434,18,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_rolling_mean_30,-0.00047661563011032297,0.0004914811106170716,0.12124969761759434,19,8,Ethereum,14,candidate,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return,0.0,0.0,0.12197949405005827,1,8,Ethereum,14,candidate,XGBoost,Original,Ethereum_Price,,
 Ethereum_Volume_log,0.0,0.0,0.12197949405005827,1,8,Ethereum,14,candidate,XGBoost,Original,Ethereum_Volume,-0.035611674223248,
@@ -858,13 +858,13 @@ Ethereum_Volume_pct_change_lag_7,1.6310971330910085e-05,1.055523274127017e-05,0.
 Fear_Greed_Index_diff_lag_1,1.3052838546748907e-05,6.359527778633481e-06,0.1269408382978126,5,8,Ethereum,14,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
 Ethereum_Price_log_return,5.102122450161006e-06,3.696428848988648e-06,0.1269408382978126,6,8,Ethereum,14,ablation,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_lag_2,1.4314353904386345e-06,6.8512847890762894e-06,0.1269408382978126,7,8,Ethereum,14,ablation,Random Forest,Original,Ethereum_Price,,
-Ethereum_Volume_log,-2.8268302637614318e-06,4.142787055388374e-05,0.1269408382978126,8,8,Ethereum,14,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_log,-2.826830263764901e-06,4.142787055388158e-05,0.1269408382978126,8,8,Ethereum,14,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_lag_1,-3.160655126094314e-06,3.588104176068606e-06,0.1269408382978126,9,8,Ethereum,14,ablation,Random Forest,Original,Ethereum_Price,,
 Fear_Greed_Index_diff_lag_2,-5.482647047180822e-06,1.8229800381236742e-05,0.1269408382978126,10,8,Ethereum,14,ablation,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
 Ethereum_Volume_pct_change_lag_1,-8.14355954037102e-06,6.432053769955979e-06,0.1269408382978126,11,8,Ethereum,14,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_momentum_7,-1.860506764606376e-05,1.1095361763064112e-05,0.1269408382978126,12,8,Ethereum,14,ablation,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_raw_lag_1,-2.7727555706808654e-05,4.408679474890956e-05,0.1269408382978126,13,8,Ethereum,14,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
-Ethereum_Price_trailing_14day_return,-4.455591241356305e-05,4.4197523762944945e-05,0.1269408382978126,14,8,Ethereum,14,ablation,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_trailing_14day_return,-4.455591241356652e-05,4.4197523762938745e-05,0.1269408382978126,14,8,Ethereum,14,ablation,Random Forest,Original,Ethereum_Price,,
 Market_Sentiment_Encoded_lag_1,-9.175494646140175e-05,7.934090075116826e-05,0.1269408382978126,15,8,Ethereum,14,ablation,Random Forest,Original,,,
 Ethereum_Volume_raw_lag_7,-9.707118831397618e-05,3.283905106244192e-05,0.1269408382978126,16,8,Ethereum,14,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_rolling_mean_30,-0.00024559289119155045,0.0001133634763879314,0.1269408382978126,17,8,Ethereum,14,ablation,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
@@ -893,7 +893,7 @@ Ethereum_Volume_pct_change_lag_1,0.0,0.0,0.12389966808181561,2,8,Ethereum,14,abl
 Market_Sentiment_Encoded_lag_1,0.0,0.0,0.12389966808181561,2,8,Ethereum,14,ablation,XGBoost,Original,,,
 Ethereum_Price_trailing_14day_return,-0.00013733833667425172,2.6554709022596874e-05,0.12389966808181561,20,8,Ethereum,14,ablation,XGBoost,Original,Ethereum_Price,,
 Ethereum_Price_log_return_rolling_mean_30,-0.00020899292129549808,7.177536460429261e-05,0.12389966808181561,21,8,Ethereum,14,ablation,XGBoost,Original,Ethereum_Price,,
-Ethereum_Volume_rolling_std_30,0.0004904983513122352,0.000131184652495098,0.12732198281098633,1,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_rolling_std_30,0.0004904983513122387,0.0001311846524950943,0.12732198281098633,1,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_rolling_std_30,0.00016345687229513475,4.70210343785773e-05,0.12732198281098633,2,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Price_log_return_lag_7,1.454940730596238e-05,9.620461330583651e-06,0.12732198281098633,3,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Price,,
 Fear_Greed_Index_diff_lag_1,1.3862401035943939e-05,4.530492041514677e-06,0.12732198281098633,4,8,Ethereum,14,combined,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
@@ -901,14 +901,14 @@ Ethereum_Price_log_return_lag_2,5.9771242852703355e-06,1.0580656237089773e-05,0.
 Fear_Greed_Index_diff_lag_2,5.149482461008076e-06,3.8918200393763834e-06,0.12732198281098633,6,8,Ethereum,14,combined,Random Forest,Original,Fear_Greed_Index,0.0077462447203101,False
 Ethereum_Volume_pct_change_lag_1,4.936394574290431e-06,1.487769788251527e-05,0.12732198281098633,7,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_log_return_lag_1,2.89323268443456e-06,7.365069275246924e-06,0.12732198281098633,8,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Price,,
-Ethereum_Price_log_return,2.6262136453257534e-06,5.281532442907992e-06,0.12732198281098633,9,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Price,,
+Ethereum_Price_log_return,2.626213645329223e-06,5.281532442908717e-06,0.12732198281098633,9,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_pct_change_lag_7,2.242863963754227e-07,6.982194537353783e-06,0.12732198281098633,10,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Search_Interest_diff_lag_1,-2.134584269945783e-06,4.357143990680798e-06,0.12732198281098633,11,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Market_Sentiment_Encoded_lag_1,-2.644738414669251e-06,5.857539968968125e-05,0.12732198281098633,12,8,Ethereum,14,combined,Random Forest,Original,,,
 Ethereum_Search_Interest_diff_lag_2,-1.0886082214681125e-05,1.145805391109828e-05,0.12732198281098633,13,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Search_Interest,-0.0017280284252801,False
 Ethereum_Volume_log,-1.2509210135253773e-05,2.4308584775057087e-05,0.12732198281098633,14,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_trailing_14day_return,-2.246478047642289e-05,4.142904247226822e-05,0.12732198281098633,15,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Price,,
-Ethereum_Volume_raw_lag_1,-2.972586886022463e-05,1.8906172933069355e-05,0.12732198281098633,16,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
+Ethereum_Volume_raw_lag_1,-2.97258688602281e-05,1.8906172933074814e-05,0.12732198281098633,16,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Price_momentum_7,-7.263026354660182e-05,1.755327128295173e-05,0.12732198281098633,17,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Price,,
 Ethereum_Volume_raw_lag_7,-8.864311925422044e-05,3.468415854462265e-05,0.12732198281098633,18,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
 Ethereum_Volume_rolling_mean_30,-0.0002532322457374468,0.00010185848541263805,0.12732198281098633,19,8,Ethereum,14,combined,Random Forest,Original,Ethereum_Volume,-0.035611674223248,
