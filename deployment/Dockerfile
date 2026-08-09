@@ -30,6 +30,10 @@ COPY results/autoencoder/models/ ./results/autoencoder/models/
 # Evaluation results used by API endpoints.
 COPY results/evaluation/tables/ ./results/evaluation/tables/
 
+# Saved modelling metrics and predictions used by comparison endpoints.
+COPY results/modeling/metrics/ ./results/modeling/metrics/
+COPY results/modeling/predictions/ ./results/modeling/predictions/
+
 # Statistical evidence.
 COPY results/causality_analysis/tables/ ./results/causality_analysis/tables/
 
