@@ -233,8 +233,15 @@ if "last_result" in st.session_state:
         st.plotly_chart(fig, use_container_width=True)
 
     st.subheader("Forecast summary")
+    last_observation = result.get("date_range", ["", ""])[1]
+    parsed_last_observation = pd.to_datetime(last_observation, errors="coerce")
+    if pd.isna(parsed_last_observation):
+        forecast_target = "N/A"
+    else:
+        forecast_target = (parsed_last_observation + pd.Timedelta(days=horizon)).date().isoformat()
     summary_df = pd.DataFrame([{
-        "Date": result.get("date_range", ["", ""])[1], "Predicted return": f"{result['predicted_return']:.4%}",
+        "Last observation": last_observation, "Forecast horizon": f"{horizon} day{'s' if horizon != 1 else ''}",
+        "Forecast target": forecast_target, "Predicted return": f"{result['predicted_return']:.4%}",
         "Predicted price": f"${result['predicted_price']:,.2f}",
     }])
     st.dataframe(summary_df, use_container_width=True, hide_index=True)
@@ -284,7 +291,7 @@ if "last_result" in st.session_state:
 
     if not feature_importance:
         st.caption(
-            "Feature importance not included above for this combination -- either it hasn't been "
-            "generated yet (run run_feature_importance_grid.py) or this model used the "
-            "Autoencoder-Encoded representation, which permutation feature importance doesn't cover."
+            "Feature importance is not available for this forecast. Permutation feature "
+            "importance is reported for Random Forest and XGBoost models using the "
+            "Original feature representation."
         )
