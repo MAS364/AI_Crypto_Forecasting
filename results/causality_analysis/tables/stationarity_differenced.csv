@@ -1,10 +1,10 @@
 Variable,ADF Statistic,ADF p-value,ADF Stationary,KPSS Statistic,KPSS p-value,KPSS Stationary,Overall Conclusion
-Bitcoin_Price,-43.8428,0.0,Yes,0.1111,0.1,Yes,Stationary
-Ethereum_Price,-42.739,0.0,Yes,0.0486,0.1,Yes,Stationary
-Bitcoin_Volume,-12.8172,0.0,Yes,0.0484,0.1,Yes,Stationary
-Ethereum_Volume,-12.6446,0.0,Yes,0.1312,0.1,Yes,Stationary
-Bitcoin_Market_Cap,-43.996,0.0,Yes,0.1127,0.1,Yes,Stationary
-Ethereum_Market_Cap,-42.6309,0.0,Yes,0.048,0.1,Yes,Stationary
-Bitcoin_Search_Interest,-12.0767,0.0,Yes,0.1062,0.1,Yes,Stationary
-Ethereum_Search_Interest,-11.6917,0.0,Yes,0.0579,0.1,Yes,Stationary
-Fear_Greed_Index,-13.0976,0.0,Yes,0.0253,0.1,Yes,Stationary
+Bitcoin_Price,-43.842819441465856,0.0,Yes,0.11107092504284342,0.1,Yes,Stationary
+Ethereum_Price,-42.73903829428905,0.0,Yes,0.0485713746793183,0.1,Yes,Stationary
+Bitcoin_Volume,-12.817215778714045,6.262988151132234e-24,Yes,0.048445460626351494,0.1,Yes,Stationary
+Ethereum_Volume,-12.644550936858607,1.4110243938232196e-23,Yes,0.13122348890957983,0.1,Yes,Stationary
+Bitcoin_Market_Cap,-43.99599386650206,0.0,Yes,0.11271265920143064,0.1,Yes,Stationary
+Ethereum_Market_Cap,-42.6308664249808,0.0,Yes,0.048005992047979625,0.1,Yes,Stationary
+Bitcoin_Search_Interest,-12.076729669438686,2.281073369582356e-22,Yes,0.10620096397448421,0.1,Yes,Stationary
+Ethereum_Search_Interest,-11.69166847029327,1.647107910387738e-21,Yes,0.05792143470567854,0.1,Yes,Stationary
+Fear_Greed_Index,-13.097608938509815,1.7362628599717198e-24,Yes,0.025347816820704135,0.1,Yes,Stationary

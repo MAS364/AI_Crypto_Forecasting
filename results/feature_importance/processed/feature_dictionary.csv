@@ -1,0 +1,47 @@
+feature,feature_group,source,engineering_method
+Bitcoin_Price_log_return,Price & Return,Bitcoin,log return
+Bitcoin_Price_log_return_lag_1,Price & Return,Bitcoin,log return + lag 1
+Bitcoin_Price_log_return_lag_2,Price & Return,Bitcoin,log return + lag 2
+Bitcoin_Price_log_return_lag_7,Price & Return,Bitcoin,log return + lag 7
+Bitcoin_Price_log_return_rolling_mean_30,Price & Return,Bitcoin,log return + rolling mean (30d)
+Bitcoin_Price_log_return_rolling_std_30,Volatility,Bitcoin,log return + rolling std (30d)
+Bitcoin_Price_momentum_7,Price & Return,Bitcoin,momentum (7d)
+Bitcoin_Price_trailing_14day_return,Price & Return,Bitcoin,trailing return
+Bitcoin_Price_trailing_7day_return,Price & Return,Bitcoin,trailing return
+Bitcoin_Search_Interest_diff_lag_1,Google Trends,Bitcoin,lag 1 + first difference
+Bitcoin_Search_Interest_diff_lag_2,Google Trends,Bitcoin,lag 2 + first difference
+Bitcoin_Search_Interest_lag_1,Google Trends,Bitcoin,lag 1
+Bitcoin_Search_Interest_lag_2,Google Trends,Bitcoin,lag 2
+Bitcoin_Volume_log,Trading Volume,Bitcoin,log transform
+Bitcoin_Volume_pct_change_lag_1,Trading Volume,Bitcoin,lag 1 + pct change
+Bitcoin_Volume_pct_change_lag_7,Trading Volume,Bitcoin,lag 7 + pct change
+Bitcoin_Volume_raw_lag_1,Trading Volume,Bitcoin,lag 1
+Bitcoin_Volume_raw_lag_7,Trading Volume,Bitcoin,lag 7
+Bitcoin_Volume_rolling_mean_30,Trading Volume,Bitcoin,rolling mean (30d)
+Bitcoin_Volume_rolling_std_30,Trading Volume,Bitcoin,rolling std (30d)
+Ethereum_Price_log_return,Price & Return,Ethereum,log return
+Ethereum_Price_log_return_lag_1,Price & Return,Ethereum,log return + lag 1
+Ethereum_Price_log_return_lag_2,Price & Return,Ethereum,log return + lag 2
+Ethereum_Price_log_return_lag_7,Price & Return,Ethereum,log return + lag 7
+Ethereum_Price_log_return_rolling_mean_30,Price & Return,Ethereum,log return + rolling mean (30d)
+Ethereum_Price_log_return_rolling_std_30,Volatility,Ethereum,log return + rolling std (30d)
+Ethereum_Price_momentum_7,Price & Return,Ethereum,momentum (7d)
+Ethereum_Price_trailing_14day_return,Price & Return,Ethereum,trailing return
+Ethereum_Price_trailing_7day_return,Price & Return,Ethereum,trailing return
+Ethereum_Search_Interest_diff_lag_1,Google Trends,Ethereum,lag 1 + first difference
+Ethereum_Search_Interest_diff_lag_2,Google Trends,Ethereum,lag 2 + first difference
+Ethereum_Search_Interest_lag_1,Google Trends,Ethereum,lag 1
+Ethereum_Search_Interest_lag_2,Google Trends,Ethereum,lag 2
+Ethereum_Volume_log,Trading Volume,Ethereum,log transform
+Ethereum_Volume_pct_change_lag_1,Trading Volume,Ethereum,lag 1 + pct change
+Ethereum_Volume_pct_change_lag_7,Trading Volume,Ethereum,lag 7 + pct change
+Ethereum_Volume_raw_lag_1,Trading Volume,Ethereum,lag 1
+Ethereum_Volume_raw_lag_7,Trading Volume,Ethereum,lag 7
+Ethereum_Volume_rolling_mean_30,Trading Volume,Ethereum,rolling mean (30d)
+Ethereum_Volume_rolling_std_30,Trading Volume,Ethereum,rolling std (30d)
+Fear_Greed_Index_diff_lag_1,Fear & Greed / Sentiment,Fear & Greed Index (external),lag 1 + first difference
+Fear_Greed_Index_diff_lag_2,Fear & Greed / Sentiment,Fear & Greed Index (external),lag 2 + first difference
+Fear_Greed_Index_lag_1,Fear & Greed / Sentiment,Fear & Greed Index (external),lag 1
+Fear_Greed_Index_lag_2,Fear & Greed / Sentiment,Fear & Greed Index (external),lag 2
+Fear_Greed_Index_rolling_mean_7,Fear & Greed / Sentiment,Fear & Greed Index (external),rolling mean (7d)
+Market_Sentiment_Encoded_lag_1,Fear & Greed / Sentiment,Fear & Greed Index (external),lag 1 + ordinal sentiment encoding (0-4)

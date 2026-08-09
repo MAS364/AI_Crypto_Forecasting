@@ -1,0 +1,193 @@
+asset,horizon,feature_set_key,representation,model_name,feature_group,n_features,mean_importance,total_importance,rank_within_config_model
+Bitcoin,1,ablation,Original,Random Forest,Volatility,1,9.641038693498395e-06,9.641038693498395e-06,1
+Bitcoin,1,ablation,Original,Random Forest,Trading Volume,7,-5.801319005046804e-06,-4.0609233035327624e-05,2
+Bitcoin,1,ablation,Original,Random Forest,Price & Return,6,-1.1893777065122407e-05,-7.136266239073444e-05,3
+Bitcoin,1,ablation,Original,Random Forest,Fear & Greed / Sentiment,6,-2.318230556297805e-05,-0.0001390938333778683,4
+Bitcoin,1,ablation,Original,XGBoost,Volatility,1,0.0,0.0,1
+Bitcoin,1,ablation,Original,XGBoost,Price & Return,6,-1.5487394239393382e-06,-9.29243654363603e-06,2
+Bitcoin,1,ablation,Original,XGBoost,Fear & Greed / Sentiment,6,-3.2384279320197065e-06,-1.943056759211824e-05,3
+Bitcoin,1,ablation,Original,XGBoost,Trading Volume,7,-9.722262766312321e-06,-6.805583936418625e-05,4
+Bitcoin,1,candidate,Original,Random Forest,Volatility,1,-1.8031972610814753e-06,-1.8031972610814753e-06,1
+Bitcoin,1,candidate,Original,Random Forest,Google Trends,4,-2.4973740594095998e-06,-9.989496237638399e-06,2
+Bitcoin,1,candidate,Original,Random Forest,Trading Volume,7,-4.277427877170526e-06,-2.9941995140193682e-05,3
+Bitcoin,1,candidate,Original,Random Forest,Price & Return,6,-1.707471058253757e-05,-0.00010244826349522541,4
+Bitcoin,1,candidate,Original,XGBoost,Price & Return,6,3.1279089001244828e-06,1.8767453400746897e-05,1
+Bitcoin,1,candidate,Original,XGBoost,Google Trends,4,-7.322188589700316e-06,-2.9288754358801263e-05,2
+Bitcoin,1,candidate,Original,XGBoost,Trading Volume,7,-1.0849346801544417e-05,-7.594542761081092e-05,3
+Bitcoin,1,candidate,Original,XGBoost,Volatility,1,-1.2475987675626254e-05,-1.2475987675626254e-05,4
+Bitcoin,1,combined,Original,Random Forest,Volatility,1,1.3911051291188442e-07,1.3911051291188442e-07,1
+Bitcoin,1,combined,Original,Random Forest,Google Trends,4,-5.553574591441314e-06,-2.2214298365765255e-05,2
+Bitcoin,1,combined,Original,Random Forest,Trading Volume,7,-5.6497289723954e-06,-3.95481028067678e-05,3
+Bitcoin,1,combined,Original,Random Forest,Price & Return,6,-1.4192480442573567e-05,-8.51548826554414e-05,4
+Bitcoin,1,combined,Original,Random Forest,Fear & Greed / Sentiment,6,-1.6913012514159395e-05,-0.00010147807508495638,5
+Bitcoin,1,combined,Original,XGBoost,Trading Volume,7,9.634255878197283e-07,6.743979114738098e-06,1
+Bitcoin,1,combined,Original,XGBoost,Price & Return,6,0.0,0.0,2
+Bitcoin,1,combined,Original,XGBoost,Volatility,1,0.0,0.0,2
+Bitcoin,1,combined,Original,XGBoost,Fear & Greed / Sentiment,6,-3.7624259246710028e-06,-2.2574555548026017e-05,4
+Bitcoin,1,combined,Original,XGBoost,Google Trends,4,-9.253295217454406e-06,-3.7013180869817624e-05,5
+Bitcoin,1,primary,Original,Random Forest,Volatility,1,6.692136489686289e-06,6.692136489686289e-06,1
+Bitcoin,1,primary,Original,Random Forest,Trading Volume,7,-5.2499718229439955e-06,-3.674980276060797e-05,2
+Bitcoin,1,primary,Original,Random Forest,Price & Return,6,-1.3591390151306669e-05,-8.154834090784002e-05,3
+Bitcoin,1,primary,Original,XGBoost,Volatility,1,1.9485428078233526e-05,1.9485428078233526e-05,1
+Bitcoin,1,primary,Original,XGBoost,Price & Return,6,4.4260898106475e-06,2.6556538863885e-05,2
+Bitcoin,1,primary,Original,XGBoost,Trading Volume,7,-1.1176939713338908e-05,-7.823857799337235e-05,3
+Bitcoin,7,ablation,Original,Random Forest,Trading Volume,7,2.7352797277500176e-05,0.00019146958094250124,1
+Bitcoin,7,ablation,Original,Random Forest,Price & Return,7,2.1364720335107566e-05,0.00014955304234575296,2
+Bitcoin,7,ablation,Original,Random Forest,Volatility,1,1.6082398199245874e-05,1.6082398199245874e-05,3
+Bitcoin,7,ablation,Original,Random Forest,Fear & Greed / Sentiment,6,-0.00045975135263862376,-0.0027585081158317424,4
+Bitcoin,7,ablation,Original,XGBoost,Price & Return,7,5.9989478521521884e-05,0.0004199263496506532,1
+Bitcoin,7,ablation,Original,XGBoost,Trading Volume,7,4.329973500304267e-07,3.030981450212987e-06,2
+Bitcoin,7,ablation,Original,XGBoost,Volatility,1,0.0,0.0,3
+Bitcoin,7,ablation,Original,XGBoost,Fear & Greed / Sentiment,6,-0.0002662044030088512,-0.001597226418053107,4
+Bitcoin,7,candidate,Original,Random Forest,Trading Volume,7,1.23272805776132e-05,8.62909640432924e-05,1
+Bitcoin,7,candidate,Original,Random Forest,Google Trends,4,-3.5335750918003613e-06,-1.4134300367201445e-05,2
+Bitcoin,7,candidate,Original,Random Forest,Price & Return,7,-1.3466075119962383e-05,-9.426252583973668e-05,3
+Bitcoin,7,candidate,Original,Random Forest,Volatility,1,-1.7204491243080766e-05,-1.7204491243080766e-05,4
+Bitcoin,7,candidate,Original,XGBoost,Volatility,1,0.00012058477121320785,0.00012058477121320785,1
+Bitcoin,7,candidate,Original,XGBoost,Trading Volume,7,9.429837024153396e-06,6.600885916907377e-05,2
+Bitcoin,7,candidate,Original,XGBoost,Price & Return,7,-7.5052899013918676e-06,-5.253702930974307e-05,3
+Bitcoin,7,candidate,Original,XGBoost,Google Trends,4,-9.7285886522234e-06,-3.89143546088936e-05,4
+Bitcoin,7,combined,Original,Random Forest,Price & Return,7,4.650936903202097e-05,0.0003255655832241468,1
+Bitcoin,7,combined,Original,Random Forest,Google Trends,4,2.3138035760157443e-05,9.255214304062977e-05,2
+Bitcoin,7,combined,Original,Random Forest,Trading Volume,7,2.3052159046500144e-05,0.000161365113325501,3
+Bitcoin,7,combined,Original,Random Forest,Volatility,1,-2.6532002837616545e-05,-2.6532002837616545e-05,4
+Bitcoin,7,combined,Original,Random Forest,Fear & Greed / Sentiment,6,-0.0005139442245910266,-0.0030836653475461596,5
+Bitcoin,7,combined,Original,XGBoost,Price & Return,7,0.00011156726816011295,0.0007809708771207907,1
+Bitcoin,7,combined,Original,XGBoost,Volatility,1,2.696728285875652e-05,2.696728285875652e-05,2
+Bitcoin,7,combined,Original,XGBoost,Trading Volume,7,-6.869604681251372e-06,-4.8087232768759605e-05,3
+Bitcoin,7,combined,Original,XGBoost,Google Trends,4,-1.1546417194218056e-05,-4.6185668776872225e-05,4
+Bitcoin,7,combined,Original,XGBoost,Fear & Greed / Sentiment,6,-0.00036014933056451455,-0.0021608959833870874,5
+Bitcoin,7,primary,Original,Random Forest,Trading Volume,7,2.1300701612325295e-05,0.00014910491128627707,1
+Bitcoin,7,primary,Original,Random Forest,Price & Return,7,-1.5817800661822373e-05,-0.0001107246046327566,2
+Bitcoin,7,primary,Original,Random Forest,Volatility,1,-6.159978893628421e-05,-6.159978893628421e-05,3
+Bitcoin,7,primary,Original,XGBoost,Volatility,1,0.00023515816865137505,0.00023515816865137505,1
+Bitcoin,7,primary,Original,XGBoost,Trading Volume,7,6.036713922542797e-06,4.225699745779958e-05,2
+Bitcoin,7,primary,Original,XGBoost,Price & Return,7,4.207504730267002e-06,2.945253311186901e-05,3
+Bitcoin,14,ablation,Original,Random Forest,Price & Return,7,0.00011219042501688316,0.0007853329751181821,1
+Bitcoin,14,ablation,Original,Random Forest,Trading Volume,7,4.303618067606069e-05,0.0003012532647324248,2
+Bitcoin,14,ablation,Original,Random Forest,Volatility,1,4.4338969746246515e-06,4.4338969746246515e-06,3
+Bitcoin,14,ablation,Original,Random Forest,Fear & Greed / Sentiment,6,-0.0013896620383814463,-0.008337972230288678,4
+Bitcoin,14,ablation,Original,XGBoost,Volatility,1,0.0020453202570579355,0.0020453202570579355,1
+Bitcoin,14,ablation,Original,XGBoost,Price & Return,7,0.00024638859458561154,0.001724720162099281,2
+Bitcoin,14,ablation,Original,XGBoost,Trading Volume,7,-0.0004554297499978862,-0.0031880082499852035,3
+Bitcoin,14,ablation,Original,XGBoost,Fear & Greed / Sentiment,6,-0.0007859764240661241,-0.0047158585443967446,4
+Bitcoin,14,candidate,Original,Random Forest,Google Trends,4,-4.514860408539722e-06,-1.8059441634158888e-05,1
+Bitcoin,14,candidate,Original,Random Forest,Price & Return,7,-1.819104259534961e-05,-0.00012733729816744727,2
+Bitcoin,14,candidate,Original,Random Forest,Trading Volume,7,-7.260839443791864e-05,-0.0005082587610654304,3
+Bitcoin,14,candidate,Original,Random Forest,Volatility,1,-0.00018460937284827186,-0.00018460937284827186,4
+Bitcoin,14,candidate,Original,XGBoost,Volatility,1,0.0006337880545815161,0.0006337880545815161,1
+Bitcoin,14,candidate,Original,XGBoost,Price & Return,7,2.656780147188356e-06,1.8597461030318493e-05,2
+Bitcoin,14,candidate,Original,XGBoost,Google Trends,4,-1.0238374139361073e-06,-4.095349655744429e-06,3
+Bitcoin,14,candidate,Original,XGBoost,Trading Volume,7,-0.0004314811990270368,-0.003020368393189258,4
+Bitcoin,14,combined,Original,Random Forest,Price & Return,7,0.00010251620870506926,0.0007176134609354849,1
+Bitcoin,14,combined,Original,Random Forest,Google Trends,4,6.588597314339953e-05,0.00026354389257359813,2
+Bitcoin,14,combined,Original,Random Forest,Trading Volume,7,2.3165723466047825e-05,0.00016216006426233477,3
+Bitcoin,14,combined,Original,Random Forest,Volatility,1,-0.0002295275171948618,-0.0002295275171948618,4
+Bitcoin,14,combined,Original,Random Forest,Fear & Greed / Sentiment,6,-0.001411692183065445,-0.00847015309839267,5
+Bitcoin,14,combined,Original,XGBoost,Google Trends,4,2.9090243582166e-05,0.000116360974328664,1
+Bitcoin,14,combined,Original,XGBoost,Volatility,1,2.8408815868680506e-05,2.8408815868680506e-05,2
+Bitcoin,14,combined,Original,XGBoost,Price & Return,7,2.5460924649360022e-05,0.00017822647254552015,3
+Bitcoin,14,combined,Original,XGBoost,Trading Volume,7,-0.00021863015898250241,-0.001530411112877517,4
+Bitcoin,14,combined,Original,XGBoost,Fear & Greed / Sentiment,6,-0.0004085025942000822,-0.002451015565200493,5
+Bitcoin,14,primary,Original,Random Forest,Price & Return,7,-1.2822123438152935e-05,-8.975486406707055e-05,1
+Bitcoin,14,primary,Original,Random Forest,Trading Volume,7,-5.571658347556033e-05,-0.0003900160843289223,2
+Bitcoin,14,primary,Original,Random Forest,Volatility,1,-0.00025193776313182925,-0.00025193776313182925,3
+Bitcoin,14,primary,Original,XGBoost,Volatility,1,0.00048244001997832346,0.00048244001997832346,1
+Bitcoin,14,primary,Original,XGBoost,Price & Return,7,2.635354153915607e-06,1.844747907740925e-05,2
+Bitcoin,14,primary,Original,XGBoost,Trading Volume,7,-0.00012708190094817929,-0.0008895733066372549,3
+Ethereum,1,ablation,Original,Random Forest,Volatility,1,-2.502211367064189e-07,-2.502211367064189e-07,1
+Ethereum,1,ablation,Original,Random Forest,Price & Return,6,-1.5157072495645789e-06,-9.094243497387473e-06,2
+Ethereum,1,ablation,Original,Random Forest,Trading Volume,7,-9.657461811457472e-06,-6.76022326802023e-05,3
+Ethereum,1,ablation,Original,Random Forest,Fear & Greed / Sentiment,6,-4.804555904657382e-05,-0.00028827335427944294,4
+Ethereum,1,ablation,Original,XGBoost,Fear & Greed / Sentiment,6,5.584749301875205e-07,3.350849581125123e-06,1
+Ethereum,1,ablation,Original,XGBoost,Price & Return,6,-1.913225171559004e-06,-1.1479351029354025e-05,2
+Ethereum,1,ablation,Original,XGBoost,Volatility,1,-2.024400352081124e-06,-2.024400352081124e-06,3
+Ethereum,1,ablation,Original,XGBoost,Trading Volume,7,-3.585015150691487e-06,-2.509510605484041e-05,4
+Ethereum,1,candidate,Original,Random Forest,Google Trends,4,5.709956143409682e-06,2.283982457363873e-05,1
+Ethereum,1,candidate,Original,Random Forest,Price & Return,6,3.6156134758234524e-06,2.1693680854940715e-05,2
+Ethereum,1,candidate,Original,Random Forest,Volatility,1,2.3025768713181086e-06,2.3025768713181086e-06,3
+Ethereum,1,candidate,Original,Random Forest,Trading Volume,7,1.9293697536497894e-06,1.3505588275548527e-05,4
+Ethereum,1,candidate,Original,XGBoost,Price & Return,6,4.6998128471682716e-06,2.819887708300963e-05,1
+Ethereum,1,candidate,Original,XGBoost,Google Trends,4,3.51870985576758e-06,1.407483942307032e-05,2
+Ethereum,1,candidate,Original,XGBoost,Volatility,1,-4.85605658260245e-07,-4.85605658260245e-07,3
+Ethereum,1,candidate,Original,XGBoost,Trading Volume,7,-2.156540164057142e-06,-1.5095781148399996e-05,4
+Ethereum,1,combined,Original,Random Forest,Price & Return,6,4.5660378212245695e-06,2.7396226927347417e-05,1
+Ethereum,1,combined,Original,Random Forest,Google Trends,4,3.688083063919413e-06,1.4752332255677653e-05,2
+Ethereum,1,combined,Original,Random Forest,Trading Volume,7,-7.255432571603942e-07,-5.07880280012276e-06,3
+Ethereum,1,combined,Original,Random Forest,Volatility,1,-1.0131566642408371e-06,-1.0131566642408371e-06,4
+Ethereum,1,combined,Original,Random Forest,Fear & Greed / Sentiment,6,-3.556602079745914e-05,-0.00021339612478475482,5
+Ethereum,1,combined,Original,XGBoost,Price & Return,6,4.689209809937937e-06,2.8135258859627622e-05,1
+Ethereum,1,combined,Original,XGBoost,Fear & Greed / Sentiment,6,4.009699011655402e-07,2.405819406993241e-06,2
+Ethereum,1,combined,Original,XGBoost,Volatility,1,-3.8926083952960794e-07,-3.8926083952960794e-07,3
+Ethereum,1,combined,Original,XGBoost,Trading Volume,7,-4.0154147182013185e-06,-2.810790302740923e-05,4
+Ethereum,1,combined,Original,XGBoost,Google Trends,4,-4.192908935306879e-06,-1.6771635741227517e-05,5
+Ethereum,1,primary,Original,Random Forest,Volatility,1,7.337498325978194e-06,7.337498325978194e-06,1
+Ethereum,1,primary,Original,Random Forest,Price & Return,6,-4.492608568582718e-09,-2.6955651411496306e-08,2
+Ethereum,1,primary,Original,Random Forest,Trading Volume,7,-5.522818865313223e-06,-3.865973205719256e-05,3
+Ethereum,1,primary,Original,XGBoost,Volatility,1,9.9251567619741e-06,9.9251567619741e-06,1
+Ethereum,1,primary,Original,XGBoost,Price & Return,6,8.289932371845972e-06,4.973959423107584e-05,2
+Ethereum,1,primary,Original,XGBoost,Trading Volume,7,-2.2266394218924324e-06,-1.5586475953247025e-05,3
+Ethereum,7,ablation,Original,Random Forest,Trading Volume,7,-1.5347389133696872e-06,-1.074317239358781e-05,1
+Ethereum,7,ablation,Original,Random Forest,Price & Return,7,-6.376915499649676e-05,-0.00044638408497547737,2
+Ethereum,7,ablation,Original,Random Forest,Volatility,1,-9.91565008783106e-05,-9.91565008783106e-05,3
+Ethereum,7,ablation,Original,Random Forest,Fear & Greed / Sentiment,6,-0.0005689266970341521,-0.003413560182204912,4
+Ethereum,7,ablation,Original,XGBoost,Volatility,1,6.813661204755836e-05,6.813661204755836e-05,1
+Ethereum,7,ablation,Original,XGBoost,Fear & Greed / Sentiment,6,2.95873656044572e-05,0.0001775241936267432,2
+Ethereum,7,ablation,Original,XGBoost,Price & Return,7,2.6372267537680704e-05,0.00018460587276376492,3
+Ethereum,7,ablation,Original,XGBoost,Trading Volume,7,0.0,0.0,4
+Ethereum,7,candidate,Original,Random Forest,Volatility,1,4.4581558582426975e-05,4.4581558582426975e-05,1
+Ethereum,7,candidate,Original,Random Forest,Google Trends,4,7.351135263428989e-06,2.9404541053715955e-05,2
+Ethereum,7,candidate,Original,Random Forest,Trading Volume,7,-2.5524385408818434e-06,-1.7867069786172904e-05,3
+Ethereum,7,candidate,Original,Random Forest,Price & Return,7,-5.382775067390185e-05,-0.00037679425471731295,4
+Ethereum,7,candidate,Original,XGBoost,Google Trends,4,4.491439945734964e-05,0.00017965759782939857,1
+Ethereum,7,candidate,Original,XGBoost,Trading Volume,7,-8.509840996332887e-05,-0.0005956888697433022,2
+Ethereum,7,candidate,Original,XGBoost,Price & Return,7,-0.0001585190072824701,-0.0011096330509772906,3
+Ethereum,7,candidate,Original,XGBoost,Volatility,1,-0.000635362148707139,-0.000635362148707139,4
+Ethereum,7,combined,Original,Random Forest,Trading Volume,7,-4.114707582389013e-06,-2.8802953076723092e-05,1
+Ethereum,7,combined,Original,Random Forest,Volatility,1,-7.270808388788394e-06,-7.270808388788394e-06,2
+Ethereum,7,combined,Original,Random Forest,Price & Return,7,-6.007741730423992e-05,-0.00042054192112967945,3
+Ethereum,7,combined,Original,Random Forest,Google Trends,4,-0.00012912413514592743,-0.0005164965405837097,4
+Ethereum,7,combined,Original,Random Forest,Fear & Greed / Sentiment,6,-0.0006472165540644248,-0.0038832993243865487,5
+Ethereum,7,combined,Original,XGBoost,Fear & Greed / Sentiment,6,0.0,0.0,1
+Ethereum,7,combined,Original,XGBoost,Google Trends,4,0.0,0.0,1
+Ethereum,7,combined,Original,XGBoost,Price & Return,7,0.0,0.0,1
+Ethereum,7,combined,Original,XGBoost,Trading Volume,7,0.0,0.0,1
+Ethereum,7,combined,Original,XGBoost,Volatility,1,0.0,0.0,1
+Ethereum,7,primary,Original,Random Forest,Volatility,1,1.5033734303553092e-05,1.5033734303553092e-05,1
+Ethereum,7,primary,Original,Random Forest,Trading Volume,7,-1.6639353314160258e-05,-0.00011647547319912181,2
+Ethereum,7,primary,Original,Random Forest,Price & Return,7,-6.161752897168285e-05,-0.0004313227028017799,3
+Ethereum,7,primary,Original,XGBoost,Price & Return,7,-5.051582276765285e-05,-0.00035361075937356996,1
+Ethereum,7,primary,Original,XGBoost,Trading Volume,7,-0.00012228237838661577,-0.0008559766487063105,2
+Ethereum,7,primary,Original,XGBoost,Volatility,1,-0.0004999659879419034,-0.0004999659879419034,3
+Ethereum,14,ablation,Original,Random Forest,Volatility,1,0.00026164304166752944,0.00026164304166752944,1
+Ethereum,14,ablation,Original,Random Forest,Trading Volume,7,-7.565221524394118e-06,-5.295655067075883e-05,2
+Ethereum,14,ablation,Original,Random Forest,Price & Return,7,-0.00022524043116406805,-0.0015766830181484764,3
+Ethereum,14,ablation,Original,Random Forest,Fear & Greed / Sentiment,6,-0.001028080782034439,-0.006168484692206634,4
+Ethereum,14,ablation,Original,XGBoost,Volatility,1,9.335356382247396e-05,9.335356382247396e-05,1
+Ethereum,14,ablation,Original,XGBoost,Fear & Greed / Sentiment,6,0.0,0.0,2
+Ethereum,14,ablation,Original,XGBoost,Trading Volume,7,0.0,0.0,2
+Ethereum,14,ablation,Original,XGBoost,Price & Return,7,-4.947589399567854e-05,-0.0003463312579697498,4
+Ethereum,14,candidate,Original,Random Forest,Volatility,1,7.97252396652088e-05,7.97252396652088e-05,1
+Ethereum,14,candidate,Original,Random Forest,Trading Volume,7,8.25751825256448e-06,5.7802627767951364e-05,2
+Ethereum,14,candidate,Original,Random Forest,Google Trends,4,-3.2369887664676546e-05,-0.00012947955065870619,3
+Ethereum,14,candidate,Original,Random Forest,Price & Return,7,-7.41760874873556e-05,-0.0005192326124114893,4
+Ethereum,14,candidate,Original,XGBoost,Google Trends,4,-2.7981599259865094e-05,-0.00011192639703946038,1
+Ethereum,14,candidate,Original,XGBoost,Trading Volume,7,-3.693077519347736e-05,-0.00025851542635434155,2
+Ethereum,14,candidate,Original,XGBoost,Volatility,1,-4.5396804410641894e-05,-4.5396804410641894e-05,3
+Ethereum,14,candidate,Original,XGBoost,Price & Return,7,-7.657325496400866e-05,-0.0005360127847480606,4
+Ethereum,14,combined,Original,Random Forest,Volatility,1,0.00016345687229513475,0.00016345687229513475,1
+Ethereum,14,combined,Original,Random Forest,Trading Volume,7,1.5935512613679337e-05,0.00011154858829575537,2
+Ethereum,14,combined,Original,Random Forest,Price & Return,7,-0.00011959945071807447,-0.0008371961550265213,3
+Ethereum,14,combined,Original,Random Forest,Google Trends,4,-0.0002577633251185851,-0.0010310533004743404,4
+Ethereum,14,combined,Original,Random Forest,Fear & Greed / Sentiment,6,-0.0012829971410590042,-0.007697982846354026,5
+Ethereum,14,combined,Original,XGBoost,Trading Volume,7,0.00010051659567136134,0.0007036161696995294,1
+Ethereum,14,combined,Original,XGBoost,Google Trends,4,-1.3071007491584526e-05,-5.22840299663381e-05,2
+Ethereum,14,combined,Original,XGBoost,Price & Return,7,-0.00012717563635490103,-0.0008902294544843072,3
+Ethereum,14,combined,Original,XGBoost,Volatility,1,-0.00047042837184267314,-0.00047042837184267314,4
+Ethereum,14,combined,Original,XGBoost,Fear & Greed / Sentiment,6,-0.0005184229509459388,-0.0031105377056756325,5
+Ethereum,14,primary,Original,Random Forest,Trading Volume,7,3.806293503420276e-06,2.6644054523941932e-05,1
+Ethereum,14,primary,Original,Random Forest,Volatility,1,-6.589422307021545e-05,-6.589422307021545e-05,2
+Ethereum,14,primary,Original,Random Forest,Price & Return,7,-0.00012850479542072905,-0.0008995335679451034,3
+Ethereum,14,primary,Original,XGBoost,Volatility,1,0.0009946440484656163,0.0009946440484656163,1
+Ethereum,14,primary,Original,XGBoost,Trading Volume,7,5.338835521561233e-05,0.0003737184865092863,2
+Ethereum,14,primary,Original,XGBoost,Price & Return,7,-0.00024214035683916838,-0.0016949824978741788,3

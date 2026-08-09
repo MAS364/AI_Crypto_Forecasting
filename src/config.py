@@ -193,3 +193,65 @@ DISPLAY_LABELS = {
     "Ethereum_Search_Interest": "Ethereum Search Interest Change",
     "Fear_Greed_Index": "Fear and Greed Change",
 }
+
+
+# ---------------------------------------------------------------------
+# Feature selection and feature engineering (Chapter 4.8 / Section 06)
+# ---------------------------------------------------------------------
+
+FEATURE_RESULTS_DIR = RESULTS_DIR / "feature_engineering"
+FEATURES_DIR = PROCESSED_DATA_DIR / "features"
+
+# The lag order established by the VAR/BIC analysis in the causality stage
+# (05_Correlation_Causality_analysis.ipynb). Reused here as the single
+# evidence-selected lag for any predictor carried forward as a candidate
+# feature, rather than re-deriving or re-choosing a lag in this notebook.
+EVIDENCE_SELECTED_LAG = 2
+
+# Conventional comparison lags with no direct statistical test behind them
+# in this project (no ACF/PACF analysis exists in 04_EDA.ipynb). Lag 1 is
+# the standard one-step autoregressive/naive-baseline lag. Lag 7 is a
+# conventional short-horizon comparison lag, included as standard
+# time-series practice — NOT because a weekly pattern was established for
+# this data. Cryptocurrency markets trade continuously with no weekend
+# close, and no day-of-week or calendar effect was found anywhere in
+# 04_EDA.ipynb, so "weekly market structure" is not a valid justification
+# here and lag 7 should be read as arbitrary-but-conventional, on the same
+# footing as lag 1, not as evidence-based.
+CONVENTIONAL_LAGS = [1, 7]
+
+# The only rolling window with a documented precedent in this project:
+# 04_EDA.ipynb, Section "Temporal Behaviour", explicitly uses a 30-day
+# window for rolling correlation and rolling price volatility. Reused
+# directly here for return rolling statistics. For volume rolling
+# statistics specifically, this is an extension by analogy rather than a
+# literal precedent — the EDA's 30-day window was applied to price-based
+# correlation and volatility, not to volume — and this distinction is
+# kept explicit in the feature metadata rationale.
+ROLLING_WINDOW_EDA_PRECEDENT = 30
+
+# A short trailing window with no EDA precedent, used only for the
+# optional external-candidate and ablation feature sets, and labelled as
+# a conventional (not evidence-based) choice wherever it is used.
+ROLLING_WINDOW_SHORT = 7
+
+# Per-asset variable groupings used to build asset-specific feature sets.
+ASSET_VARIABLES = {
+    "Bitcoin": {
+        "price": "Bitcoin_Price",
+        "volume": "Bitcoin_Volume",
+        "search_interest": "Bitcoin_Search_Interest",
+    },
+    "Ethereum": {
+        "price": "Ethereum_Price",
+        "volume": "Ethereum_Volume",
+        "search_interest": "Ethereum_Search_Interest",
+    },
+}
+
+# Sentiment variables available for the ablation-only feature set.
+# Market_Sentiment_Encoded is the ordinal encoding already created during
+# preprocessing (03_Data-preprocessing.ipynb) and is reused as-is rather
+# than re-encoded here.
+SENTIMENT_SCORE_VARIABLE = "Fear_Greed_Index"
+SENTIMENT_ORDINAL_VARIABLE = "Market_Sentiment_Encoded"

@@ -1,0 +1,5 @@
+Predictor,Target,p-value (lag 2),Significant at lag 2 (FDR),p-value (lag 5),Significant at lag 5 (FDR)
+Ethereum_Search_Interest,Ethereum_Price,0.10881499613724321,False,0.23091943643553578,False
+Bitcoin_Search_Interest,Bitcoin_Price,0.13527237609848147,False,0.1345215791454988,False
+Fear_Greed_Index,Ethereum_Price,0.7162227891595939,False,0.9777405179869189,False
+Fear_Greed_Index,Bitcoin_Price,0.9193107408877711,False,0.7928433244528359,False

@@ -1,0 +1,53 @@
+{
+  "horizon": 1,
+  "cryptocurrency": "ethereum",
+  "feature_set_key": "primary",
+  "feature_set_name": "market_only",
+  "target": "Ethereum_Price_log_return_target_t_plus_1",
+  "feature_names": [
+    "Ethereum_Price_log_return",
+    "Ethereum_Price_log_return_lag_1",
+    "Ethereum_Price_log_return_lag_2",
+    "Ethereum_Price_log_return_lag_7",
+    "Ethereum_Price_log_return_rolling_mean_30",
+    "Ethereum_Price_log_return_rolling_std_30",
+    "Ethereum_Price_momentum_7",
+    "Ethereum_Volume_raw_lag_1",
+    "Ethereum_Volume_raw_lag_7",
+    "Ethereum_Volume_pct_change_lag_1",
+    "Ethereum_Volume_pct_change_lag_7",
+    "Ethereum_Volume_log",
+    "Ethereum_Volume_rolling_mean_30",
+    "Ethereum_Volume_rolling_std_30"
+  ],
+  "random_seed": 42,
+  "library_versions": {
+    "scikit_learn": "1.9.0",
+    "xgboost": "3.4.0",
+    "tensorflow": "2.21.0",
+    "statsmodels": "0.14.6",
+    "joblib": "1.5.3"
+  },
+  "training_period": [
+    "2021-07-02",
+    "2024-11-20"
+  ],
+  "validation_period": [
+    "2024-11-21",
+    "2025-08-12"
+  ],
+  "test_period": [
+    "2025-08-13",
+    "2026-05-05"
+  ],
+  "model_family": "lstm",
+  "model_path": "models/trained/horizon_1day/ethereum/market_only/lstm.keras",
+  "scaler_path": "models/trained/horizon_1day/ethereum/market_only/lstm_scaler.joblib",
+  "sequence_config": {
+    "window": 5,
+    "units": 16,
+    "dropout": 0.2,
+    "recurrent_dropout": 0.2,
+    "lr": 0.001
+  }
+}

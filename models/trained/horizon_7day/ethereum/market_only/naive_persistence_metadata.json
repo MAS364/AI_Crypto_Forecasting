@@ -1,0 +1,26 @@
+{
+  "horizon": 7,
+  "cryptocurrency": "ethereum",
+  "model_family": "naive_persistence",
+  "feature_set_key": "primary",
+  "feature_set_name": "market_only",
+  "target": "Ethereum_Price_log_return_target_t_plus_7",
+  "rule": "prediction = observed Ethereum_Price_trailing_7day_return -- no fitted parameters",
+  "feature_names": null,
+  "model_path": null,
+  "scaler_path": null,
+  "training_period": [
+    "2021-07-02",
+    "2024-11-16"
+  ],
+  "validation_period": [
+    "2024-11-17",
+    "2025-08-07"
+  ],
+  "test_period": [
+    "2025-08-08",
+    "2026-04-29"
+  ],
+  "random_seed": 42,
+  "limitation": "Naive is a parameterless persistence rule, not a trained model -- there is no fitted object to serialise. This metadata records the rule and evaluation periods only."
+}

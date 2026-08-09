@@ -1,0 +1,19 @@
+# Training-only image: for running notebooks (like 06b_autoencoder-new.ipynb)
+# inside a clean Linux environment, sidestepping whatever TensorFlow issue
+# exists on this project's native macOS setup. Not used for deployment --
+# see deployment/Dockerfile and deployment/Dockerfile.streamlit for that.
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY deployment/requirements.txt ./deployment/requirements.txt
+RUN pip install --no-cache-dir -r deployment/requirements.txt jupyter
+
+EXPOSE 8888
+
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--no-browser", "--allow-root", "--NotebookApp.token=''"]

@@ -1,0 +1,51 @@
+{
+  "horizon": 7,
+  "cryptocurrency": "bitcoin",
+  "feature_set_key": "candidate",
+  "feature_set_name": "market_google_trends",
+  "target": "Bitcoin_Price_log_return_target_t_plus_7",
+  "feature_names": [
+    "Bitcoin_Price_log_return",
+    "Bitcoin_Price_log_return_lag_1",
+    "Bitcoin_Price_log_return_lag_2",
+    "Bitcoin_Price_log_return_lag_7",
+    "Bitcoin_Price_log_return_rolling_mean_30",
+    "Bitcoin_Price_log_return_rolling_std_30",
+    "Bitcoin_Price_momentum_7",
+    "Bitcoin_Volume_raw_lag_1",
+    "Bitcoin_Volume_raw_lag_7",
+    "Bitcoin_Volume_pct_change_lag_1",
+    "Bitcoin_Volume_pct_change_lag_7",
+    "Bitcoin_Volume_log",
+    "Bitcoin_Volume_rolling_mean_30",
+    "Bitcoin_Volume_rolling_std_30",
+    "Bitcoin_Price_trailing_7day_return",
+    "Bitcoin_Search_Interest_lag_1",
+    "Bitcoin_Search_Interest_lag_2",
+    "Bitcoin_Search_Interest_diff_lag_1",
+    "Bitcoin_Search_Interest_diff_lag_2"
+  ],
+  "random_seed": 42,
+  "library_versions": {
+    "scikit_learn": "1.9.0",
+    "xgboost": "3.4.0",
+    "tensorflow": "2.21.0",
+    "statsmodels": "0.14.6",
+    "joblib": "1.5.3"
+  },
+  "training_period": [
+    "2021-07-02",
+    "2024-11-16"
+  ],
+  "validation_period": [
+    "2024-11-17",
+    "2025-08-07"
+  ],
+  "test_period": [
+    "2025-08-08",
+    "2026-04-29"
+  ],
+  "model_family": "xgboost",
+  "model_path": "models/trained/horizon_7day/bitcoin/market_google_trends/xgboost.joblib",
+  "scaler_path": null
+}

@@ -1,0 +1,193 @@
+horizon,asset,feature_set,model,representation,status,seconds
+1,Bitcoin,Market Only,Naive,Original,success,0.0
+1,Bitcoin,Market Only,ARIMA,Original,success,0.0
+1,Bitcoin,Market Only,Random Forest,Original,success,10.0
+1,Bitcoin,Market Only,XGBoost,Original,success,0.2
+1,Bitcoin,Market Only,LSTM,Original,success,65.0
+1,Bitcoin,Market + Google Trends,Naive,Original,success,0.0
+1,Bitcoin,Market + Google Trends,ARIMA,Original,success,0.0
+1,Bitcoin,Market + Google Trends,Random Forest,Original,success,10.9
+1,Bitcoin,Market + Google Trends,XGBoost,Original,success,0.2
+1,Bitcoin,Market + Google Trends,LSTM,Original,success,61.4
+1,Bitcoin,Market + Fear & Greed Index,Naive,Original,success,0.0
+1,Bitcoin,Market + Fear & Greed Index,ARIMA,Original,success,0.0
+1,Bitcoin,Market + Fear & Greed Index,Random Forest,Original,success,10.6
+1,Bitcoin,Market + Fear & Greed Index,XGBoost,Original,success,0.1
+1,Bitcoin,Market + Fear & Greed Index,LSTM,Original,success,61.4
+1,Bitcoin,Market + Google Trends + Fear & Greed Index,Naive,Original,success,0.0
+1,Bitcoin,Market + Google Trends + Fear & Greed Index,ARIMA,Original,success,0.0
+1,Bitcoin,Market + Google Trends + Fear & Greed Index,Random Forest,Original,success,10.8
+1,Bitcoin,Market + Google Trends + Fear & Greed Index,XGBoost,Original,success,0.1
+1,Bitcoin,Market + Google Trends + Fear & Greed Index,LSTM,Original,success,64.7
+1,Ethereum,Market Only,Naive,Original,success,0.0
+1,Ethereum,Market Only,ARIMA,Original,success,0.0
+1,Ethereum,Market Only,Random Forest,Original,success,9.8
+1,Ethereum,Market Only,XGBoost,Original,success,0.1
+1,Ethereum,Market Only,LSTM,Original,success,55.4
+1,Ethereum,Market + Google Trends,Naive,Original,success,0.0
+1,Ethereum,Market + Google Trends,ARIMA,Original,success,0.0
+1,Ethereum,Market + Google Trends,Random Forest,Original,success,10.4
+1,Ethereum,Market + Google Trends,XGBoost,Original,success,0.1
+1,Ethereum,Market + Google Trends,LSTM,Original,success,58.1
+1,Ethereum,Market + Fear & Greed Index,Naive,Original,success,0.0
+1,Ethereum,Market + Fear & Greed Index,ARIMA,Original,success,0.0
+1,Ethereum,Market + Fear & Greed Index,Random Forest,Original,success,10.4
+1,Ethereum,Market + Fear & Greed Index,XGBoost,Original,success,0.1
+1,Ethereum,Market + Fear & Greed Index,LSTM,Original,success,55.5
+1,Ethereum,Market + Google Trends + Fear & Greed Index,Naive,Original,success,0.0
+1,Ethereum,Market + Google Trends + Fear & Greed Index,ARIMA,Original,success,0.0
+1,Ethereum,Market + Google Trends + Fear & Greed Index,Random Forest,Original,success,10.5
+1,Ethereum,Market + Google Trends + Fear & Greed Index,XGBoost,Original,success,0.1
+1,Ethereum,Market + Google Trends + Fear & Greed Index,LSTM,Original,success,61.1
+7,Bitcoin,Market Only,Naive,Original,success,0.0
+7,Bitcoin,Market Only,ARIMA,Original,success,0.0
+7,Bitcoin,Market Only,Random Forest,Original,success,9.3
+7,Bitcoin,Market Only,XGBoost,Original,success,0.1
+7,Bitcoin,Market Only,LSTM,Original,success,40.7
+7,Bitcoin,Market + Google Trends,Naive,Original,success,0.0
+7,Bitcoin,Market + Google Trends,ARIMA,Original,success,0.0
+7,Bitcoin,Market + Google Trends,Random Forest,Original,success,10.0
+7,Bitcoin,Market + Google Trends,XGBoost,Original,success,0.1
+7,Bitcoin,Market + Google Trends,LSTM,Original,success,39.3
+7,Bitcoin,Market + Fear & Greed Index,Naive,Original,success,0.0
+7,Bitcoin,Market + Fear & Greed Index,ARIMA,Original,success,0.0
+7,Bitcoin,Market + Fear & Greed Index,Random Forest,Original,success,10.2
+7,Bitcoin,Market + Fear & Greed Index,XGBoost,Original,success,0.1
+7,Bitcoin,Market + Fear & Greed Index,LSTM,Original,success,43.1
+7,Bitcoin,Market + Google Trends + Fear & Greed Index,Naive,Original,success,0.0
+7,Bitcoin,Market + Google Trends + Fear & Greed Index,ARIMA,Original,success,0.0
+7,Bitcoin,Market + Google Trends + Fear & Greed Index,Random Forest,Original,success,10.8
+7,Bitcoin,Market + Google Trends + Fear & Greed Index,XGBoost,Original,success,0.1
+7,Bitcoin,Market + Google Trends + Fear & Greed Index,LSTM,Original,success,43.8
+7,Ethereum,Market Only,Naive,Original,success,0.0
+7,Ethereum,Market Only,ARIMA,Original,success,0.0
+7,Ethereum,Market Only,Random Forest,Original,success,9.4
+7,Ethereum,Market Only,XGBoost,Original,success,0.2
+7,Ethereum,Market Only,LSTM,Original,success,36.0
+7,Ethereum,Market + Google Trends,Naive,Original,success,0.0
+7,Ethereum,Market + Google Trends,ARIMA,Original,success,0.0
+7,Ethereum,Market + Google Trends,Random Forest,Original,success,10.6
+7,Ethereum,Market + Google Trends,XGBoost,Original,success,0.2
+7,Ethereum,Market + Google Trends,LSTM,Original,success,42.5
+7,Ethereum,Market + Fear & Greed Index,Naive,Original,success,0.0
+7,Ethereum,Market + Fear & Greed Index,ARIMA,Original,success,0.0
+7,Ethereum,Market + Fear & Greed Index,Random Forest,Original,success,10.4
+7,Ethereum,Market + Fear & Greed Index,XGBoost,Original,success,0.1
+7,Ethereum,Market + Fear & Greed Index,LSTM,Original,success,38.4
+7,Ethereum,Market + Google Trends + Fear & Greed Index,Naive,Original,success,0.0
+7,Ethereum,Market + Google Trends + Fear & Greed Index,ARIMA,Original,success,0.0
+7,Ethereum,Market + Google Trends + Fear & Greed Index,Random Forest,Original,success,10.8
+7,Ethereum,Market + Google Trends + Fear & Greed Index,XGBoost,Original,success,0.1
+7,Ethereum,Market + Google Trends + Fear & Greed Index,LSTM,Original,success,45.1
+14,Bitcoin,Market Only,Naive,Original,success,0.0
+14,Bitcoin,Market Only,ARIMA,Original,success,0.0
+14,Bitcoin,Market Only,Random Forest,Original,success,9.2
+14,Bitcoin,Market Only,XGBoost,Original,success,0.1
+14,Bitcoin,Market Only,LSTM,Original,success,37.3
+14,Bitcoin,Market + Google Trends,Naive,Original,success,0.0
+14,Bitcoin,Market + Google Trends,ARIMA,Original,success,0.0
+14,Bitcoin,Market + Google Trends,Random Forest,Original,success,9.9
+14,Bitcoin,Market + Google Trends,XGBoost,Original,success,0.1
+14,Bitcoin,Market + Google Trends,LSTM,Original,success,40.4
+14,Bitcoin,Market + Fear & Greed Index,Naive,Original,success,0.0
+14,Bitcoin,Market + Fear & Greed Index,ARIMA,Original,success,0.0
+14,Bitcoin,Market + Fear & Greed Index,Random Forest,Original,success,10.1
+14,Bitcoin,Market + Fear & Greed Index,XGBoost,Original,success,0.2
+14,Bitcoin,Market + Fear & Greed Index,LSTM,Original,success,40.8
+14,Bitcoin,Market + Google Trends + Fear & Greed Index,Naive,Original,success,0.0
+14,Bitcoin,Market + Google Trends + Fear & Greed Index,ARIMA,Original,success,0.0
+14,Bitcoin,Market + Google Trends + Fear & Greed Index,Random Forest,Original,success,10.8
+14,Bitcoin,Market + Google Trends + Fear & Greed Index,XGBoost,Original,success,0.2
+14,Bitcoin,Market + Google Trends + Fear & Greed Index,LSTM,Original,success,37.7
+14,Ethereum,Market Only,Naive,Original,success,0.0
+14,Ethereum,Market Only,ARIMA,Original,success,0.0
+14,Ethereum,Market Only,Random Forest,Original,success,9.4
+14,Ethereum,Market Only,XGBoost,Original,success,0.1
+14,Ethereum,Market Only,LSTM,Original,success,35.9
+14,Ethereum,Market + Google Trends,Naive,Original,success,0.0
+14,Ethereum,Market + Google Trends,ARIMA,Original,success,0.0
+14,Ethereum,Market + Google Trends,Random Forest,Original,success,10.1
+14,Ethereum,Market + Google Trends,XGBoost,Original,success,0.1
+14,Ethereum,Market + Google Trends,LSTM,Original,success,38.1
+14,Ethereum,Market + Fear & Greed Index,Naive,Original,success,0.0
+14,Ethereum,Market + Fear & Greed Index,ARIMA,Original,success,0.0
+14,Ethereum,Market + Fear & Greed Index,Random Forest,Original,success,10.1
+14,Ethereum,Market + Fear & Greed Index,XGBoost,Original,success,0.1
+14,Ethereum,Market + Fear & Greed Index,LSTM,Original,success,43.6
+14,Ethereum,Market + Google Trends + Fear & Greed Index,Naive,Original,success,0.0
+14,Ethereum,Market + Google Trends + Fear & Greed Index,ARIMA,Original,success,0.0
+14,Ethereum,Market + Google Trends + Fear & Greed Index,Random Forest,Original,success,10.7
+14,Ethereum,Market + Google Trends + Fear & Greed Index,XGBoost,Original,success,0.1
+14,Ethereum,Market + Google Trends + Fear & Greed Index,LSTM,Original,success,42.9
+1,Bitcoin,Market Only,Random Forest,Autoencoder-Encoded,success,8.6
+1,Bitcoin,Market Only,XGBoost,Autoencoder-Encoded,success,0.1
+1,Bitcoin,Market Only,LSTM,Autoencoder-Encoded,success,61.1
+1,Bitcoin,Market + Google Trends,Random Forest,Autoencoder-Encoded,success,8.4
+1,Bitcoin,Market + Google Trends,XGBoost,Autoencoder-Encoded,success,0.1
+1,Bitcoin,Market + Google Trends,LSTM,Autoencoder-Encoded,success,57.5
+1,Bitcoin,Market + Fear & Greed Index,Random Forest,Autoencoder-Encoded,success,8.4
+1,Bitcoin,Market + Fear & Greed Index,XGBoost,Autoencoder-Encoded,success,0.1
+1,Bitcoin,Market + Fear & Greed Index,LSTM,Autoencoder-Encoded,success,55.1
+1,Bitcoin,Market + Google Trends + Fear & Greed Index,Random Forest,Autoencoder-Encoded,success,8.2
+1,Bitcoin,Market + Google Trends + Fear & Greed Index,XGBoost,Autoencoder-Encoded,success,0.1
+1,Bitcoin,Market + Google Trends + Fear & Greed Index,LSTM,Autoencoder-Encoded,success,65.1
+1,Ethereum,Market Only,Random Forest,Autoencoder-Encoded,success,8.1
+1,Ethereum,Market Only,XGBoost,Autoencoder-Encoded,success,0.1
+1,Ethereum,Market Only,LSTM,Autoencoder-Encoded,success,55.7
+1,Ethereum,Market + Google Trends,Random Forest,Autoencoder-Encoded,success,8.5
+1,Ethereum,Market + Google Trends,XGBoost,Autoencoder-Encoded,success,0.1
+1,Ethereum,Market + Google Trends,LSTM,Autoencoder-Encoded,success,49.3
+1,Ethereum,Market + Fear & Greed Index,Random Forest,Autoencoder-Encoded,success,8.2
+1,Ethereum,Market + Fear & Greed Index,XGBoost,Autoencoder-Encoded,success,0.1
+1,Ethereum,Market + Fear & Greed Index,LSTM,Autoencoder-Encoded,success,53.2
+1,Ethereum,Market + Google Trends + Fear & Greed Index,Random Forest,Autoencoder-Encoded,success,8.4
+1,Ethereum,Market + Google Trends + Fear & Greed Index,XGBoost,Autoencoder-Encoded,success,0.1
+1,Ethereum,Market + Google Trends + Fear & Greed Index,LSTM,Autoencoder-Encoded,success,53.7
+7,Bitcoin,Market Only,Random Forest,Autoencoder-Encoded,success,8.5
+7,Bitcoin,Market Only,XGBoost,Autoencoder-Encoded,success,0.1
+7,Bitcoin,Market Only,LSTM,Autoencoder-Encoded,success,59.0
+7,Bitcoin,Market + Google Trends,Random Forest,Autoencoder-Encoded,success,8.5
+7,Bitcoin,Market + Google Trends,XGBoost,Autoencoder-Encoded,success,0.1
+7,Bitcoin,Market + Google Trends,LSTM,Autoencoder-Encoded,success,57.7
+7,Bitcoin,Market + Fear & Greed Index,Random Forest,Autoencoder-Encoded,success,8.5
+7,Bitcoin,Market + Fear & Greed Index,XGBoost,Autoencoder-Encoded,success,0.1
+7,Bitcoin,Market + Fear & Greed Index,LSTM,Autoencoder-Encoded,success,54.1
+7,Bitcoin,Market + Google Trends + Fear & Greed Index,Random Forest,Autoencoder-Encoded,success,8.2
+7,Bitcoin,Market + Google Trends + Fear & Greed Index,XGBoost,Autoencoder-Encoded,success,0.1
+7,Bitcoin,Market + Google Trends + Fear & Greed Index,LSTM,Autoencoder-Encoded,success,52.3
+7,Ethereum,Market Only,Random Forest,Autoencoder-Encoded,success,8.2
+7,Ethereum,Market Only,XGBoost,Autoencoder-Encoded,success,0.2
+7,Ethereum,Market Only,LSTM,Autoencoder-Encoded,success,51.2
+7,Ethereum,Market + Google Trends,Random Forest,Autoencoder-Encoded,success,8.3
+7,Ethereum,Market + Google Trends,XGBoost,Autoencoder-Encoded,success,0.1
+7,Ethereum,Market + Google Trends,LSTM,Autoencoder-Encoded,success,46.1
+7,Ethereum,Market + Fear & Greed Index,Random Forest,Autoencoder-Encoded,success,8.0
+7,Ethereum,Market + Fear & Greed Index,XGBoost,Autoencoder-Encoded,success,0.2
+7,Ethereum,Market + Fear & Greed Index,LSTM,Autoencoder-Encoded,success,46.6
+7,Ethereum,Market + Google Trends + Fear & Greed Index,Random Forest,Autoencoder-Encoded,success,8.0
+7,Ethereum,Market + Google Trends + Fear & Greed Index,XGBoost,Autoencoder-Encoded,success,0.2
+7,Ethereum,Market + Google Trends + Fear & Greed Index,LSTM,Autoencoder-Encoded,success,50.1
+14,Bitcoin,Market Only,Random Forest,Autoencoder-Encoded,success,8.1
+14,Bitcoin,Market Only,XGBoost,Autoencoder-Encoded,success,0.1
+14,Bitcoin,Market Only,LSTM,Autoencoder-Encoded,success,48.6
+14,Bitcoin,Market + Google Trends,Random Forest,Autoencoder-Encoded,success,8.0
+14,Bitcoin,Market + Google Trends,XGBoost,Autoencoder-Encoded,success,0.2
+14,Bitcoin,Market + Google Trends,LSTM,Autoencoder-Encoded,success,46.5
+14,Bitcoin,Market + Fear & Greed Index,Random Forest,Autoencoder-Encoded,success,8.3
+14,Bitcoin,Market + Fear & Greed Index,XGBoost,Autoencoder-Encoded,success,0.1
+14,Bitcoin,Market + Fear & Greed Index,LSTM,Autoencoder-Encoded,success,48.9
+14,Bitcoin,Market + Google Trends + Fear & Greed Index,Random Forest,Autoencoder-Encoded,success,8.3
+14,Bitcoin,Market + Google Trends + Fear & Greed Index,XGBoost,Autoencoder-Encoded,success,0.3
+14,Bitcoin,Market + Google Trends + Fear & Greed Index,LSTM,Autoencoder-Encoded,success,49.5
+14,Ethereum,Market Only,Random Forest,Autoencoder-Encoded,success,8.1
+14,Ethereum,Market Only,XGBoost,Autoencoder-Encoded,success,0.1
+14,Ethereum,Market Only,LSTM,Autoencoder-Encoded,success,48.6
+14,Ethereum,Market + Google Trends,Random Forest,Autoencoder-Encoded,success,8.3
+14,Ethereum,Market + Google Trends,XGBoost,Autoencoder-Encoded,success,0.1
+14,Ethereum,Market + Google Trends,LSTM,Autoencoder-Encoded,success,53.5
+14,Ethereum,Market + Fear & Greed Index,Random Forest,Autoencoder-Encoded,success,8.1
+14,Ethereum,Market + Fear & Greed Index,XGBoost,Autoencoder-Encoded,success,0.2
+14,Ethereum,Market + Fear & Greed Index,LSTM,Autoencoder-Encoded,success,49.3
+14,Ethereum,Market + Google Trends + Fear & Greed Index,Random Forest,Autoencoder-Encoded,success,8.2
+14,Ethereum,Market + Google Trends + Fear & Greed Index,XGBoost,Autoencoder-Encoded,success,0.4
+14,Ethereum,Market + Google Trends + Fear & Greed Index,LSTM,Autoencoder-Encoded,success,44.6

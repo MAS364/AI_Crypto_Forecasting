@@ -1,0 +1,32 @@
+# Runs the FastAPI backend and Streamlit frontend together.
+#
+# Usage:
+#   docker compose up --build
+#   Then open http://localhost:8501 (Streamlit) -- it talks to the API
+#   container at http://api:8000 internally, http://localhost:8000/docs
+#   externally for the API's own interactive documentation.
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: deployment/Dockerfile
+    ports:
+      - "8000:8000"
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  frontend:
+    build:
+      context: .
+      dockerfile: deployment/Dockerfile.streamlit
+    ports:
+      - "8501:8501"
+    environment:
+      - CRYPTO_API_URL=http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy

@@ -1,43 +1,43 @@
 Method,Variable A,Variable B,Coefficient,p-value,Direction,Strength,Adjusted p-value (FDR),"Significant (raw, 5%)",Significant (FDR-corrected)
-Pearson,Bitcoin_Price,Ethereum_Price,0.838,0.0,Positive,Very strong,0.0,True,True
-Pearson,Bitcoin_Price,Bitcoin_Volume,0.043,0.0713,Positive,Very weak,0.1361,False,False
-Pearson,Bitcoin_Price,Ethereum_Volume,-0.048,0.0425,Negative,Very weak,0.0893,True,False
-Pearson,Bitcoin_Price,Bitcoin_Search_Interest,-0.056,0.0172,Negative,Very weak,0.0401,True,True
-Pearson,Bitcoin_Price,Ethereum_Search_Interest,-0.008,0.7271,Negative,Very weak,0.8209,False,False
-Pearson,Bitcoin_Price,Fear_Greed_Index,-0.005,0.8325,Negative,Very weak,0.8741,False,False
-Pearson,Ethereum_Price,Bitcoin_Volume,0.015,0.5331,Positive,Very weak,0.6997,False,False
-Pearson,Ethereum_Price,Ethereum_Volume,-0.036,0.1323,Negative,Very weak,0.2137,False,False
-Pearson,Ethereum_Price,Bitcoin_Search_Interest,-0.107,0.0,Negative,Very weak,0.0,True,True
-Pearson,Ethereum_Price,Ethereum_Search_Interest,-0.002,0.9416,Negative,Very weak,0.9416,False,False
-Pearson,Ethereum_Price,Fear_Greed_Index,0.008,0.7427,Positive,Very weak,0.8209,False,False
-Pearson,Bitcoin_Volume,Ethereum_Volume,0.587,0.0,Positive,Moderate,0.0,True,True
-Pearson,Bitcoin_Volume,Bitcoin_Search_Interest,0.413,0.0,Positive,Moderate,0.0,True,True
-Pearson,Bitcoin_Volume,Ethereum_Search_Interest,0.249,0.0,Positive,Weak,0.0,True,True
-Pearson,Bitcoin_Volume,Fear_Greed_Index,-0.039,0.0982,Negative,Very weak,0.1718,False,False
-Pearson,Ethereum_Volume,Bitcoin_Search_Interest,0.433,0.0,Positive,Moderate,0.0,True,True
-Pearson,Ethereum_Volume,Ethereum_Search_Interest,0.371,0.0,Positive,Weak,0.0,True,True
-Pearson,Ethereum_Volume,Fear_Greed_Index,-0.012,0.5985,Negative,Very weak,0.7393,False,False
-Pearson,Bitcoin_Search_Interest,Ethereum_Search_Interest,0.759,0.0,Positive,Strong,0.0,True,True
-Pearson,Bitcoin_Search_Interest,Fear_Greed_Index,-0.026,0.2676,Negative,Very weak,0.3746,False,False
-Pearson,Ethereum_Search_Interest,Fear_Greed_Index,0.032,0.1768,Positive,Very weak,0.2652,False,False
-Spearman,Bitcoin_Price,Ethereum_Price,0.819,0.0,Positive,Very strong,0.0,True,True
-Spearman,Bitcoin_Price,Bitcoin_Volume,0.008,0.7198,Positive,Very weak,0.8892,False,False
-Spearman,Bitcoin_Price,Ethereum_Volume,-0.052,0.0291,Negative,Very weak,0.0556,True,False
-Spearman,Bitcoin_Price,Bitcoin_Search_Interest,0.006,0.7919,Positive,Very weak,0.9239,False,False
-Spearman,Bitcoin_Price,Ethereum_Search_Interest,0.089,0.0001,Positive,Very weak,0.0003,True,True
-Spearman,Bitcoin_Price,Fear_Greed_Index,-0.022,0.3564,Negative,Very weak,0.499,False,False
-Spearman,Ethereum_Price,Bitcoin_Volume,-0.028,0.2298,Negative,Very weak,0.3447,False,False
-Spearman,Ethereum_Price,Ethereum_Volume,-0.016,0.4937,Negative,Very weak,0.648,False,False
-Spearman,Ethereum_Price,Bitcoin_Search_Interest,-0.034,0.1498,Negative,Very weak,0.242,False,False
-Spearman,Ethereum_Price,Ethereum_Search_Interest,0.089,0.0002,Positive,Very weak,0.0005,True,True
-Spearman,Ethereum_Price,Fear_Greed_Index,0.003,0.8874,Positive,Very weak,0.9373,False,False
-Spearman,Bitcoin_Volume,Ethereum_Volume,0.775,0.0,Positive,Strong,0.0,True,True
-Spearman,Bitcoin_Volume,Bitcoin_Search_Interest,0.629,0.0,Positive,Strong,0.0,True,True
-Spearman,Bitcoin_Volume,Ethereum_Search_Interest,0.517,0.0,Positive,Moderate,0.0,True,True
-Spearman,Bitcoin_Volume,Fear_Greed_Index,-0.036,0.1275,Negative,Very weak,0.2231,False,False
-Spearman,Ethereum_Volume,Bitcoin_Search_Interest,0.575,0.0,Positive,Moderate,0.0,True,True
-Spearman,Ethereum_Volume,Ethereum_Search_Interest,0.552,0.0,Positive,Moderate,0.0,True,True
-Spearman,Ethereum_Volume,Fear_Greed_Index,0.002,0.9237,Positive,Very weak,0.9373,False,False
-Spearman,Bitcoin_Search_Interest,Ethereum_Search_Interest,0.685,0.0,Positive,Strong,0.0,True,True
-Spearman,Bitcoin_Search_Interest,Fear_Greed_Index,0.002,0.9373,Positive,Very weak,0.9373,False,False
-Spearman,Ethereum_Search_Interest,Fear_Greed_Index,0.055,0.0189,Positive,Very weak,0.0397,True,True
+Pearson,Bitcoin_Price,Ethereum_Price,0.8378607057716206,0.0,Positive,Very strong,0.0,True,True
+Pearson,Bitcoin_Price,Bitcoin_Volume,0.04266704488729382,0.07127443432639266,Positive,Very weak,0.13606937462311325,False,False
+Pearson,Bitcoin_Price,Ethereum_Volume,-0.04797206946458925,0.0425361592833284,Negative,Very weak,0.08932593449498964,True,False
+Pearson,Bitcoin_Price,Bitcoin_Search_Interest,-0.05618811478751344,0.017183362411331195,Negative,Very weak,0.04009451229310612,True,True
+Pearson,Bitcoin_Price,Ethereum_Search_Interest,-0.0082344325844858,0.7271446106536036,Negative,Very weak,0.820913003948287,False,False
+Pearson,Bitcoin_Price,Fear_Greed_Index,-0.004989848930686121,0.8325455938686479,Negative,Very weak,0.8741728735620804,False,False
+Pearson,Ethereum_Price,Bitcoin_Volume,0.014751285798178986,0.5330531534461648,Positive,Very weak,0.6996322638980913,False,False
+Pearson,Ethereum_Price,Ethereum_Volume,-0.03561167422324808,0.13225851149439863,Negative,Very weak,0.21364836472172086,False,False
+Pearson,Ethereum_Price,Bitcoin_Search_Interest,-0.1066368294649411,5.857057267825529e-06,Negative,Very weak,1.5374775328042015e-05,True,True
+Pearson,Ethereum_Price,Ethereum_Search_Interest,-0.001728028425280137,0.9416291469837691,Negative,Very weak,0.9416291469837691,False,False
+Pearson,Ethereum_Price,Fear_Greed_Index,0.007746244720310166,0.7427308130960693,Positive,Very weak,0.820913003948287,False,False
+Pearson,Bitcoin_Volume,Ethereum_Volume,0.58740957775318,2.4010730109326045e-166,Positive,Moderate,1.6807511076528233e-165,True,True
+Pearson,Bitcoin_Volume,Bitcoin_Search_Interest,0.4129605698325993,1.3959155352622175e-74,Positive,Moderate,5.862845248101314e-74,True,True
+Pearson,Bitcoin_Volume,Ethereum_Search_Interest,0.2485421508965564,1.4054653115835065e-26,Positive,Weak,4.21639593475052e-26,True,True
+Pearson,Bitcoin_Volume,Fear_Greed_Index,-0.03911927402947189,0.098203761734535,Negative,Very weak,0.17185658303543627,False,False
+Pearson,Ethereum_Volume,Bitcoin_Search_Interest,0.43268259002542186,1.7675578806136858e-82,Positive,Moderate,9.279678873221851e-82,True,True
+Pearson,Ethereum_Volume,Ethereum_Search_Interest,0.37118733849611607,1.6284593642353133e-59,Positive,Weak,5.699607774823596e-59,True,True
+Pearson,Ethereum_Volume,Fear_Greed_Index,-0.01245975463422936,0.5985341929501196,Negative,Very weak,0.7393657677619124,False,False
+Pearson,Bitcoin_Search_Interest,Ethereum_Search_Interest,0.758811658107591,0.0,Positive,Strong,0.0,True,True
+Pearson,Bitcoin_Search_Interest,Fear_Greed_Index,-0.0261566562616611,0.2676310128472445,Negative,Very weak,0.3746834179861423,False,False
+Pearson,Ethereum_Search_Interest,Fear_Greed_Index,0.031866676666208585,0.17681059528739976,Positive,Very weak,0.26521589293109965,False,False
+Spearman,Bitcoin_Price,Ethereum_Price,0.818648767783264,0.0,Positive,Very strong,0.0,True,True
+Spearman,Bitcoin_Price,Bitcoin_Volume,0.00848818437198857,0.719837332841748,Positive,Very weak,0.8892108229221592,False,False
+Spearman,Bitcoin_Price,Ethereum_Volume,-0.051620353837731975,0.02905920190780998,Negative,Very weak,0.05547665818763723,True,False
+Spearman,Bitcoin_Price,Bitcoin_Search_Interest,0.006227759363345623,0.7918619588392598,Positive,Very weak,0.9238389519791365,False,False
+Spearman,Bitcoin_Price,Ethereum_Search_Interest,0.0893461935837178,0.00014854735069234621,Positive,Very weak,0.00038993679556740884,True,True
+Spearman,Bitcoin_Price,Fear_Greed_Index,-0.02176367465877032,0.35636749732985046,Negative,Very weak,0.49891449626179063,False,False
+Spearman,Ethereum_Price,Bitcoin_Volume,-0.028416884840870012,0.2297500164154731,Negative,Very weak,0.34462502462320965,False,False
+Spearman,Ethereum_Price,Ethereum_Volume,-0.01619811898030347,0.4936599272665975,Negative,Very weak,0.6479286545374093,False,False
+Spearman,Ethereum_Price,Bitcoin_Search_Interest,-0.03397806530280514,0.14981648036309064,Negative,Very weak,0.24201123750960796,False,False
+Spearman,Ethereum_Price,Ethereum_Search_Interest,0.08855608564221011,0.00017004530517616482,Positive,Very weak,0.0003967723787443846,True,True
+Spearman,Ethereum_Price,Fear_Greed_Index,0.003342137250529971,0.887381812646899,Positive,Very weak,0.9372969351045207,False,False
+Spearman,Bitcoin_Volume,Ethereum_Volume,0.7751709751530733,0.0,Positive,Strong,0.0,True,True
+Spearman,Bitcoin_Volume,Bitcoin_Search_Interest,0.6285627011484644,3.3603584096881896e-197,Positive,Strong,1.7641881650862997e-196,True,True
+Spearman,Bitcoin_Volume,Ethereum_Search_Interest,0.5174566248583611,4.968365871543198e-123,Positive,Moderate,1.4905097614629594e-122,True,True
+Spearman,Bitcoin_Volume,Fear_Greed_Index,-0.036059851560058906,0.12745597452462576,Negative,Very weak,0.22304795541809508,False,False
+Spearman,Ethereum_Volume,Bitcoin_Search_Interest,0.5748363060456123,8.867342871105741e-158,Positive,Moderate,3.7242840058644114e-157,True,True
+Spearman,Ethereum_Volume,Ethereum_Search_Interest,0.5520592510313762,3.5849256950789076e-143,Positive,Moderate,1.2547239932776177e-142,True,True
+Spearman,Ethereum_Volume,Fear_Greed_Index,0.002266414764554804,0.9237049262573441,Positive,Very weak,0.9372969351045207,False,False
+Spearman,Bitcoin_Search_Interest,Ethereum_Search_Interest,0.6849750241269505,2.7133842151851955e-249,Positive,Strong,1.899368950629637e-248,True,True
+Spearman,Bitcoin_Search_Interest,Fear_Greed_Index,0.001856536030448117,0.9372969351045207,Positive,Very weak,0.9372969351045207,False,False
+Spearman,Ethereum_Search_Interest,Fear_Greed_Index,0.05535215751804865,0.018912281950258805,Positive,Very weak,0.039715792095543496,True,True

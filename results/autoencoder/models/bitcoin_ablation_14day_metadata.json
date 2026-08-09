@@ -1,0 +1,13 @@
+{
+  "encoding_dim": 8,
+  "input_dim": 21,
+  "epochs_trained": 68,
+  "final_train_loss": 0.22518649697303772,
+  "final_val_loss": 0.425190269947052,
+  "horizon": 14,
+  "asset": "Bitcoin",
+  "feature_set": "Market + Fear & Greed Index",
+  "reconstruction_loss_train": 0.2476530373096466,
+  "reconstruction_loss_val": 0.4105268120765686,
+  "reconstruction_loss_test": 0.4533398747444153
+}

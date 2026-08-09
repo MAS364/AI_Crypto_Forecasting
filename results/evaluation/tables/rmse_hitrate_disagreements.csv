@@ -1,0 +1,33 @@
+horizon,asset,feature_set,representation,best_by_RMSE,best_by_Hit_Rate
+1,Bitcoin,Market + Fear & Greed Index,Autoencoder-Encoded,XGBoost,LSTM
+1,Bitcoin,Market + Fear & Greed Index,Original,ARIMA,LSTM
+1,Bitcoin,Market + Google Trends,Autoencoder-Encoded,XGBoost,Random Forest
+1,Bitcoin,Market + Google Trends,Original,ARIMA,XGBoost
+1,Bitcoin,Market + Google Trends + Fear & Greed Index,Autoencoder-Encoded,Random Forest,LSTM
+1,Bitcoin,Market + Google Trends + Fear & Greed Index,Original,ARIMA,Naive
+1,Bitcoin,Market Only,Autoencoder-Encoded,XGBoost,LSTM
+1,Bitcoin,Market Only,Original,ARIMA,LSTM
+1,Ethereum,Market + Google Trends,Autoencoder-Encoded,XGBoost,Random Forest
+1,Ethereum,Market + Google Trends,Original,ARIMA,LSTM
+1,Ethereum,Market + Google Trends + Fear & Greed Index,Original,ARIMA,LSTM
+1,Ethereum,Market Only,Autoencoder-Encoded,Random Forest,LSTM
+1,Ethereum,Market Only,Original,ARIMA,XGBoost
+7,Bitcoin,Market + Fear & Greed Index,Autoencoder-Encoded,Random Forest,XGBoost
+7,Bitcoin,Market + Fear & Greed Index,Original,ARIMA,Random Forest
+7,Bitcoin,Market + Google Trends,Original,Random Forest,XGBoost
+7,Bitcoin,Market + Google Trends + Fear & Greed Index,Original,ARIMA,Random Forest
+7,Bitcoin,Market Only,Original,XGBoost,Random Forest
+7,Ethereum,Market + Fear & Greed Index,Original,XGBoost,ARIMA
+7,Ethereum,Market + Google Trends,Autoencoder-Encoded,Random Forest,LSTM
+7,Ethereum,Market + Google Trends,Original,Random Forest,LSTM
+7,Ethereum,Market + Google Trends + Fear & Greed Index,Original,XGBoost,ARIMA
+7,Ethereum,Market Only,Original,ARIMA,Random Forest
+14,Bitcoin,Market + Fear & Greed Index,Original,ARIMA,Random Forest
+14,Bitcoin,Market + Google Trends,Autoencoder-Encoded,Random Forest,LSTM
+14,Bitcoin,Market + Google Trends + Fear & Greed Index,Original,XGBoost,Random Forest
+14,Ethereum,Market + Fear & Greed Index,Original,ARIMA,LSTM
+14,Ethereum,Market + Google Trends,Autoencoder-Encoded,LSTM,Random Forest
+14,Ethereum,Market + Google Trends,Original,Random Forest,XGBoost
+14,Ethereum,Market + Google Trends + Fear & Greed Index,Original,ARIMA,Random Forest
+14,Ethereum,Market Only,Autoencoder-Encoded,Random Forest,LSTM
+14,Ethereum,Market Only,Original,Random Forest,LSTM

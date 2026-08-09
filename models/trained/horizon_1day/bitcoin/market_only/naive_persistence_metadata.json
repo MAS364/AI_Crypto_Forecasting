@@ -1,0 +1,26 @@
+{
+  "horizon": 1,
+  "cryptocurrency": "bitcoin",
+  "model_family": "naive_persistence",
+  "feature_set_key": "primary",
+  "feature_set_name": "market_only",
+  "target": "Bitcoin_Price_log_return_target_t_plus_1",
+  "rule": "prediction = observed Bitcoin_Price_log_return -- no fitted parameters",
+  "feature_names": null,
+  "model_path": null,
+  "scaler_path": null,
+  "training_period": [
+    "2021-07-02",
+    "2024-11-20"
+  ],
+  "validation_period": [
+    "2024-11-21",
+    "2025-08-12"
+  ],
+  "test_period": [
+    "2025-08-13",
+    "2026-05-05"
+  ],
+  "random_seed": 42,
+  "limitation": "Naive is a parameterless persistence rule, not a trained model -- there is no fitted object to serialise. This metadata records the rule and evaluation periods only."
+}

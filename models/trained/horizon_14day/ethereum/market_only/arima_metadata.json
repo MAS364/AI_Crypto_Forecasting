@@ -1,0 +1,37 @@
+{
+  "horizon": 14,
+  "cryptocurrency": "ethereum",
+  "model_family": "arima",
+  "feature_set_key": "primary",
+  "feature_set_name": "market_only",
+  "target": "Ethereum_Price_log_return",
+  "feature_names": null,
+  "selected_order": [
+    3,
+    0,
+    0
+  ],
+  "model_path": null,
+  "scaler_path": null,
+  "training_period": [
+    "2021-07-02",
+    "2024-11-11"
+  ],
+  "validation_period": [
+    "2024-11-12",
+    "2025-08-01"
+  ],
+  "test_period": [
+    "2025-08-02",
+    "2026-04-22"
+  ],
+  "random_seed": 42,
+  "library_versions": {
+    "scikit_learn": "1.9.0",
+    "xgboost": "3.4.0",
+    "tensorflow": "2.21.0",
+    "statsmodels": "0.14.6",
+    "joblib": "1.5.3"
+  },
+  "limitation": "The fitted statsmodels ARIMA object is not returned by run_arima() / arima_rolling() -- only the selected (p, d, q) order is available. No fitted model file is saved for ARIMA; the order is preserved here as configuration metadata only."
+}

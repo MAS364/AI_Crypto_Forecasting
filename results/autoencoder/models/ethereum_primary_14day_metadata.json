@@ -1,0 +1,13 @@
+{
+  "encoding_dim": 8,
+  "input_dim": 15,
+  "epochs_trained": 150,
+  "final_train_loss": 0.12796257436275482,
+  "final_val_loss": 0.42217621207237244,
+  "horizon": 14,
+  "asset": "Ethereum",
+  "feature_set": "Market Only",
+  "reconstruction_loss_train": 0.12647347152233124,
+  "reconstruction_loss_val": 0.42217621207237244,
+  "reconstruction_loss_test": 0.6093700528144836
+}

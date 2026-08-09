@@ -1,0 +1,7 @@
+Asset,Horizon (days),Best Model,Feature Configuration,Feature Type,RMSE (returns),MAE (returns),R²,Hit Rate (%),Practical Recommendation
+Bitcoin,1,ARIMA,N/A (univariate),Original,0.02448,0.01729,-0.0101,48.87,"Simple, computationally cheap, and among the strongest performers here -- a defensible default."
+Bitcoin,7,LSTM,Market + Google Trends,Autoencoder-Encoded,0.05755,0.04387,-0.0046,58.11,"Best result used autoencoder-encoded features -- worth the extra encoding step for this specific case, per Section 7."
+Bitcoin,14,Random Forest,Market + Google Trends,Original,0.08351,0.06385,-0.0329,52.65,Random Forest on engineered features outperformed both classical baselines for this asset/horizon.
+Ethereum,1,Random Forest,Market Only,Autoencoder-Encoded,0.03654,0.02589,-0.0023,48.87,"Best result used autoencoder-encoded features -- worth the extra encoding step for this specific case, per Section 7."
+Ethereum,7,Random Forest,Market + Google Trends + Fear & Greed Index,Autoencoder-Encoded,0.0842,0.0626,-0.0232,53.96,"Best result used autoencoder-encoded features -- worth the extra encoding step for this specific case, per Section 7."
+Ethereum,14,LSTM,Market + Google Trends,Autoencoder-Encoded,0.119,0.0951,-0.0068,50.38,"Best result used autoencoder-encoded features -- worth the extra encoding step for this specific case, per Section 7."

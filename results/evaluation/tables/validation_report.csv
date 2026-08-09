@@ -1,0 +1,10 @@
+check,passed,detail
+All 3 forecast horizons present in predictions,True,"found [np.int64(1), np.int64(7), np.int64(14)]"
+Both assets present in predictions,True,"found ['Bitcoin', 'Ethereum']"
+All 5 models present in predictions,True,"found ['ARIMA', 'LSTM', 'Naive', 'Random Forest', 'XGBoost']"
+All 4 feature configurations present in predictions,True,"found ['Market + Fear & Greed Index', 'Market + Google Trends', 'Market + Google Trends + Fear & Greed Index', 'Market Only']"
+"Both representations (Original, Autoencoder-Encoded) present",True,"found ['Autoencoder-Encoded', 'Original']"
+Every logged run succeeded (status == success),True,0 non-success rows
+No missing values in core metrics,True,
+Metric reconciliation available (independent recomputation from Notebook 07),True,384 rows
+Autoencoder manifest covers all 24 (horizon x asset x feature_set) combinations,True,found 24

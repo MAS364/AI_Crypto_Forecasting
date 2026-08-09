@@ -1,0 +1,53 @@
+{
+  "horizon": 1,
+  "cryptocurrency": "bitcoin",
+  "feature_set_key": "primary",
+  "feature_set_name": "market_only",
+  "target": "Bitcoin_Price_log_return_target_t_plus_1",
+  "feature_names": [
+    "Bitcoin_Price_log_return",
+    "Bitcoin_Price_log_return_lag_1",
+    "Bitcoin_Price_log_return_lag_2",
+    "Bitcoin_Price_log_return_lag_7",
+    "Bitcoin_Price_log_return_rolling_mean_30",
+    "Bitcoin_Price_log_return_rolling_std_30",
+    "Bitcoin_Price_momentum_7",
+    "Bitcoin_Volume_raw_lag_1",
+    "Bitcoin_Volume_raw_lag_7",
+    "Bitcoin_Volume_pct_change_lag_1",
+    "Bitcoin_Volume_pct_change_lag_7",
+    "Bitcoin_Volume_log",
+    "Bitcoin_Volume_rolling_mean_30",
+    "Bitcoin_Volume_rolling_std_30"
+  ],
+  "random_seed": 42,
+  "library_versions": {
+    "scikit_learn": "1.9.0",
+    "xgboost": "3.4.0",
+    "tensorflow": "2.21.0",
+    "statsmodels": "0.14.6",
+    "joblib": "1.5.3"
+  },
+  "training_period": [
+    "2021-07-02",
+    "2024-11-20"
+  ],
+  "validation_period": [
+    "2024-11-21",
+    "2025-08-12"
+  ],
+  "test_period": [
+    "2025-08-13",
+    "2026-05-05"
+  ],
+  "model_family": "lstm",
+  "model_path": "models/trained/horizon_1day/bitcoin/market_only/lstm.keras",
+  "scaler_path": "models/trained/horizon_1day/bitcoin/market_only/lstm_scaler.joblib",
+  "sequence_config": {
+    "window": 5,
+    "units": 16,
+    "dropout": 0.3,
+    "recurrent_dropout": 0.2,
+    "lr": 0.001
+  }
+}

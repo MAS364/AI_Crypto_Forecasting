@@ -1,0 +1,17 @@
+# Deployment-only dependencies -- deliberately leaner than the main
+# requirements.txt. This container only serves predictions from already-
+# saved models; it never trains, so jupyter, matplotlib, seaborn,
+# yfinance, and pycoingecko (all research/data-collection dependencies)
+# are intentionally excluded.
+
+fastapi==0.141.1
+uvicorn[standard]==0.52.1
+pydantic==2.13.4
+python-multipart==0.0.32
+
+pandas==3.0.5
+numpy==2.4.6
+scikit-learn==1.9.0
+xgboost==3.4.0
+tensorflow==2.21.0
+joblib==1.5.3

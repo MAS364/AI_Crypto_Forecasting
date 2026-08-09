@@ -1,0 +1,15 @@
+# Frontend-only image: the Streamlit app, talking to the API container
+# exclusively over HTTP (never imports src/ directly, so this image is
+# genuinely lightweight -- no models, no TensorFlow/XGBoost needed here).
+
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN pip install --no-cache-dir streamlit plotly pandas requests
+
+COPY deployment/frontend/ ./deployment/frontend/
+
+EXPOSE 8501
+
+CMD ["streamlit", "run", "deployment/frontend/Home.py", "--server.address=0.0.0.0", "--server.port=8501"]

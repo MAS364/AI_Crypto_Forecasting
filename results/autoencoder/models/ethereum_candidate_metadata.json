@@ -1,0 +1,13 @@
+{
+  "encoding_dim": 8,
+  "input_dim": 18,
+  "epochs_trained": 112,
+  "final_train_loss": 0.20880645513534546,
+  "final_val_loss": 0.4372904598712921,
+  "horizon": 1,
+  "asset": "Ethereum",
+  "feature_set": "Market + Google Trends",
+  "reconstruction_loss_train": 0.21391458809375763,
+  "reconstruction_loss_val": 0.4285282492637634,
+  "reconstruction_loss_test": 0.6631430387496948
+}

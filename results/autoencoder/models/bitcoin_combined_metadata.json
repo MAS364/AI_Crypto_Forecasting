@@ -1,0 +1,13 @@
+{
+  "encoding_dim": 8,
+  "input_dim": 24,
+  "epochs_trained": 150,
+  "final_train_loss": 0.22770702838897705,
+  "final_val_loss": 0.4065282642841339,
+  "horizon": 1,
+  "asset": "Bitcoin",
+  "feature_set": "Market + Google Trends + Fear & Greed Index",
+  "reconstruction_loss_train": 0.22598135471343994,
+  "reconstruction_loss_val": 0.4058944880962372,
+  "reconstruction_loss_test": 0.4679797887802124
+}

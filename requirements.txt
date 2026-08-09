@@ -1,16 +1,33 @@
-numpy
-pandas
-matplotlib
-seaborn
-scikit-learn
-yfinance
-pycoingecko
-requests
-jupyter
-ipykernel
-python-dotenv
-PyYAML
-setuptools
+numpy==2.4.6
+pandas==3.0.5
+matplotlib==3.11.1
+seaborn==0.13.2
+scikit-learn==1.9.0
+yfinance==1.5.2
+pycoingecko==3.2.0
+requests==2.34.2
+jupyter==1.1.1
+ipykernel==7.3.0
+python-dotenv==1.2.2
+PyYAML==6.0.3
+pytest==9.1.1
+fastapi==0.141.1
+uvicorn[standard]==0.52.1
+httpx==0.28.1  # needed for fastapi.testclient in tests/test_deployment_app.py
+setuptools==83.0.0
+
+# Added -- genuinely required by src/ and the notebooks, but were missing
+# from this file entirely (discovered as ModuleNotFoundError one at a
+# time while re-running the project on a fresh environment, not part of
+# the original file).
+tensorflow==2.21.0
+xgboost==3.4.0
+statsmodels==0.14.6
+openpyxl==3.1.5
+
+# Deployment/frontend dependencies
+streamlit==1.60.0
+plotly==6.9.0
+python-multipart==0.0.32
+
 -e .
-
-

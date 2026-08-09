@@ -1,0 +1,52 @@
+{
+  "horizon": 1,
+  "cryptocurrency": "ethereum",
+  "feature_set_key": "ablation",
+  "feature_set_name": "market_fear_greed",
+  "target": "Ethereum_Price_log_return_target_t_plus_1",
+  "feature_names": [
+    "Ethereum_Price_log_return",
+    "Ethereum_Price_log_return_lag_1",
+    "Ethereum_Price_log_return_lag_2",
+    "Ethereum_Price_log_return_lag_7",
+    "Ethereum_Price_log_return_rolling_mean_30",
+    "Ethereum_Price_log_return_rolling_std_30",
+    "Ethereum_Price_momentum_7",
+    "Ethereum_Volume_raw_lag_1",
+    "Ethereum_Volume_raw_lag_7",
+    "Ethereum_Volume_pct_change_lag_1",
+    "Ethereum_Volume_pct_change_lag_7",
+    "Ethereum_Volume_log",
+    "Ethereum_Volume_rolling_mean_30",
+    "Ethereum_Volume_rolling_std_30",
+    "Fear_Greed_Index_lag_1",
+    "Fear_Greed_Index_lag_2",
+    "Fear_Greed_Index_diff_lag_1",
+    "Fear_Greed_Index_diff_lag_2",
+    "Fear_Greed_Index_rolling_mean_7",
+    "Market_Sentiment_Encoded_lag_1"
+  ],
+  "random_seed": 42,
+  "library_versions": {
+    "scikit_learn": "1.9.0",
+    "xgboost": "3.4.0",
+    "tensorflow": "2.21.0",
+    "statsmodels": "0.14.6",
+    "joblib": "1.5.3"
+  },
+  "training_period": [
+    "2021-07-02",
+    "2024-11-20"
+  ],
+  "validation_period": [
+    "2024-11-21",
+    "2025-08-12"
+  ],
+  "test_period": [
+    "2025-08-13",
+    "2026-05-05"
+  ],
+  "model_family": "random_forest",
+  "model_path": "models/trained/horizon_1day/ethereum/market_fear_greed/random_forest.joblib",
+  "scaler_path": null
+}

@@ -1,0 +1,241 @@
+feature,mean_importance,std_importance,baseline_rmse,rank,n_repeats,asset,horizon,feature_set_key,model_name,representation,feature_group
+Bitcoin_Price_log_return_lag_7,6.364168762578587e-06,5.969676257548622e-06,0.02460401357296878,1,8,Bitcoin,1,ablation,XGBoost,Original,Price & Return
+Bitcoin_Volume_raw_lag_7,1.7129110982238432e-06,4.527580636000875e-06,0.02460401357296878,2,8,Bitcoin,1,ablation,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return,1.7008704751480044e-06,2.940147670882105e-06,0.02460401357296878,3,8,Bitcoin,1,ablation,XGBoost,Original,Price & Return
+Fear_Greed_Index_diff_lag_2,0.0,0.0,0.02460401357296878,4,8,Bitcoin,1,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_diff_lag_1,0.0,0.0,0.02460401357296878,4,8,Bitcoin,1,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_2,0.0,0.0,0.02460401357296878,4,8,Bitcoin,1,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Bitcoin_Volume_rolling_std_30,0.0,0.0,0.02460401357296878,4,8,Bitcoin,1,ablation,XGBoost,Original,Trading Volume
+Bitcoin_Volume_rolling_mean_30,0.0,0.0,0.02460401357296878,4,8,Bitcoin,1,ablation,XGBoost,Original,Trading Volume
+Bitcoin_Volume_pct_change_lag_7,0.0,0.0,0.02460401357296878,4,8,Bitcoin,1,ablation,XGBoost,Original,Trading Volume
+Bitcoin_Volume_pct_change_lag_1,0.0,0.0,0.02460401357296878,4,8,Bitcoin,1,ablation,XGBoost,Original,Trading Volume
+Bitcoin_Search_Interest_diff_lag_1,1.6811998309423232e-05,8.367999205607765e-06,0.024616622758866308,1,8,Bitcoin,1,candidate,XGBoost,Original,Google Trends
+Bitcoin_Price_log_return_lag_1,1.531343910168414e-05,1.3710997896034072e-05,0.024616622758866308,2,8,Bitcoin,1,candidate,XGBoost,Original,Price & Return
+Bitcoin_Volume_log,5.6182312703476935e-06,1.2313031701662917e-05,0.024616622758866308,3,8,Bitcoin,1,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Volume_pct_change_lag_1,3.768861709276764e-06,9.039082049497396e-06,0.024616622758866308,4,8,Bitcoin,1,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return,3.454014299062759e-06,8.594351751994952e-06,0.024616622758866308,5,8,Bitcoin,1,candidate,XGBoost,Original,Price & Return
+Bitcoin_Volume_raw_lag_7,1.7159554606786809e-06,4.4276405181956845e-06,0.024616622758866308,6,8,Bitcoin,1,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Price_momentum_7,0.0,0.0,0.024616622758866308,7,8,Bitcoin,1,candidate,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_rolling_mean_30,0.0,0.0,0.024616622758866308,7,8,Bitcoin,1,candidate,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_lag_7,0.0,0.0,0.024616622758866308,7,8,Bitcoin,1,candidate,XGBoost,Original,Price & Return
+Bitcoin_Volume_pct_change_lag_7,0.0,0.0,0.024616622758866308,7,8,Bitcoin,1,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Volume_log,6.743979114738098e-06,3.5836327705866545e-06,0.02449326795445668,1,8,Bitcoin,1,combined,XGBoost,Original,Trading Volume
+Fear_Greed_Index_diff_lag_2,0.0,0.0,0.02449326795445668,2,8,Bitcoin,1,combined,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_diff_lag_1,0.0,0.0,0.02449326795445668,2,8,Bitcoin,1,combined,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_2,0.0,0.0,0.02449326795445668,2,8,Bitcoin,1,combined,XGBoost,Original,Fear & Greed / Sentiment
+Bitcoin_Search_Interest_diff_lag_1,0.0,0.0,0.02449326795445668,2,8,Bitcoin,1,combined,XGBoost,Original,Google Trends
+Bitcoin_Search_Interest_lag_2,0.0,0.0,0.02449326795445668,2,8,Bitcoin,1,combined,XGBoost,Original,Google Trends
+Bitcoin_Volume_rolling_std_30,0.0,0.0,0.02449326795445668,2,8,Bitcoin,1,combined,XGBoost,Original,Trading Volume
+Bitcoin_Volume_rolling_mean_30,0.0,0.0,0.02449326795445668,2,8,Bitcoin,1,combined,XGBoost,Original,Trading Volume
+Fear_Greed_Index_rolling_mean_7,0.0,0.0,0.02449326795445668,2,8,Bitcoin,1,combined,XGBoost,Original,Fear & Greed / Sentiment
+Bitcoin_Volume_pct_change_lag_7,0.0,0.0,0.02449326795445668,2,8,Bitcoin,1,combined,XGBoost,Original,Trading Volume
+Bitcoin_Volume_rolling_std_30,2.014378180793504e-05,1.7942975852165007e-05,0.02456922503899514,1,8,Bitcoin,1,primary,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return_rolling_std_30,1.9485428078233526e-05,1.8527760107929958e-05,0.02456922503899514,2,8,Bitcoin,1,primary,XGBoost,Original,Volatility
+Bitcoin_Price_log_return_rolling_mean_30,1.7368635667425626e-05,2.1379973421238722e-05,0.02456922503899514,3,8,Bitcoin,1,primary,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_lag_7,1.3302317314212858e-05,8.610374065345968e-06,0.02456922503899514,4,8,Bitcoin,1,primary,XGBoost,Original,Price & Return
+Bitcoin_Volume_pct_change_lag_7,8.02687890728718e-06,4.673447595661622e-06,0.02456922503899514,5,8,Bitcoin,1,primary,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return_lag_2,7.160430115165685e-06,8.981603909246557e-06,0.02456922503899514,6,8,Bitcoin,1,primary,XGBoost,Original,Price & Return
+Bitcoin_Volume_pct_change_lag_1,8.269432156962978e-07,9.768051198320066e-06,0.02456922503899514,7,8,Bitcoin,1,primary,XGBoost,Original,Trading Volume
+Bitcoin_Volume_rolling_mean_30,6.072855296816206e-07,1.6132501075492715e-06,0.02456922503899514,8,8,Bitcoin,1,primary,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return_lag_1,-3.8654401504113756e-07,1.5514497752884924e-05,0.02456922503899514,9,8,Bitcoin,1,primary,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return,-2.514486263155511e-06,1.4173871779467208e-05,0.02456922503899514,10,8,Bitcoin,1,primary,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_rolling_mean_30,0.0004199263496506532,0.00011457981594938349,0.060490684736615376,1,8,Bitcoin,7,ablation,XGBoost,Original,Price & Return
+Bitcoin_Volume_rolling_mean_30,3.030981450212987e-06,1.8552191970724725e-05,0.060490684736615376,2,8,Bitcoin,7,ablation,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return,0.0,0.0,0.060490684736615376,3,8,Bitcoin,7,ablation,XGBoost,Original,Price & Return
+Fear_Greed_Index_diff_lag_2,0.0,0.0,0.060490684736615376,3,8,Bitcoin,7,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_diff_lag_1,0.0,0.0,0.060490684736615376,3,8,Bitcoin,7,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_2,0.0,0.0,0.060490684736615376,3,8,Bitcoin,7,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_1,0.0,0.0,0.060490684736615376,3,8,Bitcoin,7,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Bitcoin_Price_trailing_7day_return,0.0,0.0,0.060490684736615376,3,8,Bitcoin,7,ablation,XGBoost,Original,Price & Return
+Bitcoin_Volume_rolling_std_30,0.0,0.0,0.060490684736615376,3,8,Bitcoin,7,ablation,XGBoost,Original,Trading Volume
+Bitcoin_Volume_log,0.0,0.0,0.060490684736615376,3,8,Bitcoin,7,ablation,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return_rolling_std_30,0.00012058477121320785,6.503763524591927e-05,0.05825081875303865,1,8,Bitcoin,7,candidate,XGBoost,Original,Volatility
+Bitcoin_Volume_rolling_std_30,7.662365033557234e-05,9.062451970622065e-06,0.05825081875303865,2,8,Bitcoin,7,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return_lag_7,3.037748429401011e-05,2.4918696354907247e-05,0.05825081875303865,3,8,Bitcoin,7,candidate,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_rolling_mean_30,2.8006380358418063e-05,1.5219263256587205e-05,0.05825081875303865,4,8,Bitcoin,7,candidate,XGBoost,Original,Price & Return
+Bitcoin_Search_Interest_lag_1,1.4040614399061027e-06,2.0765726278280255e-05,0.05825081875303865,5,8,Bitcoin,7,candidate,XGBoost,Original,Google Trends
+Bitcoin_Volume_raw_lag_7,1.2200888296967638e-06,7.247575598895455e-06,0.05825081875303865,6,8,Bitcoin,7,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Volume_raw_lag_1,8.138506046636435e-07,1.4096305970480826e-06,0.05825081875303865,7,8,Bitcoin,7,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Volume_pct_change_lag_1,2.717580370806272e-09,2.2855491023161798e-08,0.05825081875303865,8,8,Bitcoin,7,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Volume_log,0.0,0.0,0.05825081875303865,9,8,Bitcoin,7,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Volume_pct_change_lag_7,0.0,0.0,0.05825081875303865,9,8,Bitcoin,7,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return_rolling_mean_30,0.0007784677546452748,0.0001366931821894917,0.06148045167326498,1,8,Bitcoin,7,combined,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_rolling_std_30,2.696728285875652e-05,7.78842337352559e-05,0.06148045167326498,2,8,Bitcoin,7,combined,XGBoost,Original,Volatility
+Bitcoin_Price_log_return,1.2639807303903468e-05,1.237129794438543e-05,0.06148045167326498,3,8,Bitcoin,7,combined,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_lag_7,1.1724236816102601e-05,1.325665202284173e-05,0.06148045167326498,4,8,Bitcoin,7,combined,XGBoost,Original,Price & Return
+Bitcoin_Price_momentum_7,2.2583154445669426e-06,1.645456412683085e-05,0.06148045167326498,5,8,Bitcoin,7,combined,XGBoost,Original,Price & Return
+Fear_Greed_Index_diff_lag_2,0.0,0.0,0.06148045167326498,6,8,Bitcoin,7,combined,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_diff_lag_1,0.0,0.0,0.06148045167326498,6,8,Bitcoin,7,combined,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_2,0.0,0.0,0.06148045167326498,6,8,Bitcoin,7,combined,XGBoost,Original,Fear & Greed / Sentiment
+Bitcoin_Search_Interest_diff_lag_1,0.0,0.0,0.06148045167326498,6,8,Bitcoin,7,combined,XGBoost,Original,Google Trends
+Bitcoin_Volume_log,0.0,0.0,0.06148045167326498,6,8,Bitcoin,7,combined,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return_rolling_std_30,0.00023515816865137505,0.00010063206938973256,0.05821232414805851,1,8,Bitcoin,7,primary,XGBoost,Original,Volatility
+Bitcoin_Volume_rolling_std_30,0.00014790711609916508,3.915879171728277e-05,0.05821232414805851,2,8,Bitcoin,7,primary,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return_rolling_mean_30,6.830936841843889e-05,1.7673947007583343e-05,0.05821232414805851,3,8,Bitcoin,7,primary,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_lag_7,9.34699741504761e-06,1.7325074097092083e-05,0.05821232414805851,4,8,Bitcoin,7,primary,XGBoost,Original,Price & Return
+Bitcoin_Volume_raw_lag_7,7.97269697376448e-06,2.5187969277228627e-05,0.05821232414805851,5,8,Bitcoin,7,primary,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return,0.0,0.0,0.05821232414805851,6,8,Bitcoin,7,primary,XGBoost,Original,Price & Return
+Bitcoin_Price_momentum_7,0.0,0.0,0.05821232414805851,6,8,Bitcoin,7,primary,XGBoost,Original,Price & Return
+Bitcoin_Volume_raw_lag_1,0.0,0.0,0.05821232414805851,6,8,Bitcoin,7,primary,XGBoost,Original,Trading Volume
+Bitcoin_Volume_pct_change_lag_1,0.0,0.0,0.05821232414805851,6,8,Bitcoin,7,primary,XGBoost,Original,Trading Volume
+Bitcoin_Volume_pct_change_lag_7,0.0,0.0,0.05821232414805851,6,8,Bitcoin,7,primary,XGBoost,Original,Trading Volume
+Bitcoin_Price_log_return_rolling_std_30,0.0020453202570579355,0.0003050038137157601,0.09533738501781391,1,8,Bitcoin,14,ablation,XGBoost,Original,Volatility
+Bitcoin_Price_log_return_rolling_mean_30,0.0014963202349804455,0.00020729240321812177,0.09533738501781391,2,8,Bitcoin,14,ablation,XGBoost,Original,Price & Return
+Bitcoin_Price_trailing_14day_return,0.0003109450814939435,0.00023078904455804087,0.09533738501781391,3,8,Bitcoin,14,ablation,XGBoost,Original,Price & Return
+Fear_Greed_Index_lag_1,1.4569623355376732e-05,1.177795596742581e-05,0.09533738501781391,4,8,Bitcoin,14,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Bitcoin_Volume_pct_change_lag_7,0.0,0.0,0.09533738501781391,5,8,Bitcoin,14,ablation,XGBoost,Original,Trading Volume
+Fear_Greed_Index_diff_lag_2,0.0,0.0,0.09533738501781391,5,8,Bitcoin,14,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_diff_lag_1,0.0,0.0,0.09533738501781391,5,8,Bitcoin,14,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_2,0.0,0.0,0.09533738501781391,5,8,Bitcoin,14,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Bitcoin_Volume_pct_change_lag_1,0.0,0.0,0.09533738501781391,5,8,Bitcoin,14,ablation,XGBoost,Original,Trading Volume
+Market_Sentiment_Encoded_lag_1,0.0,0.0,0.09533738501781391,5,8,Bitcoin,14,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Bitcoin_Price_log_return_rolling_std_30,0.0006337880545815161,0.0002655482031292778,0.08615655728160888,1,8,Bitcoin,14,candidate,XGBoost,Original,Volatility
+Bitcoin_Price_trailing_14day_return,1.8597461030318493e-05,2.084483808531805e-05,0.08615655728160888,2,8,Bitcoin,14,candidate,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return,0.0,0.0,0.08615655728160888,3,8,Bitcoin,14,candidate,XGBoost,Original,Price & Return
+Bitcoin_Search_Interest_lag_2,0.0,0.0,0.08615655728160888,3,8,Bitcoin,14,candidate,XGBoost,Original,Google Trends
+Bitcoin_Volume_log,0.0,0.0,0.08615655728160888,3,8,Bitcoin,14,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Volume_pct_change_lag_7,0.0,0.0,0.08615655728160888,3,8,Bitcoin,14,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Search_Interest_diff_lag_1,0.0,0.0,0.08615655728160888,3,8,Bitcoin,14,candidate,XGBoost,Original,Google Trends
+Bitcoin_Volume_pct_change_lag_1,0.0,0.0,0.08615655728160888,3,8,Bitcoin,14,candidate,XGBoost,Original,Trading Volume
+Bitcoin_Price_momentum_7,0.0,0.0,0.08615655728160888,3,8,Bitcoin,14,candidate,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_rolling_mean_30,0.0,0.0,0.08615655728160888,3,8,Bitcoin,14,candidate,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_rolling_mean_30,0.00013833522233460023,2.780900543318914e-05,0.08804032570426369,1,8,Bitcoin,14,combined,XGBoost,Original,Price & Return
+Bitcoin_Search_Interest_lag_2,9.306817650426256e-05,0.00017670706994130832,0.08804032570426369,2,8,Bitcoin,14,combined,XGBoost,Original,Google Trends
+Bitcoin_Price_trailing_14day_return,3.9891250210919924e-05,1.713416626264835e-05,0.08804032570426369,3,8,Bitcoin,14,combined,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_rolling_std_30,2.8408815868680506e-05,4.2422558468828406e-06,0.08804032570426369,4,8,Bitcoin,14,combined,XGBoost,Original,Volatility
+Bitcoin_Search_Interest_lag_1,2.329279782440144e-05,5.47825844609201e-05,0.08804032570426369,5,8,Bitcoin,14,combined,XGBoost,Original,Google Trends
+Bitcoin_Price_log_return,0.0,0.0,0.08804032570426369,6,8,Bitcoin,14,combined,XGBoost,Original,Price & Return
+Fear_Greed_Index_diff_lag_2,0.0,0.0,0.08804032570426369,6,8,Bitcoin,14,combined,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_diff_lag_1,0.0,0.0,0.08804032570426369,6,8,Bitcoin,14,combined,XGBoost,Original,Fear & Greed / Sentiment
+Bitcoin_Search_Interest_diff_lag_2,0.0,0.0,0.08804032570426369,6,8,Bitcoin,14,combined,XGBoost,Original,Google Trends
+Bitcoin_Search_Interest_diff_lag_1,0.0,0.0,0.08804032570426369,6,8,Bitcoin,14,combined,XGBoost,Original,Google Trends
+Bitcoin_Price_log_return_rolling_std_30,0.00048244001997832346,0.00018553923773957813,0.08482033014287782,1,8,Bitcoin,14,primary,XGBoost,Original,Volatility
+Bitcoin_Volume_rolling_std_30,4.1029798596912276e-05,0.00016079075690411521,0.08482033014287782,2,8,Bitcoin,14,primary,XGBoost,Original,Trading Volume
+Bitcoin_Price_trailing_14day_return,1.844747907740925e-05,2.1559002688616943e-05,0.08482033014287782,3,8,Bitcoin,14,primary,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return,0.0,0.0,0.08482033014287782,4,8,Bitcoin,14,primary,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_lag_1,0.0,0.0,0.08482033014287782,4,8,Bitcoin,14,primary,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_lag_2,0.0,0.0,0.08482033014287782,4,8,Bitcoin,14,primary,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_lag_7,0.0,0.0,0.08482033014287782,4,8,Bitcoin,14,primary,XGBoost,Original,Price & Return
+Bitcoin_Price_log_return_rolling_mean_30,0.0,0.0,0.08482033014287782,4,8,Bitcoin,14,primary,XGBoost,Original,Price & Return
+Bitcoin_Price_momentum_7,0.0,0.0,0.08482033014287782,4,8,Bitcoin,14,primary,XGBoost,Original,Price & Return
+Bitcoin_Volume_raw_lag_7,0.0,0.0,0.08482033014287782,4,8,Bitcoin,14,primary,XGBoost,Original,Trading Volume
+Fear_Greed_Index_lag_2,1.96325043564146e-05,6.908144435312144e-06,0.03666973762483074,1,8,Ethereum,1,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Ethereum_Price_log_return_rolling_mean_30,1.3564584886081171e-05,9.39537140418802e-06,0.03666973762483074,2,8,Ethereum,1,ablation,XGBoost,Original,Price & Return
+Ethereum_Volume_pct_change_lag_7,1.414190964383992e-06,4.078085765853377e-06,0.03666973762483074,3,8,Ethereum,1,ablation,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return_lag_1,1.2110932068858798e-06,2.821011432900856e-06,0.03666973762483074,4,8,Ethereum,1,ablation,XGBoost,Original,Price & Return
+Ethereum_Volume_raw_lag_1,9.80799439813211e-07,3.2674718829325853e-06,0.03666973762483074,5,8,Ethereum,1,ablation,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return,0.0,0.0,0.03666973762483074,6,8,Ethereum,1,ablation,XGBoost,Original,Price & Return
+Fear_Greed_Index_diff_lag_2,0.0,0.0,0.03666973762483074,6,8,Ethereum,1,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_diff_lag_1,0.0,0.0,0.03666973762483074,6,8,Ethereum,1,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Ethereum_Volume_rolling_std_30,0.0,0.0,0.03666973762483074,6,8,Ethereum,1,ablation,XGBoost,Original,Trading Volume
+Ethereum_Volume_rolling_mean_30,0.0,0.0,0.03666973762483074,6,8,Ethereum,1,ablation,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return,1.8577976937540937e-05,1.2298575734888988e-05,0.03663534834521492,1,8,Ethereum,1,candidate,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_rolling_mean_30,1.4477113362802371e-05,1.2065743692675682e-05,0.03663534834521492,2,8,Ethereum,1,candidate,XGBoost,Original,Price & Return
+Ethereum_Search_Interest_diff_lag_2,7.868704586840546e-06,9.949234541702565e-06,0.03663534834521492,3,8,Ethereum,1,candidate,XGBoost,Original,Google Trends
+Ethereum_Search_Interest_lag_2,6.206134836229775e-06,2.2481629292380692e-06,0.03663534834521492,4,8,Ethereum,1,candidate,XGBoost,Original,Google Trends
+Ethereum_Price_log_return_lag_2,1.024541554959374e-06,3.573767955463728e-06,0.03663534834521492,5,8,Ethereum,1,candidate,XGBoost,Original,Price & Return
+Ethereum_Volume_pct_change_lag_1,4.710248767856792e-07,4.429954790439945e-06,0.03663534834521492,6,8,Ethereum,1,candidate,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return_lag_7,0.0,0.0,0.03663534834521492,7,8,Ethereum,1,candidate,XGBoost,Original,Price & Return
+Ethereum_Price_momentum_7,0.0,0.0,0.03663534834521492,7,8,Ethereum,1,candidate,XGBoost,Original,Price & Return
+Ethereum_Search_Interest_diff_lag_1,0.0,0.0,0.03663534834521492,7,8,Ethereum,1,candidate,XGBoost,Original,Google Trends
+Ethereum_Volume_log,0.0,0.0,0.03663534834521492,7,8,Ethereum,1,candidate,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return_rolling_mean_30,2.417239080644215e-05,2.2593403272214906e-05,0.03666332608998634,1,8,Ethereum,1,combined,XGBoost,Original,Price & Return
+Fear_Greed_Index_rolling_mean_7,1.9958908144364004e-05,1.4565666804139648e-05,0.03666332608998634,2,8,Ethereum,1,combined,XGBoost,Original,Fear & Greed / Sentiment
+Ethereum_Price_log_return,9.15529922548581e-06,9.003137157575626e-06,0.03666332608998634,3,8,Ethereum,1,combined,XGBoost,Original,Price & Return
+Ethereum_Volume_pct_change_lag_7,5.234166517284131e-07,7.485932885767845e-06,0.03666332608998634,4,8,Ethereum,1,combined,XGBoost,Original,Trading Volume
+Fear_Greed_Index_diff_lag_1,0.0,0.0,0.03666332608998634,5,8,Ethereum,1,combined,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_2,0.0,0.0,0.03666332608998634,5,8,Ethereum,1,combined,XGBoost,Original,Fear & Greed / Sentiment
+Ethereum_Search_Interest_diff_lag_1,0.0,0.0,0.03666332608998634,5,8,Ethereum,1,combined,XGBoost,Original,Google Trends
+Ethereum_Search_Interest_lag_2,0.0,0.0,0.03666332608998634,5,8,Ethereum,1,combined,XGBoost,Original,Google Trends
+Ethereum_Search_Interest_lag_1,0.0,0.0,0.03666332608998634,5,8,Ethereum,1,combined,XGBoost,Original,Google Trends
+Ethereum_Volume_rolling_std_30,0.0,0.0,0.03666332608998634,5,8,Ethereum,1,combined,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return_rolling_mean_30,2.6887727647622456e-05,1.2291594880958509e-05,0.03663169290485745,1,8,Ethereum,1,primary,XGBoost,Original,Price & Return
+Ethereum_Price_log_return,1.0332358167584182e-05,1.3603997554954063e-05,0.03663169290485745,2,8,Ethereum,1,primary,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_rolling_std_30,9.9251567619741e-06,1.2747849562475831e-05,0.03663169290485745,3,8,Ethereum,1,primary,XGBoost,Original,Volatility
+Ethereum_Price_momentum_7,9.650960122543906e-06,5.844961913935893e-06,0.03663169290485745,4,8,Ethereum,1,primary,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_lag_1,5.363694507846614e-06,1.1209629337900843e-05,0.03663169290485745,5,8,Ethereum,1,primary,XGBoost,Original,Price & Return
+Ethereum_Volume_pct_change_lag_1,5.040934099856051e-07,4.440328875125333e-06,0.03663169290485745,6,8,Ethereum,1,primary,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return_lag_7,0.0,0.0,0.03663169290485745,7,8,Ethereum,1,primary,XGBoost,Original,Price & Return
+Ethereum_Volume_raw_lag_7,0.0,0.0,0.03663169290485745,7,8,Ethereum,1,primary,XGBoost,Original,Trading Volume
+Ethereum_Volume_log,0.0,0.0,0.03663169290485745,7,8,Ethereum,1,primary,XGBoost,Original,Trading Volume
+Ethereum_Volume_rolling_mean_30,0.0,0.0,0.03663169290485745,7,8,Ethereum,1,primary,XGBoost,Original,Trading Volume
+Fear_Greed_Index_lag_2,0.00017416748618464227,5.048153239832536e-05,0.08546560381823104,1,8,Ethereum,7,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Ethereum_Price_log_return_rolling_mean_30,0.0001669363425849165,6.249343256448594e-05,0.08546560381823104,2,8,Ethereum,7,ablation,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_rolling_std_30,6.813661204755836e-05,1.417677522480382e-05,0.08546560381823104,3,8,Ethereum,7,ablation,XGBoost,Original,Volatility
+Ethereum_Price_log_return_lag_7,1.766953017884841e-05,1.2479847421348551e-05,0.08546560381823104,4,8,Ethereum,7,ablation,XGBoost,Original,Price & Return
+Fear_Greed_Index_diff_lag_2,3.3567074421009258e-06,1.7493670488484266e-05,0.08546560381823104,5,8,Ethereum,7,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Ethereum_Price_log_return,0.0,0.0,0.08546560381823104,6,8,Ethereum,7,ablation,XGBoost,Original,Price & Return
+Fear_Greed_Index_diff_lag_1,0.0,0.0,0.08546560381823104,6,8,Ethereum,7,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_1,0.0,0.0,0.08546560381823104,6,8,Ethereum,7,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Ethereum_Price_trailing_7day_return,0.0,0.0,0.08546560381823104,6,8,Ethereum,7,ablation,XGBoost,Original,Price & Return
+Ethereum_Volume_rolling_std_30,0.0,0.0,0.08546560381823104,6,8,Ethereum,7,ablation,XGBoost,Original,Trading Volume
+Ethereum_Search_Interest_lag_2,0.00014506195834552461,8.722613559445847e-05,0.08680202723970354,1,8,Ethereum,7,candidate,XGBoost,Original,Google Trends
+Ethereum_Search_Interest_lag_1,3.863129353019225e-05,3.724400567443271e-05,0.08680202723970354,2,8,Ethereum,7,candidate,XGBoost,Original,Google Trends
+Ethereum_Price_log_return_lag_7,4.676565252876089e-06,1.9957979350134406e-06,0.08680202723970354,3,8,Ethereum,7,candidate,XGBoost,Original,Price & Return
+Ethereum_Price_log_return,3.492467375019667e-06,2.2838123962658657e-05,0.08680202723970354,4,8,Ethereum,7,candidate,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_lag_1,3.4405858563568703e-06,5.174542833682642e-06,0.08680202723970354,5,8,Ethereum,7,candidate,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_lag_2,0.0,0.0,0.08680202723970354,6,8,Ethereum,7,candidate,XGBoost,Original,Price & Return
+Ethereum_Search_Interest_diff_lag_1,0.0,0.0,0.08680202723970354,6,8,Ethereum,7,candidate,XGBoost,Original,Google Trends
+Ethereum_Volume_log,-9.402237207186553e-07,5.3955841363772524e-05,0.08680202723970354,8,8,Ethereum,7,candidate,XGBoost,Original,Trading Volume
+Ethereum_Volume_raw_lag_1,-1.188354346025669e-06,1.1864756938384537e-05,0.08680202723970354,9,8,Ethereum,7,candidate,XGBoost,Original,Trading Volume
+Ethereum_Volume_raw_lag_7,-3.62977340679152e-06,5.823542004213657e-06,0.08680202723970354,10,8,Ethereum,7,candidate,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combined,XGBoost,Original,Price & Return
+Fear_Greed_Index_diff_lag_2,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combined,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_diff_lag_1,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combined,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_2,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combined,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_1,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combined,XGBoost,Original,Fear & Greed / Sentiment
+Ethereum_Search_Interest_diff_lag_2,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combined,XGBoost,Original,Google Trends
+Ethereum_Search_Interest_diff_lag_1,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combined,XGBoost,Original,Google Trends
+Ethereum_Search_Interest_lag_2,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combined,XGBoost,Original,Google Trends
+Ethereum_Search_Interest_lag_1,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combined,XGBoost,Original,Google Trends
+Ethereum_Price_trailing_7day_return,0.0,0.0,0.08571953051825157,1,8,Ethereum,7,combined,XGBoost,Original,Price & Return
+Ethereum_Price_log_return,0.0,0.0,0.08727878907456466,1,8,Ethereum,7,primary,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_lag_1,0.0,0.0,0.08727878907456466,1,8,Ethereum,7,primary,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_lag_2,0.0,0.0,0.08727878907456466,1,8,Ethereum,7,primary,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_lag_7,0.0,0.0,0.08727878907456466,1,8,Ethereum,7,primary,XGBoost,Original,Price & Return
+Ethereum_Price_momentum_7,0.0,0.0,0.08727878907456466,1,8,Ethereum,7,primary,XGBoost,Original,Price & Return
+Ethereum_Volume_raw_lag_1,0.0,0.0,0.08727878907456466,1,8,Ethereum,7,primary,XGBoost,Original,Trading Volume
+Ethereum_Volume_raw_lag_7,0.0,0.0,0.08727878907456466,1,8,Ethereum,7,primary,XGBoost,Original,Trading Volume
+Ethereum_Volume_pct_change_lag_1,0.0,0.0,0.08727878907456466,1,8,Ethereum,7,primary,XGBoost,Original,Trading Volume
+Ethereum_Volume_pct_change_lag_7,0.0,0.0,0.08727878907456466,1,8,Ethereum,7,primary,XGBoost,Original,Trading Volume
+Ethereum_Volume_log,0.0,0.0,0.08727878907456466,1,8,Ethereum,7,primary,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return_rolling_std_30,9.335356382247396e-05,1.8621706162266815e-05,0.12389966808181561,1,8,Ethereum,14,ablation,XGBoost,Original,Volatility
+Ethereum_Price_log_return,0.0,0.0,0.12389966808181561,2,8,Ethereum,14,ablation,XGBoost,Original,Price & Return
+Fear_Greed_Index_diff_lag_2,0.0,0.0,0.12389966808181561,2,8,Ethereum,14,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_diff_lag_1,0.0,0.0,0.12389966808181561,2,8,Ethereum,14,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_2,0.0,0.0,0.12389966808181561,2,8,Ethereum,14,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_1,0.0,0.0,0.12389966808181561,2,8,Ethereum,14,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Ethereum_Volume_rolling_std_30,0.0,0.0,0.12389966808181561,2,8,Ethereum,14,ablation,XGBoost,Original,Trading Volume
+Ethereum_Volume_rolling_mean_30,0.0,0.0,0.12389966808181561,2,8,Ethereum,14,ablation,XGBoost,Original,Trading Volume
+Ethereum_Volume_log,0.0,0.0,0.12389966808181561,2,8,Ethereum,14,ablation,XGBoost,Original,Trading Volume
+Fear_Greed_Index_rolling_mean_7,0.0,0.0,0.12389966808181561,2,8,Ethereum,14,ablation,XGBoost,Original,Fear & Greed / Sentiment
+Ethereum_Price_log_return,0.0,0.0,0.12197949405005827,1,8,Ethereum,14,candidate,XGBoost,Original,Price & Return
+Ethereum_Volume_log,0.0,0.0,0.12197949405005827,1,8,Ethereum,14,candidate,XGBoost,Original,Trading Volume
+Ethereum_Search_Interest_diff_lag_1,0.0,0.0,0.12197949405005827,1,8,Ethereum,14,candidate,XGBoost,Original,Google Trends
+Ethereum_Volume_raw_lag_7,0.0,0.0,0.12197949405005827,1,8,Ethereum,14,candidate,XGBoost,Original,Trading Volume
+Ethereum_Volume_pct_change_lag_1,0.0,0.0,0.12197949405005827,1,8,Ethereum,14,candidate,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return_lag_7,0.0,0.0,0.12197949405005827,1,8,Ethereum,14,candidate,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_lag_2,0.0,0.0,0.12197949405005827,1,8,Ethereum,14,candidate,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_lag_1,0.0,0.0,0.12197949405005827,1,8,Ethereum,14,candidate,XGBoost,Original,Price & Return
+Ethereum_Search_Interest_diff_lag_2,0.0,0.0,0.12197949405005827,1,8,Ethereum,14,candidate,XGBoost,Original,Google Trends
+Ethereum_Price_momentum_7,-1.344398869694563e-06,2.3285671479491538e-06,0.12197949405005827,10,8,Ethereum,14,candidate,XGBoost,Original,Price & Return
+Ethereum_Volume_rolling_std_30,0.0007245536435903505,0.00012553119840126893,0.1241966431567761,1,8,Ethereum,14,combined,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return,3.726128571610379e-05,1.3000225727899042e-05,0.1241966431567761,2,8,Ethereum,14,combined,XGBoost,Original,Price & Return
+Ethereum_Volume_raw_lag_7,2.079924157666682e-05,1.362829410954449e-05,0.1241966431567761,3,8,Ethereum,14,combined,XGBoost,Original,Trading Volume
+Fear_Greed_Index_diff_lag_1,1.732566553531642e-05,1.679706231428586e-05,0.1241966431567761,4,8,Ethereum,14,combined,XGBoost,Original,Fear & Greed / Sentiment
+Fear_Greed_Index_lag_2,9.445107459763596e-06,3.869146929556551e-05,0.1241966431567761,5,8,Ethereum,14,combined,XGBoost,Original,Fear & Greed / Sentiment
+Ethereum_Price_momentum_7,1.6992315629814347e-06,1.8390336038116252e-06,0.1241966431567761,6,8,Ethereum,14,combined,XGBoost,Original,Price & Return
+Fear_Greed_Index_diff_lag_2,0.0,0.0,0.1241966431567761,7,8,Ethereum,14,combined,XGBoost,Original,Fear & Greed / Sentiment
+Ethereum_Search_Interest_diff_lag_2,0.0,0.0,0.1241966431567761,7,8,Ethereum,14,combined,XGBoost,Original,Google Trends
+Ethereum_Search_Interest_diff_lag_1,0.0,0.0,0.1241966431567761,7,8,Ethereum,14,combined,XGBoost,Original,Google Trends
+Ethereum_Volume_log,0.0,0.0,0.1241966431567761,7,8,Ethereum,14,combined,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return_rolling_std_30,0.0009946440484656163,0.0001458265579165832,0.1239506724251246,1,8,Ethereum,14,primary,XGBoost,Original,Volatility
+Ethereum_Volume_rolling_std_30,0.00028637064220321355,4.097068191573353e-05,0.1239506724251246,2,8,Ethereum,14,primary,XGBoost,Original,Trading Volume
+Ethereum_Volume_rolling_mean_30,8.622806963193112e-05,9.199066930927652e-05,0.1239506724251246,3,8,Ethereum,14,primary,XGBoost,Original,Trading Volume
+Ethereum_Volume_pct_change_lag_1,1.1521333560596259e-06,1.1521333560596259e-06,0.1239506724251246,4,8,Ethereum,14,primary,XGBoost,Original,Trading Volume
+Ethereum_Price_log_return,0.0,0.0,0.1239506724251246,5,8,Ethereum,14,primary,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_lag_1,0.0,0.0,0.1239506724251246,5,8,Ethereum,14,primary,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_lag_2,0.0,0.0,0.1239506724251246,5,8,Ethereum,14,primary,XGBoost,Original,Price & Return
+Ethereum_Price_log_return_lag_7,0.0,0.0,0.1239506724251246,5,8,Ethereum,14,primary,XGBoost,Original,Price & Return
+Ethereum_Volume_raw_lag_1,0.0,0.0,0.1239506724251246,5,8,Ethereum,14,primary,XGBoost,Original,Trading Volume
+Ethereum_Volume_raw_lag_7,0.0,0.0,0.1239506724251246,5,8,Ethereum,14,primary,XGBoost,Original,Trading Volume
