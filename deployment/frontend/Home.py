@@ -16,27 +16,19 @@ inject()
 
 api_up = health_check()
 
-header_col1, header_col2 = st.columns([4, 1])
-with header_col1:
-    st.title("AI-Driven Bitcoin & Ethereum Forecasting")
-    st.caption("Statistical, ML, and deep learning models -- compared, evaluated, and explained with explainable AI via permutation feature importance")
-with header_col2:
-    st.write("")
-    if st.button("Start forecasting", type="primary", use_container_width=True):
-        st.switch_page("pages/1_Forecast.py")
+st.title("AI-Driven Bitcoin & Ethereum Forecasting")
+st.caption("Statistical, ML, and deep learning models -- compared, evaluated, and explained with explainable AI via permutation feature importance")
 
 if "selected_asset" not in st.session_state:
     st.session_state["selected_asset"] = "Bitcoin"
 
-t1, t2 = st.columns(2)
-with t1:
-    if st.button("Bitcoin", type="primary" if st.session_state["selected_asset"] == "Bitcoin" else "secondary", use_container_width=True):
-        st.session_state["selected_asset"] = "Bitcoin"
-        st.rerun()
-with t2:
-    if st.button("Ethereum", type="primary" if st.session_state["selected_asset"] == "Ethereum" else "secondary", use_container_width=True):
-        st.session_state["selected_asset"] = "Ethereum"
-        st.rerun()
+st.segmented_control(
+    "Choose cryptocurrency", ["Bitcoin", "Ethereum"],
+    key="selected_asset",
+)
+
+if st.button("Start forecasting \u2192", type="primary", use_container_width=True):
+    st.switch_page("pages/1_Forecast.py")
 
 selected_asset = st.session_state["selected_asset"]
 st.markdown("---")
