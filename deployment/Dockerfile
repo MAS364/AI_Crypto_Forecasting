@@ -24,6 +24,9 @@ COPY deployment/csv_inference.py ./deployment/csv_inference.py
 # Saved trained models.
 COPY models/trained/ ./models/trained/
 
+# Saved models for Autoencoder-Encoded inference.
+COPY results/modeling/fitted_models/ ./results/modeling/fitted_models/
+
 # Saved autoencoder artefacts.
 COPY results/autoencoder/models/ ./results/autoencoder/models/
 
