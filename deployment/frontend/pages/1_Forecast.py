@@ -15,6 +15,7 @@ from styles import inject
 
 import pandas as pd
 import plotly.graph_objects as go
+import requests
 import streamlit as st
 import streamlit.components.v1 as components
 from api_client import (
@@ -26,7 +27,7 @@ import reports
 # EDIT THIS once the dataset is uploaded to GitHub -- the raw file URL,
 # not the GitHub page URL (raw.githubusercontent.com/<user>/<repo>/<branch>/<path>).
 # Example: "https://raw.githubusercontent.com/mas364/AI_Crypto_Forecasting/main/data/processed/merged_dataset.csv"
-SAMPLE_DATASET_GITHUB_URL = "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/data/processed/merged_dataset.csv"
+SAMPLE_DATASET_GITHUB_URL = "https://raw.githubusercontent.com/MAS364/AI_Crypto_Forecasting_Data/main/merged_dataset.csv"
 
 st.set_page_config(page_title="Forecast", layout="wide")
 inject()
@@ -116,12 +117,24 @@ else:
         "Importance Comparison page for the Original-representation results instead."
     )
 
-st.link_button(
-    "Download sample dataset (GitHub)", SAMPLE_DATASET_GITHUB_URL,
-    disabled="YOUR_USERNAME" in SAMPLE_DATASET_GITHUB_URL,
-)
-if "YOUR_USERNAME" in SAMPLE_DATASET_GITHUB_URL:
-    st.caption("Button will work once SAMPLE_DATASET_GITHUB_URL in this file is set to the real GitHub raw URL.")
+@st.cache_data(ttl=3600, show_spinner=False)
+def _fetch_dataset_csv(url: str) -> bytes:
+    """Fetches the public dataset CSV from GitHub. Cached for an hour so a
+    normal Streamlit rerun (any widget interaction reruns this whole
+    script top to bottom) doesn't refetch the file every time."""
+    response = requests.get(url, timeout=15)
+    response.raise_for_status()
+    return response.content
+
+
+try:
+    dataset_bytes = _fetch_dataset_csv(SAMPLE_DATASET_GITHUB_URL)
+    st.download_button(
+        "Download project dataset (CSV)", data=dataset_bytes,
+        file_name="merged_dataset.csv", mime="text/csv",
+    )
+except Exception:
+    st.warning("Dataset download is temporarily unavailable -- please try again shortly.")
 
 with st.expander("CSV requirements", expanded=False):
     try:
