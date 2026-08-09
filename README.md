@@ -236,8 +236,8 @@ python -m pytest tests/ -q
 
 | Location | Contents |
 |---|---|
-| `models/trained/` | Canonical, deployment-ready fitted models (Random Forest, XGBoost, LSTM) + `manifest.json`. This is what `src/evaluation/loaders.py` and the deployed API read from. |
-| `results/modeling/fitted_models/` | Experiment-local artefacts retained from Notebook 07 for research traceability. Notebook 07 exports the deployment-facing copies into `models/trained/`; this directory is a working/intermediate stage, not a second deployment source. |
+| `models/trained/` | Deployment-ready fitted models (Random Forest, XGBoost, LSTM) used for Original-representation inference, plus `manifest.json`. This is what `src/evaluation/loaders.py` reads from. |
+| `results/modeling/fitted_models/` | Notebook 07 experiment-local fitted artefacts retained for research traceability. The relevant Autoencoder-Encoded fitted models in this directory are also required by encoded runtime inference and are included in the backend Docker image; not every file here is necessarily a deployment artefact. |
 | `results/autoencoder/` | Encoded feature CSVs and autoencoder model artefacts |
 | `results/modeling/predictions/`, `results/modeling/metrics/` | Every model's predictions and metrics, all splits |
 | `results/evaluation/` | Decision summary, master comparison, Diebold-Mariano results |
@@ -282,7 +282,12 @@ docker build -f deployment/Dockerfile.streamlit -t crypto-forecast-frontend .
 docker run -p 8501:8080 -e CRYPTO_API_URL=<reachable backend URL> crypto-forecast-frontend
 ```
 
-**A note on `docker-compose.yml`**: as currently checked into the repository, it maps ports 8000 (backend) and 8501 (frontend) externally, but both Dockerfiles' containers actually listen on 8080 internally (`EXPOSE 8080`, `--port ${PORT:-8080}`), and `docker-compose.yml` does not set `PORT` to override this. `docker compose up --build` is therefore not currently a verified reproduction route and is not documented as one here; use the two `docker build`/`docker run` commands above until `docker-compose.yml` is corrected.
+**`docker-compose.yml`**: corrected and verified end-to-end. `docker compose up --build` starts both containers together, with the backend healthcheck (`http://localhost:8080/health`, checked from inside the backend container) confirmed returning HTTP 200 before the frontend starts. Once running:
+
+- Frontend: `http://localhost:8501`
+- FastAPI documentation: `http://localhost:8000/docs`
+
+Internally, the frontend reaches the backend over the Docker Compose network at `http://api:8080`.
 
 ## Deployment Architecture
 
@@ -296,7 +301,12 @@ Streamlit frontend  (deployment/frontend/, talks to the API over HTTP only, neve
 FastAPI inference API  (deployment/app.py, imports src/ directly)
   |
   v
-Saved models (models/trained/) and results (results/)
+Runtime model artefacts
+  |- models/trained/                       (Original representation)
+  `- results/modeling/fitted_models/       (Autoencoder-Encoded representation)
+  |
+  v
+Saved evaluation/research artefacts (results/)
 ```
 
 The backend is inference-only — it loads already-saved models and results and never trains anything at runtime. If Google Cloud Run is used for the live deployment, no project IDs, service URLs, or credentials are included in this repository; deployment configuration is handled outside version control.
