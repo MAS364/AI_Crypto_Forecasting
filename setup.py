@@ -22,8 +22,8 @@ def get_requirements(file_path):
 setup(
     name="crypto_time_series_analysis",
     version="0.1.0",
-    author="Your Name",
-    author_email="your_email@example.com",
+    author="Mohammad Arshad",
+    author_email="siddiquiarshad106@gmail.com",
     description="End-to-End Machine Learning Pipeline for Cryptocurrency Time Series Forecasting and Causality Analysis",
     packages=find_packages(),
     install_requires=get_requirements("requirements.txt"),

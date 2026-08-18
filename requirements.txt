@@ -11,9 +11,15 @@ ipykernel==7.3.0
 python-dotenv==1.2.2
 PyYAML==6.0.3
 pytest==9.1.1
+# pytrends is used by notebooks/01_data_collection.ipynb to collect Google
+# Trends search interest. It was missing from this file entirely (a
+# ModuleNotFoundError on a clean install) and is only needed if re-running
+# Notebook 01; every other stage reads the already-collected data/raw/ CSV.
+pytrends==4.9.2
 fastapi==0.141.1
 uvicorn[standard]==0.52.1
-httpx==0.28.1  # needed for fastapi.testclient in tests/test_deployment_app.py
+# httpx is needed for fastapi.testclient in tests/test_deployment_app.py
+httpx==0.28.1
 setuptools==83.0.0
 
 # Added -- genuinely required by src/ and the notebooks, but were missing

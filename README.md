@@ -146,7 +146,7 @@ Correlation and Granger causality analysis (`05_correlation_and_granger.ipynb`) 
 
 Permutation feature importance (`09_feature_importance_analysis.ipynb`, `src/feature_importance/`) is computed for Random Forest and XGBoost, on the Original representation, across all 48 real (asset, horizon, feature-configuration, model) combinations that have a saved model for this representation. It works by shuffling one feature at a time in the real test set and measuring how much the already-fitted model's RMSE degrades — it never retrains anything, and it never touches the model's internal structure.
 
-Cross-model agreement between Random Forest and XGBoost is real but modest: mean Spearman rank correlation of **0.247** across all 48 configurations. This is interpreted as the two models capturing similar aggregate signal without ranking individual features the same way, consistent with how differently the two algorithms are regularised — not as a discrepancy to explain away. Findings are cross-referenced directly against the correlation and Granger causality results (Notebook 05) rather than reported independently; no causal or economic interpretation is claimed for any feature's importance score.
+Cross-model agreement between Random Forest and XGBoost is real but modest: mean Spearman rank correlation of **0.247** across the 24 (asset, horizon, feature-configuration) pairs where both models have a saved importance result (`results/feature_importance/processed/rank_agreement_summary.csv`). This is interpreted as the two models capturing similar aggregate signal without ranking individual features the same way, consistent with how differently the two algorithms are regularised — not as a discrepancy to explain away. Findings are cross-referenced directly against the correlation and Granger causality results (Notebook 05) rather than reported independently; no causal or economic interpretation is claimed for any feature's importance score.
 
 ## Repository Structure
 
@@ -365,3 +365,4 @@ Python 3.12, pandas, NumPy, scikit-learn, XGBoost, TensorFlow/Keras, statsmodels
 ## Academic Context
 
 This repository accompanies an MSc Data Science dissertation submitted at the University of Surrey.
+
