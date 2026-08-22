@@ -43,6 +43,10 @@ COPY results/causality_analysis/tables/ ./results/causality_analysis/tables/
 # Permutation feature-importance results.
 COPY results/feature_importance/ ./results/feature_importance/
 
+# Autoencoder-Encoded permutation feature-importance, latent-original
+# correlation, and cross-representation comparison results.
+COPY results/feature_importance_autoencoder/ ./results/feature_importance_autoencoder/
+
 # Cloud Run provides PORT automatically.
 EXPOSE 8080
 

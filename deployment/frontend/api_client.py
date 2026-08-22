@@ -157,6 +157,38 @@ def get_feature_group_importance() -> list[dict]:
 
 
 @st.cache_data(ttl=300)
+def get_feature_importance_comparison_autoencoder() -> list[dict]:
+    return _get("/feature-importance-comparison-autoencoder")
+
+
+@st.cache_data(ttl=300)
+def get_feature_importance_agreement_summary_autoencoder() -> list[dict]:
+    return _get("/feature-importance-agreement-summary-autoencoder")
+
+
+@st.cache_data(ttl=300)
+def get_feature_group_importance_autoencoder() -> list[dict]:
+    return _get("/feature-group-importance-autoencoder")
+
+
+@st.cache_data(ttl=300)
+def get_latent_original_correlations(asset: str = None, horizon: int = None, feature_set: str = None) -> list[dict]:
+    params = {k: v for k, v in {"asset": asset, "horizon": horizon, "feature_set": feature_set}.items() if v}
+    return _get("/latent-original-correlations", params=params)
+
+
+@st.cache_data(ttl=300)
+def get_latent_original_top_associations(asset: str = None, horizon: int = None, feature_set: str = None) -> list[dict]:
+    params = {k: v for k, v in {"asset": asset, "horizon": horizon, "feature_set": feature_set}.items() if v}
+    return _get("/latent-original-top-associations", params=params)
+
+
+@st.cache_data(ttl=300)
+def get_representation_comparison_summary() -> list[dict]:
+    return _get("/representation-comparison-summary")
+
+
+@st.cache_data(ttl=300)
 def get_arima_info(asset: str, horizon: int, feature_set: str = "primary") -> dict:
     return _get("/arima-info", params={"asset": asset, "horizon": horizon, "feature_set": feature_set})
 

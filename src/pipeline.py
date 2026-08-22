@@ -402,6 +402,37 @@ def run_predict(
 
 
 # ---------------------------------------------------------------------------
+# FEATURE IMPORTANCE (AUTOENCODER-ENCODED BRANCH + CROSS-REPRESENTATION)
+# ---------------------------------------------------------------------------
+
+def run_feature_importance_autoencoder() -> None:
+    """Runs the full Autoencoder-Encoded feature-importance analysis: the
+    permutation-importance grid, the latent-original correlation
+    analysis, the combined report (feature dictionary + defensible
+    cross-representation comparison), and the dissertation figures --
+    in that order, each as its own already-tested top-level script, via
+    a real subprocess (not re-implemented here) so this command's
+    behaviour is identical to running the four scripts by hand. Never
+    retrains any model. Stops immediately if any step fails (a
+    non-zero exit code), rather than continuing with a broken step's
+    downstream outputs."""
+    import subprocess
+
+    steps = [
+        "run_feature_importance_grid_autoencoder.py",
+        "run_latent_original_correlation_analysis.py",
+        "run_combined_feature_importance_report.py",
+        "run_feature_importance_figures_autoencoder.py",
+    ]
+    for step in steps:
+        script_path = config.PROJECT_ROOT / step
+        print(f"\n{'=' * 70}\nRunning {step}\n{'=' * 70}")
+        result = subprocess.run([sys.executable, str(script_path)], cwd=config.PROJECT_ROOT)
+        if result.returncode != 0:
+            raise RuntimeError(f"{step} failed with exit code {result.returncode} -- stopping.")
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -411,6 +442,11 @@ def main():
 
     subparsers.add_parser("train", help="Build features, train autoencoders, train all models.")
     subparsers.add_parser("evaluate", help="Load saved results and build comparison tables. Never retrains.")
+    subparsers.add_parser(
+        "feature-importance-autoencoder",
+        help="Run the Autoencoder-Encoded permutation-importance grid, latent-original correlation "
+             "analysis, combined report, and figures. Never retrains any model.",
+    )
 
     predict_parser = subparsers.add_parser("predict", help="Load a saved model and predict. Never retrains.")
     predict_parser.add_argument("--horizon", type=int, required=True, choices=[1, 7, 14])
@@ -426,6 +462,8 @@ def main():
         run_train()
     elif args.command == "evaluate":
         run_evaluate()
+    elif args.command == "feature-importance-autoencoder":
+        run_feature_importance_autoencoder()
     elif args.command == "predict":
         input_df = pd.read_csv(args.input, parse_dates=["Date"])
         result = run_predict(

@@ -1,0 +1,49 @@
+asset,horizon,feature_set_key,representation,model_name,feature_group,n_features,mean_importance,total_importance,rank_within_config_model
+Bitcoin,1,ablation,Autoencoder-Encoded,Random Forest,Other,8,-2.292652214656507e-06,-1.8341217717252056e-05,1
+Bitcoin,1,ablation,Autoencoder-Encoded,XGBoost,Other,8,-6.900535404302983e-06,-5.5204283234423866e-05,1
+Bitcoin,1,candidate,Autoencoder-Encoded,Random Forest,Other,8,-2.967989970104035e-05,-0.0002374391976083228,1
+Bitcoin,1,candidate,Autoencoder-Encoded,XGBoost,Other,8,-4.073236691436058e-05,-0.0003258589353148846,1
+Bitcoin,1,combined,Autoencoder-Encoded,Random Forest,Other,8,-3.419042350013093e-06,-2.7352338800104743e-05,1
+Bitcoin,1,combined,Autoencoder-Encoded,XGBoost,Other,8,-8.553298728214973e-06,-6.842638982571978e-05,1
+Bitcoin,1,primary,Autoencoder-Encoded,Random Forest,Other,8,-1.433178286079661e-05,-0.00011465426288637288,1
+Bitcoin,1,primary,Autoencoder-Encoded,XGBoost,Other,8,1.852710179662219e-05,0.00014821681437297753,1
+Bitcoin,7,ablation,Autoencoder-Encoded,Random Forest,Other,8,-5.142756522946972e-05,-0.0004114205218357578,1
+Bitcoin,7,ablation,Autoencoder-Encoded,XGBoost,Other,8,-1.8587095062088115e-05,-0.00014869676049670492,1
+Bitcoin,7,candidate,Autoencoder-Encoded,Random Forest,Other,8,-2.9742061483092083e-05,-0.00023793649186473666,1
+Bitcoin,7,candidate,Autoencoder-Encoded,XGBoost,Other,8,-4.430115052513886e-06,-3.5440920420111086e-05,1
+Bitcoin,7,combined,Autoencoder-Encoded,Random Forest,Other,8,-2.6825881570900116e-05,-0.00021460705256720093,1
+Bitcoin,7,combined,Autoencoder-Encoded,XGBoost,Other,8,4.53366217336164e-07,3.626929738689312e-06,1
+Bitcoin,7,primary,Autoencoder-Encoded,Random Forest,Other,8,-2.938356921856867e-05,-0.00023506855374854935,1
+Bitcoin,7,primary,Autoencoder-Encoded,XGBoost,Other,8,-8.301141976809162e-06,-6.64091358144733e-05,1
+Bitcoin,14,ablation,Autoencoder-Encoded,Random Forest,Other,8,-0.00014259461245578683,-0.0011407568996462947,1
+Bitcoin,14,ablation,Autoencoder-Encoded,XGBoost,Other,8,-7.639345216965492e-05,-0.0006111476173572394,1
+Bitcoin,14,candidate,Autoencoder-Encoded,Random Forest,Other,8,-5.311672636300769e-05,-0.0004249338109040615,1
+Bitcoin,14,candidate,Autoencoder-Encoded,XGBoost,Other,8,1.583231584881945e-05,0.0001266585267905556,1
+Bitcoin,14,combined,Autoencoder-Encoded,Random Forest,Other,8,-2.7981724278247242e-05,-0.00022385379422597794,1
+Bitcoin,14,combined,Autoencoder-Encoded,XGBoost,Other,8,-3.384089775478093e-05,-0.00027072718203824744,1
+Bitcoin,14,primary,Autoencoder-Encoded,Random Forest,Other,8,-3.591624776157231e-05,-0.0002873299820925785,1
+Bitcoin,14,primary,Autoencoder-Encoded,XGBoost,Other,8,-1.0816376552368143e-05,-8.653101241894515e-05,1
+Ethereum,1,ablation,Autoencoder-Encoded,Random Forest,Other,8,-7.94741418721817e-06,-6.357931349774536e-05,1
+Ethereum,1,ablation,Autoencoder-Encoded,XGBoost,Other,8,-9.30500207670386e-06,-7.444001661363088e-05,1
+Ethereum,1,candidate,Autoencoder-Encoded,Random Forest,Other,8,4.521499264691954e-05,0.00036171994117535633,1
+Ethereum,1,candidate,Autoencoder-Encoded,XGBoost,Other,8,-1.4152161224364069e-06,-1.1321728979491255e-05,1
+Ethereum,1,combined,Autoencoder-Encoded,Random Forest,Other,8,-4.5300763427999925e-05,-0.0003624061074239994,1
+Ethereum,1,combined,Autoencoder-Encoded,XGBoost,Other,8,-2.84900815262308e-05,-0.0002279206522098464,1
+Ethereum,1,primary,Autoencoder-Encoded,Random Forest,Other,8,3.946881654219342e-05,0.00031575053233754737,1
+Ethereum,1,primary,Autoencoder-Encoded,XGBoost,Other,8,5.3564827552566815e-05,0.0004285186204205345,1
+Ethereum,7,ablation,Autoencoder-Encoded,Random Forest,Other,8,-5.0769607502857686e-05,-0.0004061568600228615,1
+Ethereum,7,ablation,Autoencoder-Encoded,XGBoost,Other,8,-0.00022693080700957199,-0.0018154464560765759,1
+Ethereum,7,candidate,Autoencoder-Encoded,Random Forest,Other,8,-9.230858062965713e-05,-0.000738468645037257,1
+Ethereum,7,candidate,Autoencoder-Encoded,XGBoost,Other,8,-0.00010756173386122845,-0.0008604938708898276,1
+Ethereum,7,combined,Autoencoder-Encoded,Random Forest,Other,8,-3.868182918989344e-05,-0.00030945463351914754,1
+Ethereum,7,combined,Autoencoder-Encoded,XGBoost,Other,8,1.4343330094150793e-05,0.00011474664075320634,1
+Ethereum,7,primary,Autoencoder-Encoded,Random Forest,Other,8,-7.861273399499568e-05,-0.0006289018719599655,1
+Ethereum,7,primary,Autoencoder-Encoded,XGBoost,Other,8,-9.311949561981994e-05,-0.0007449559649585595,1
+Ethereum,14,ablation,Autoencoder-Encoded,Random Forest,Other,8,-2.7959530750526788e-05,-0.0002236762460042143,1
+Ethereum,14,ablation,Autoencoder-Encoded,XGBoost,Other,8,3.2854850440006307e-07,2.6283880352005046e-06,1
+Ethereum,14,candidate,Autoencoder-Encoded,Random Forest,Other,8,-0.0001786425777126708,-0.0014291406217013664,1
+Ethereum,14,candidate,Autoencoder-Encoded,XGBoost,Other,8,-0.0002394447559996404,-0.0019155580479971231,1
+Ethereum,14,combined,Autoencoder-Encoded,Random Forest,Other,8,-0.00023294847917202646,-0.0018635878333762117,1
+Ethereum,14,combined,Autoencoder-Encoded,XGBoost,Other,8,-0.00016740356161914702,-0.0013392284929531761,1
+Ethereum,14,primary,Autoencoder-Encoded,Random Forest,Other,8,-0.00028477841322563347,-0.0022782273058050678,1
+Ethereum,14,primary,Autoencoder-Encoded,XGBoost,Other,8,-2.1108349735187576e-05,-0.0001688667978815006,1

@@ -26,7 +26,11 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
-from api_client import get_feature_importance_comparison, get_feature_importance_agreement_summary
+from api_client import (
+    get_feature_importance_comparison, get_feature_importance_agreement_summary,
+    get_feature_importance_comparison_autoencoder, get_feature_importance_agreement_summary_autoencoder,
+    get_latent_original_top_associations, get_representation_comparison_summary,
+)
 
 st.set_page_config(page_title="Feature importance comparison", layout="wide")
 inject()
@@ -143,6 +147,177 @@ else:
     st.dataframe(
         disagreement[["feature", RF_COL, XGB_COL, "abs_difference", "rank_Random Forest", "rank_XGBoost"]]
         .rename(columns={RF_COL: "Random Forest", XGB_COL: "XGBoost"}),
+        use_container_width=True, hide_index=True,
+    )
+
+st.markdown("---")
+st.subheader("Autoencoder-Encoded latent features")
+st.caption(
+    "The same RF-vs-XGBoost permutation importance comparison, computed for the 8 autoencoder "
+    "latent dimensions (encoded_0..encoded_7) instead of the named engineered features above."
+)
+
+try:
+    ae_grid = pd.DataFrame(get_feature_importance_comparison_autoencoder())
+    ae_agreement = pd.DataFrame(get_feature_importance_agreement_summary_autoencoder())
+except Exception:
+    ae_grid, ae_agreement = pd.DataFrame(), pd.DataFrame()
+
+if ae_grid.empty or ae_agreement.empty:
+    st.info(
+        "Autoencoder-Encoded feature importance hasn't been generated yet. Run "
+        "`run_feature_importance_grid_autoencoder.py` from the project root, then reload this page."
+    )
+else:
+    ae_grid["feature_set_display"] = ae_grid["feature_set_key"].map(FSET_DISPLAY)
+    ae_agreement["feature_set_display"] = ae_agreement["feature_set_key"].map(FSET_DISPLAY)
+
+    ae_heatmap_df = ae_agreement.copy()
+    ae_heatmap_df["config_label"] = ae_heatmap_df["asset"] + " " + ae_heatmap_df["horizon"].astype(str) + "d"
+    ae_pivot = ae_heatmap_df.pivot(index="feature_set_display", columns="config_label", values="spearman_rho")
+    ae_pivot = ae_pivot.reindex(["Market Only", "Market + Google Trends", "Market + Fear & Greed Index",
+                                  "Market + Google Trends + Fear & Greed Index"])
+    ae_fig_heatmap = go.Figure(data=go.Heatmap(
+        z=ae_pivot.values, x=ae_pivot.columns, y=ae_pivot.index,
+        colorscale="RdYlGn", zmin=-1, zmax=1,
+        text=ae_pivot.values.round(2), texttemplate="%{text}",
+        colorbar=dict(title="Spearman ρ"),
+    ))
+    ae_fig_heatmap.update_layout(template="plotly_white", height=360, margin=dict(l=20, r=20, t=30, b=20))
+    st.plotly_chart(ae_fig_heatmap, use_container_width=True)
+
+    ae_mean_rho = ae_agreement["spearman_rho"].mean()
+    st.caption(
+        f"Mean Spearman rank correlation across all 24 Autoencoder-Encoded configurations: "
+        f"**{ae_mean_rho:.3f}**. Only 8 latent dimensions exist per configuration, so top-10 "
+        "overlap always saturates near 8/8 -- not directly comparable to the Original branch's "
+        "top-10 overlap out of many more named features."
+    )
+
+    ae_col1, ae_col2, ae_col3 = st.columns(3)
+    with ae_col1:
+        ae_asset = st.selectbox("Asset", sorted(ae_grid["asset"].unique()), key="ae_asset")
+    with ae_col2:
+        ae_horizon = st.selectbox("Horizon (days)", sorted(ae_grid["horizon"].unique()), key="ae_horizon")
+    with ae_col3:
+        ae_fset_display = st.selectbox("Feature configuration", list(FSET_DISPLAY.values()), key="ae_fset")
+    ae_fset_key = {v: k for k, v in FSET_DISPLAY.items()}[ae_fset_display]
+
+    ae_subset = ae_grid[
+        (ae_grid["asset"] == ae_asset) & (ae_grid["horizon"] == ae_horizon) & (ae_grid["feature_set_key"] == ae_fset_key)
+    ].sort_values(RF_COL, ascending=False, key=abs)
+
+    if ae_subset.empty:
+        st.info("No data for this combination.")
+    else:
+        ae_melted = ae_subset.melt(
+            id_vars=["feature"], value_vars=[RF_COL, XGB_COL], var_name="model", value_name="mean_importance",
+        )
+        ae_melted["model"] = ae_melted["model"].str.replace("mean_importance_", "")
+        ae_fig = px.bar(ae_melted, x="mean_importance", y="feature", color="model", orientation="h", barmode="group",
+                         color_discrete_map={"Random Forest": "#2ca02c", "XGBoost": "#ff7f0e"})
+        ae_fig.add_vline(x=0, line_color="black", line_width=1)
+        ae_fig.update_layout(template="plotly_white", height=340, margin=dict(l=20, r=20, t=30, b=20),
+                              yaxis=dict(autorange="reversed"))
+        st.plotly_chart(ae_fig, use_container_width=True)
+
+st.markdown("---")
+st.subheader("Latent dimensions vs original engineered features")
+st.caption(
+    "Descriptive Pearson/Spearman correlation between each autoencoder latent dimension and every "
+    "real original engineered feature, on the same test rows used for permutation importance. This "
+    "does NOT mean a latent dimension \"represents\" any single original feature -- an autoencoder "
+    "bottleneck compresses a mixture of signals, so moderate correlation with several original "
+    "features at once is the expected pattern, not a mapping to one."
+)
+
+try:
+    top_assoc = pd.DataFrame(get_latent_original_top_associations())
+except Exception:
+    top_assoc = pd.DataFrame()
+
+if top_assoc.empty:
+    st.info(
+        "Latent-original correlations haven't been generated yet. Run "
+        "`run_latent_original_correlation_analysis.py` from the project root, then reload this page."
+    )
+else:
+    top_assoc["feature_set_display"] = top_assoc["feature_set_key"].map(FSET_DISPLAY)
+    corr_col1, corr_col2, corr_col3 = st.columns(3)
+    with corr_col1:
+        corr_asset = st.selectbox("Asset", sorted(top_assoc["asset"].unique()), key="corr_asset")
+    with corr_col2:
+        corr_horizon = st.selectbox("Horizon (days)", sorted(top_assoc["horizon"].unique()), key="corr_horizon")
+    with corr_col3:
+        corr_fset_display = st.selectbox("Feature configuration", list(FSET_DISPLAY.values()), key="corr_fset")
+    corr_fset_key = {v: k for k, v in FSET_DISPLAY.items()}[corr_fset_display]
+
+    corr_subset = top_assoc[
+        (top_assoc["asset"] == corr_asset) & (top_assoc["horizon"] == corr_horizon)
+        & (top_assoc["feature_set_key"] == corr_fset_key)
+    ]
+    if corr_subset.empty:
+        st.info("No data for this combination.")
+    else:
+        st.dataframe(
+            corr_subset[["latent_feature", "rank", "original_feature", "pearson_correlation",
+                         "spearman_correlation", "number_of_aligned_observations"]]
+            .rename(columns={"latent_feature": "Latent dimension", "rank": "Rank",
+                              "original_feature": "Original feature", "pearson_correlation": "Pearson r",
+                              "spearman_correlation": "Spearman rho",
+                              "number_of_aligned_observations": "Test rows"}),
+            use_container_width=True, hide_index=True,
+        )
+
+st.markdown("---")
+st.subheader("Original vs Autoencoder-Encoded: which predicts better?")
+st.caption(
+    "Raw permutation-importance magnitudes are not directly comparable across representations "
+    "(different feature counts). This instead compares test RMSE directly, plus each "
+    "representation's within-configuration normalised top feature."
+)
+
+try:
+    rep_comparison = pd.DataFrame(get_representation_comparison_summary())
+except Exception:
+    rep_comparison = pd.DataFrame()
+
+if rep_comparison.empty:
+    st.info(
+        "The representation comparison hasn't been generated yet. Run "
+        "`run_combined_feature_importance_report.py` from the project root, then reload this page."
+    )
+else:
+    valid_rmse = rep_comparison.dropna(subset=["baseline_rmse_original", "baseline_rmse_encoded"]).copy()
+    valid_rmse["feature_configuration"] = valid_rmse["feature_set_key"].map(FSET_DISPLAY)
+    n_encoded_better = (valid_rmse["better_test_rmse_representation"] == "Autoencoder-Encoded").sum()
+    st.caption(
+        f"Autoencoder-Encoded features gave the lower (better) test RMSE in "
+        f"**{n_encoded_better}/{len(valid_rmse)}** configurations."
+    )
+    rep_fig = px.scatter(
+        valid_rmse, x="baseline_rmse_original", y="baseline_rmse_encoded", color="model_name",
+        hover_data=["asset", "horizon", "feature_configuration"],
+        color_discrete_map={"Random Forest": "#1f77b4", "XGBoost": "#d62728"},
+    )
+    diag_min = min(valid_rmse["baseline_rmse_original"].min(), valid_rmse["baseline_rmse_encoded"].min())
+    diag_max = max(valid_rmse["baseline_rmse_original"].max(), valid_rmse["baseline_rmse_encoded"].max())
+    rep_fig.add_shape(type="line", x0=diag_min, y0=diag_min, x1=diag_max, y1=diag_max,
+                       line=dict(color="gray", dash="dash"))
+    rep_fig.update_layout(template="plotly_white", height=420, margin=dict(l=20, r=20, t=30, b=20),
+                           xaxis_title="Original -- test RMSE", yaxis_title="Autoencoder-Encoded -- test RMSE")
+    st.plotly_chart(rep_fig, use_container_width=True)
+
+    rep_comparison_display = rep_comparison.copy()
+    rep_comparison_display["feature_set_key"] = rep_comparison_display["feature_set_key"].map(FSET_DISPLAY)
+    st.dataframe(
+        rep_comparison_display[["asset", "horizon", "feature_set_key", "model_name",
+                        "baseline_rmse_original", "baseline_rmse_encoded",
+                        "better_test_rmse_representation", "top_feature_original", "top_feature_encoded"]]
+        .rename(columns={"feature_set_key": "Feature configuration",
+                          "baseline_rmse_original": "Original RMSE", "baseline_rmse_encoded": "Encoded RMSE",
+                          "better_test_rmse_representation": "Better representation",
+                          "top_feature_original": "Top original feature", "top_feature_encoded": "Top latent dim"}),
         use_container_width=True, hide_index=True,
     )
 

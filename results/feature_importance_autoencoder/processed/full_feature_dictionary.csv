@@ -1,0 +1,55 @@
+representation,feature,feature_group,source,engineering_method
+Original,Bitcoin_Price_log_return,Price & Return,Bitcoin,log return
+Original,Bitcoin_Price_log_return_lag_1,Price & Return,Bitcoin,log return + lag 1
+Original,Bitcoin_Price_log_return_lag_2,Price & Return,Bitcoin,log return + lag 2
+Original,Bitcoin_Price_log_return_lag_7,Price & Return,Bitcoin,log return + lag 7
+Original,Bitcoin_Price_log_return_rolling_mean_30,Price & Return,Bitcoin,log return + rolling mean (30d)
+Original,Bitcoin_Price_log_return_rolling_std_30,Volatility,Bitcoin,log return + rolling std (30d)
+Original,Bitcoin_Price_momentum_7,Price & Return,Bitcoin,momentum (7d)
+Original,Bitcoin_Price_trailing_14day_return,Price & Return,Bitcoin,trailing return
+Original,Bitcoin_Price_trailing_7day_return,Price & Return,Bitcoin,trailing return
+Original,Bitcoin_Search_Interest_diff_lag_1,Google Trends,Bitcoin,lag 1 + first difference
+Original,Bitcoin_Search_Interest_diff_lag_2,Google Trends,Bitcoin,lag 2 + first difference
+Original,Bitcoin_Search_Interest_lag_1,Google Trends,Bitcoin,lag 1
+Original,Bitcoin_Search_Interest_lag_2,Google Trends,Bitcoin,lag 2
+Original,Bitcoin_Volume_log,Trading Volume,Bitcoin,log transform
+Original,Bitcoin_Volume_pct_change_lag_1,Trading Volume,Bitcoin,lag 1 + pct change
+Original,Bitcoin_Volume_pct_change_lag_7,Trading Volume,Bitcoin,lag 7 + pct change
+Original,Bitcoin_Volume_raw_lag_1,Trading Volume,Bitcoin,lag 1
+Original,Bitcoin_Volume_raw_lag_7,Trading Volume,Bitcoin,lag 7
+Original,Bitcoin_Volume_rolling_mean_30,Trading Volume,Bitcoin,rolling mean (30d)
+Original,Bitcoin_Volume_rolling_std_30,Trading Volume,Bitcoin,rolling std (30d)
+Original,Ethereum_Price_log_return,Price & Return,Ethereum,log return
+Original,Ethereum_Price_log_return_lag_1,Price & Return,Ethereum,log return + lag 1
+Original,Ethereum_Price_log_return_lag_2,Price & Return,Ethereum,log return + lag 2
+Original,Ethereum_Price_log_return_lag_7,Price & Return,Ethereum,log return + lag 7
+Original,Ethereum_Price_log_return_rolling_mean_30,Price & Return,Ethereum,log return + rolling mean (30d)
+Original,Ethereum_Price_log_return_rolling_std_30,Volatility,Ethereum,log return + rolling std (30d)
+Original,Ethereum_Price_momentum_7,Price & Return,Ethereum,momentum (7d)
+Original,Ethereum_Price_trailing_14day_return,Price & Return,Ethereum,trailing return
+Original,Ethereum_Price_trailing_7day_return,Price & Return,Ethereum,trailing return
+Original,Ethereum_Search_Interest_diff_lag_1,Google Trends,Ethereum,lag 1 + first difference
+Original,Ethereum_Search_Interest_diff_lag_2,Google Trends,Ethereum,lag 2 + first difference
+Original,Ethereum_Search_Interest_lag_1,Google Trends,Ethereum,lag 1
+Original,Ethereum_Search_Interest_lag_2,Google Trends,Ethereum,lag 2
+Original,Ethereum_Volume_log,Trading Volume,Ethereum,log transform
+Original,Ethereum_Volume_pct_change_lag_1,Trading Volume,Ethereum,lag 1 + pct change
+Original,Ethereum_Volume_pct_change_lag_7,Trading Volume,Ethereum,lag 7 + pct change
+Original,Ethereum_Volume_raw_lag_1,Trading Volume,Ethereum,lag 1
+Original,Ethereum_Volume_raw_lag_7,Trading Volume,Ethereum,lag 7
+Original,Ethereum_Volume_rolling_mean_30,Trading Volume,Ethereum,rolling mean (30d)
+Original,Ethereum_Volume_rolling_std_30,Trading Volume,Ethereum,rolling std (30d)
+Original,Fear_Greed_Index_diff_lag_1,Fear & Greed / Sentiment,Fear & Greed Index (external),lag 1 + first difference
+Original,Fear_Greed_Index_diff_lag_2,Fear & Greed / Sentiment,Fear & Greed Index (external),lag 2 + first difference
+Original,Fear_Greed_Index_lag_1,Fear & Greed / Sentiment,Fear & Greed Index (external),lag 1
+Original,Fear_Greed_Index_lag_2,Fear & Greed / Sentiment,Fear & Greed Index (external),lag 2
+Original,Fear_Greed_Index_rolling_mean_7,Fear & Greed / Sentiment,Fear & Greed Index (external),rolling mean (7d)
+Original,Market_Sentiment_Encoded_lag_1,Fear & Greed / Sentiment,Fear & Greed Index (external),lag 1 + ordinal sentiment encoding (0-4)
+Autoencoder-Encoded,encoded_0,Other (Autoencoder Latent Dimension),"Autoencoder (learned, compressed representation)",8-dimensional autoencoder bottleneck -- no single real-world source variable; see results/feature_importance_autoencoder/processed/latent_original_correlations_long.csv for its descriptive correlation with the real original features.
+Autoencoder-Encoded,encoded_1,Other (Autoencoder Latent Dimension),"Autoencoder (learned, compressed representation)",8-dimensional autoencoder bottleneck -- no single real-world source variable; see results/feature_importance_autoencoder/processed/latent_original_correlations_long.csv for its descriptive correlation with the real original features.
+Autoencoder-Encoded,encoded_2,Other (Autoencoder Latent Dimension),"Autoencoder (learned, compressed representation)",8-dimensional autoencoder bottleneck -- no single real-world source variable; see results/feature_importance_autoencoder/processed/latent_original_correlations_long.csv for its descriptive correlation with the real original features.
+Autoencoder-Encoded,encoded_3,Other (Autoencoder Latent Dimension),"Autoencoder (learned, compressed representation)",8-dimensional autoencoder bottleneck -- no single real-world source variable; see results/feature_importance_autoencoder/processed/latent_original_correlations_long.csv for its descriptive correlation with the real original features.
+Autoencoder-Encoded,encoded_4,Other (Autoencoder Latent Dimension),"Autoencoder (learned, compressed representation)",8-dimensional autoencoder bottleneck -- no single real-world source variable; see results/feature_importance_autoencoder/processed/latent_original_correlations_long.csv for its descriptive correlation with the real original features.
+Autoencoder-Encoded,encoded_5,Other (Autoencoder Latent Dimension),"Autoencoder (learned, compressed representation)",8-dimensional autoencoder bottleneck -- no single real-world source variable; see results/feature_importance_autoencoder/processed/latent_original_correlations_long.csv for its descriptive correlation with the real original features.
+Autoencoder-Encoded,encoded_6,Other (Autoencoder Latent Dimension),"Autoencoder (learned, compressed representation)",8-dimensional autoencoder bottleneck -- no single real-world source variable; see results/feature_importance_autoencoder/processed/latent_original_correlations_long.csv for its descriptive correlation with the real original features.
+Autoencoder-Encoded,encoded_7,Other (Autoencoder Latent Dimension),"Autoencoder (learned, compressed representation)",8-dimensional autoencoder bottleneck -- no single real-world source variable; see results/feature_importance_autoencoder/processed/latent_original_correlations_long.csv for its descriptive correlation with the real original features.

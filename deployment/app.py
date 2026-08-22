@@ -330,6 +330,111 @@ def feature_importance_for_model(asset: str, horizon: int, model: str, feature_s
     return json.loads(match.to_json(orient="records"))
 
 
+# ---------------------------------------------------------------------------
+# Autoencoder-Encoded feature importance + latent-original correlation
+# ---------------------------------------------------------------------------
+# Mirrors the six Original-branch endpoints above exactly (same read-only
+# pd.read_csv-and-return pattern, same 404-with-a-runnable-command style),
+# just pointed at results/feature_importance_autoencoder/ instead of
+# results/feature_importance/. Added because the earlier version of this
+# analysis computed these CSVs but never exposed them through the API or
+# the Streamlit tab -- see FEATURE_IMPORTANCE_TAB_DIAGNOSIS.md.
+
+AE_FEATURE_IMPORTANCE_DIR = config.RESULTS_DIR / "feature_importance_autoencoder"
+
+
+def _read_ae_csv(relative_path: str, hint_command: str):
+    path = AE_FEATURE_IMPORTANCE_DIR / relative_path
+    if not path.exists():
+        raise HTTPException(404, f"{path} not found -- run {hint_command} first.")
+    return pd.read_csv(path)
+
+
+@app.get("/feature-importance-comparison-autoencoder")
+def feature_importance_comparison_autoencoder():
+    """The Autoencoder-Encoded-branch equivalent of
+    /feature-importance-comparison -- RF vs XGBoost permutation
+    importance for the 8 latent dimensions, across all 24 real
+    (asset, horizon, feature configuration) combinations."""
+    df = _read_ae_csv(
+        "processed/cross_model_comparison_autoencoder.csv", "run_feature_importance_grid_autoencoder.py",
+    )
+    return json.loads(df.to_json(orient="records"))
+
+
+@app.get("/feature-importance-agreement-summary-autoencoder")
+def feature_importance_agreement_summary_autoencoder():
+    """The Autoencoder-Encoded-branch equivalent of
+    /feature-importance-agreement-summary."""
+    df = _read_ae_csv(
+        "processed/rank_agreement_summary_autoencoder.csv", "run_feature_importance_grid_autoencoder.py",
+    )
+    return json.loads(df.to_json(orient="records"))
+
+
+@app.get("/feature-group-importance-autoencoder")
+def feature_group_importance_autoencoder():
+    """The Autoencoder-Encoded-branch equivalent of
+    /feature-group-importance. All 8 latent dimensions fall under the
+    'Other' group by design -- see run_feature_importance_grid_autoencoder.py's
+    module docstring for why that's expected, not a bug."""
+    df = _read_ae_csv(
+        "processed/feature_group_importance_autoencoder.csv", "run_feature_importance_grid_autoencoder.py",
+    )
+    return json.loads(df.to_json(orient="records"))
+
+
+@app.get("/latent-original-correlations")
+def latent_original_correlations(asset: str = None, horizon: int = None, feature_set: str = None):
+    """Descriptive Pearson + Spearman correlation between every latent
+    dimension and every real original engineered feature -- see
+    src/feature_importance/latent_correlation.py's module docstring for
+    the interpretation caveats (descriptive only, not a one-to-one
+    mapping, not causal). Optional filters narrow the (potentially
+    large) long-format table to one configuration."""
+    df = _read_ae_csv(
+        "processed/latent_original_correlations_long.csv", "run_latent_original_correlation_analysis.py",
+    )
+    if asset:
+        df = df[df["asset"] == asset]
+    if horizon:
+        df = df[df["horizon"] == horizon]
+    if feature_set:
+        df = df[df["feature_set_key"] == feature_set]
+    return json.loads(df.to_json(orient="records"))
+
+
+@app.get("/latent-original-top-associations")
+def latent_original_top_associations(asset: str = None, horizon: int = None, feature_set: str = None):
+    """Top-5 original-feature associations per latent dimension per
+    configuration -- the readable summary of /latent-original-correlations."""
+    df = _read_ae_csv(
+        "processed/latent_original_top_associations.csv", "run_latent_original_correlation_analysis.py",
+    )
+    if asset:
+        df = df[df["asset"] == asset]
+    if horizon:
+        df = df[df["horizon"] == horizon]
+    if feature_set:
+        df = df[df["feature_set_key"] == feature_set]
+    return json.loads(df.to_json(orient="records"))
+
+
+@app.get("/representation-comparison-summary")
+def representation_comparison_summary():
+    """The defensible Original-vs-Autoencoder-Encoded comparison -- test
+    RMSE, within-configuration normalised top-feature importance, and
+    importance concentration, side by side per (asset, horizon, feature
+    configuration, model). See
+    src/feature_importance/representation_comparison.py's module
+    docstring for why raw permutation-importance magnitudes are not
+    directly compared here."""
+    df = _read_ae_csv(
+        "processed/representation_comparison_summary.csv", "run_combined_feature_importance_report.py",
+    )
+    return json.loads(df.to_json(orient="records"))
+
+
 @app.get("/arima-info")
 def arima_info(asset: str = "Bitcoin", horizon: int = 1, feature_set: str = "primary"):
     """ARIMA's saved metadata -- order, training/validation/test periods,
