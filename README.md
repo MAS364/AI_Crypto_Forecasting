@@ -1,6 +1,4 @@
-# AI-Driven Bitcoin & Ethereum Forecasting
-
-**Correlation, Causality, and Predictive Modelling for Bitcoin and Ethereum**
+# AI Cryptocurrency Time-Series Analysis: Correlation, Causality, and Predictive Modelling for Bitcoin and Ethereum
 
 MSc Data Science dissertation, University of Surrey. The project forecasts Bitcoin and Ethereum returns using market data together with Google Trends search interest and the Crypto Fear & Greed Index, comparing statistical, machine learning, and deep learning models across 1-, 7-, and 14-day forecast horizons, with permutation feature importance used to interpret the trained models.
 
@@ -11,15 +9,19 @@ Cryptocurrency prices are volatile and only partially explained by their own his
 ## Research Questions
 
 1. Can machine learning and deep learning models outperform classical statistical models in forecasting Bitcoin and Ethereum prices?
-2. Does incorporating Google Trends and the Crypto Fear & Greed Index improve forecasting performance?
-3. Which forecasting model provides the most accurate and reliable predictions?
-4. What relationships exist between cryptocurrency prices and the selected external variables?
-5. Do the correlation and Granger causality findings align with the forecasting results?
+
+2. Does incorporating selected external signals (Google Trends and the Crypto Fear & Greed Index) improve forecasting performance compared with using historical cryptocurrency market data alone?
+
+3. Which forecasting model provides the most accurate and reliable predictions of Bitcoin and Ethereum prices?
+
+4. What relationships exist between cryptocurrency prices and selected external signals, specifically Google Trends and the Crypto Fear & Greed Index?
+
+5. Do Google Trends and the Crypto Fear & Greed Index exhibit predictive relationships with cryptocurrency prices according to Granger causality analysis?
 
 ## Key Contributions
 
 - A controlled comparison of five model families (Naive, ARIMA, Random Forest, XGBoost, LSTM) across two assets, three forecast horizons, and four feature configurations, evaluated identically on chronologically held-out test data.
-- A statistically grounded feature-selection process: which external variables enter which feature configuration is determined by the project's own stationarity, correlation, and Granger causality analysis (Notebook 05), not by assumption.
+- Evidence-informed feature engineering: the stationarity, correlation and Granger analysis in Notebook 05 informed transformations and lag selection. All four feature configurations were retained and evaluated, regardless of statistical significance.
 - A secondary comparison between the original engineered features and an autoencoder-compressed representation, evaluated under the same conditions as the primary comparison.
 - Permutation feature importance for Random Forest and XGBoost, cross-referenced directly against the correlation and Granger causality evidence rather than reported in isolation.
 - A reproducible modular pipeline (`src/`) that mirrors the notebook implementation exactly — the notebooks import from `src/`, they do not maintain a separate copy of the modelling logic.
@@ -44,11 +46,12 @@ Data collection
 
 Raw data is already included in `data/raw/` — this is the frozen snapshot the dissertation results were produced from, not a live feed. The four raw files present are:
 
-- `btc-usd-max.csv`, `eth-usd-max.csv` — Bitcoin and Ethereum market data
+- `btc-usd-max.csv`, `eth-usd-max.csv` — Bitcoin and Ethereum historical market data downloaded manually from the CoinGecko website
 - `google_trends.csv` (plus windowed intermediate files) — search interest, collected via the `pytrends` library, confirmed directly in `notebooks/01_data_collection.ipynb`
 - `fear_greed.csv` — the Crypto Fear & Greed Index
 
-**A note on precision here rather than assumption**: `requirements.txt` pins `pycoingecko` and `yfinance`, and the raw price filenames follow a naming convention consistent with a CoinGecko export, but neither library is actually imported or called anywhere in the current `notebooks/` or `src/` code. The exact original collection method for the price data could not be confirmed from the code as it currently stands. This does not affect reproducibility of the results below, since the frozen CSVs are what every downstream stage actually reads.
+**A note on precision here rather than assumption**: 
+Bitcoin and Ethereum historical market data were downloaded manually as CSV files from the CoinGecko website because the required programmatic API access was not available under the free plan. The frozen files used in this study are included in `data/raw/`. Although `pycoingecko` remains in `requirements.txt`, it was not used to obtain the final dissertation dataset.
 
 A separate, public repository (`MAS364/AI_Crypto_Forecasting_Data`) hosts a copy of the processed dataset for the deployed application's "download dataset" feature. This dissertation repository itself is not assumed to be public.
 
@@ -109,9 +112,9 @@ This mapping (`src/models/feature_naming.py`) is used consistently across the no
 Two representations of the same underlying features are compared:
 
 - **Original** — the named, interpretable engineered features (price/return, volatility, volume, Google Trends, Fear & Greed), evaluated for all five models.
-- **Autoencoder-Encoded** — those same features compressed into 8 unnamed latent dimensions by a trained autoencoder (`06b_autoencoder.ipynb`), evaluated only for Random Forest, XGBoost, and LSTM. Naive and ARIMA were never run through the autoencoder branch, since both are univariate and have no feature matrix to encode.
+- **Autoencoder-Encoded** — those same features compressed into 8 unnamed latent dimensions (`encoded_0`..`encoded_7`) by a trained autoencoder (`06b_autoencoder.ipynb`), evaluated only for Random Forest, XGBoost, and LSTM. Naive and ARIMA were never run through the autoencoder branch, since both are univariate and have no feature matrix to encode.
 
-Permutation feature importance is only meaningful for the Original representation — the encoded dimensions have no individual real-world interpretation to attribute importance to, so this is not applied to the Autoencoder-Encoded results.
+Permutation feature importance is computed for **both** representations (Random Forest and XGBoost only — see [Explainability / Feature Importance](#explainability--feature-importance) below for the full breakdown, including how latent-dimension importance is interpreted and cross-referenced against the original features it was compressed from).
 
 ## Evaluation Metrics
 
@@ -136,23 +139,37 @@ The best-performing model and configuration per asset/horizon, on the held-out t
 | Ethereum | 7 days | Random Forest | Market + Google Trends + Fear & Greed Index | Autoencoder-Encoded | 0.0842 | 54.0 |
 | Ethereum | 14 days | LSTM | Market + Google Trends | Autoencoder-Encoded | 0.1190 | 50.4 |
 
-No single model wins across every asset/horizon combination. R² is negative in every row above — every model performs worse on this test period than simply predicting the historical mean return, a genuine finding reported as-is rather than minimised. The full experiment grid (5 models x 2 assets x 3 horizons x 4 feature configurations x 2 representations, minus the univariate exclusions) is in `results/modeling/metrics/model_development_metrics.csv`, and Diebold-Mariano significance tests against both baselines are in `results/evaluation/tables/dm_test_results.csv`.
+No single model wins across every asset/horizon combination. R² is negative in every row above, indicating performance below a constant-mean benchmark on the evaluated test sample. This benchmark is different from the naïve persistence comparator. The full experiment grid (5 models x 2 assets x 3 horizons x 4 feature configurations x 2 representations, minus the univariate exclusions) is in `results/modeling/metrics/model_development_metrics.csv`, and Diebold-Mariano significance tests against both baselines are in `results/evaluation/tables/dm_test_results.csv`.
+
+Among the 72 Original-representation ML/DL comparisons against the naïve benchmark, 64 were significant at the unadjusted 5% level. Including the six unique ARIMA comparisons gives 70 significant results among 78 unique fitted-model comparisons. Against ARIMA, 13 of 72 ML/DL comparisons were significant: 12 favoured ARIMA and one favoured XGBoost. The DM-test p-values were not adjusted for multiple comparisons; Benjamini–Hochberg correction was applied to the correlation and Granger-test families, not to the DM tests.
 
 ## Statistical Evidence
 
-Correlation and Granger causality analysis (`05_correlation_and_granger.ipynb`) tested whether Google Trends and the Fear & Greed Index show a statistically significant relationship with price, using FDR-corrected significance thresholds. Neither variable Granger-caused either asset's price at any tested lag. Google Trends showed a weak but significant correlation with price for at least one asset; Fear & Greed showed no significant correlation with either asset. These are association and predictive-value findings, not evidence of causation, and are described using that language throughout — Granger causality is a specific statistical test for whether past values of one series carry incremental predictive information about another under a given lag structure, not proof of a real causal mechanism.
+A preliminary, raw-level look at these relationships appears first during exploratory analysis (`04_eda.ipynb`): a static correlation heatmap and scatter plots computed directly on price levels (e.g. Bitcoin price vs. Fear & Greed Index, r ≈ 0.29). These are exploratory only — prices are non-stationary, so a raw-level correlation coefficient can be inflated by shared trend rather than a genuine relationship, and Notebook 04 says so directly at each such plot.
+
+The formal test is `05_correlation_and_granger.ipynb`, and it is run on transformed, stationarity-confirmed series, not raw prices: Bitcoin and Ethereum prices are converted to **log returns**, and every other variable (volume, Google Trends search interest, Fear & Greed Index) is converted to a **first difference** — `results/causality_analysis/tables/correlation_transformations.csv` records exactly which transformation was applied to which variable, and both ADF and KPSS tests confirm the transformed series are stationary (see [Limitations](#limitations) for how this is worded precisely). Pearson and Spearman correlation, and Granger causality in the direction external factor → cryptocurrency return, are then tested with Benjamini–Hochberg FDR correction applied to the full set of p-values in each stage (`results/causality_analysis/tables/correlation_pairwise_results.csv`, `granger_causality_results.csv`). Neither external signal showed a statistically significant Granger-predictive relationship with returns in the primary lag-2 tests or the lag-5 robustness tests. Google Trends showed a very weak but statistically significant correlation with returns for at least one asset after FDR correction; Fear & Greed showed no significant correlation with either asset's returns. These are association and predictive-value findings, not evidence of causation, and are described using that language throughout — Granger causality is a specific statistical test for whether past values of one series carry incremental predictive information about another under a given lag structure, not proof of a real causal mechanism. Feature importance (below) is a separate, later-stage finding about what the trained forecasting models actually relied on, and is deliberately cross-referenced against this section rather than treated as independent corroboration of causality.
 
 ## Explainability / Feature Importance
 
-Permutation feature importance (`09_feature_importance_analysis.ipynb`, `src/feature_importance/`) is computed for Random Forest and XGBoost, on the Original representation, across all 48 real (asset, horizon, feature-configuration, model) combinations that have a saved model for this representation. It works by shuffling one feature at a time in the real test set and measuring how much the already-fitted model's RMSE degrades — it never retrains anything, and it never touches the model's internal structure.
+SHAP was the original choice for this project, but `TreeExplainer` caused repeated, reproducible kernel crashes in the available environment (documented directly in `src/feature_importance/permutation.py`). Permutation Feature Importance (PFI) was adopted instead: it is model-agnostic (it only ever calls `.predict()` on shuffled copies of the real, already-held-out test set — it never inspects a model's internal structure and never retrains anything), which avoided the instability entirely. The trade-off is standard for PFI generally, not specific to this project: it measures predictive reliance, not a causal effect, and its attribution can be distorted when predictors are strongly correlated with each other, since the model can partly recover a shuffled feature's information from a correlated one.
 
-Cross-model agreement between Random Forest and XGBoost is real but modest: mean Spearman rank correlation of **0.247** across the 24 (asset, horizon, feature-configuration) pairs where both models have a saved importance result (`results/feature_importance/processed/rank_agreement_summary.csv`). This is interpreted as the two models capturing similar aggregate signal without ranking individual features the same way, consistent with how differently the two algorithms are regularised — not as a discrepancy to explain away. Findings are cross-referenced directly against the correlation and Granger causality results (Notebook 05) rather than reported independently; no causal or economic interpretation is claimed for any feature's importance score.
+**Original representation.** Computed for Random Forest and XGBoost (`09_feature_importance_analysis.ipynb`, `src/feature_importance/`, `run_feature_importance_grid.py`) across all 48 real (asset, horizon, feature-configuration, model) combinations that have a saved model for this representation. Cross-model agreement is real but modest: Mean RF–XGBoost Spearman rank agreement was approximately 0.247 across 23 valid Original-representation comparisons. One of the 24 configurations produced an undefined correlation and was excluded from the valid mean count (`results/feature_importance/processed/rank_agreement_summary.csv`). Findings are cross-referenced directly against the correlation and Granger causality results (Notebook 05) rather than reported independently; no causal or economic interpretation is claimed for any feature's importance score.
+
+**Autoencoder-Encoded representation.** The same technique, same 48-combination grid shape, run separately against Random Forest and XGBoost trained on the 8 latent `encoded_0`..`encoded_7` dimensions instead of the named engineered features (`notebooks/10_feature_importance_autoencoder_analysis.ipynb`, `run_feature_importance_grid_autoencoder.py`, saved to the separate `results/feature_importance_autoencoder/` tree so nothing under `results/feature_importance/` is touched). A latent dimension's importance score describes how much the model's accuracy depends on that specific compressed dimension — it says nothing directly about any one original real-world variable, since a dimension is a learned mixture of several original signals, not a stand-in for one of them. Mean RF–XGBoost Spearman rank agreement was approximately **0.604 across 24 valid Autoencoder-Encoded comparisons** (`rank_agreement_summary_autoencoder.csv`). This indicates greater agreement between the two models' encoded-dimension rankings than in the Original representation; it does not demonstrate that the encoded representation is more interpretable or produces better forecasts.
+
+LSTM permutation importance was not implemented because its windowed sequence input requires a separate sequence-aware permutation design specifying whether features, timesteps or both are permuted. The submitted permutation-importance analysis therefore covers Random Forest and XGBoost only.
+
+**Latent-to-original correlation.** To make the encoded dimensions more interpretable, Pearson and Spearman correlations were calculated between each of the eight latent dimensions and every original engineered feature. This supports an *approximate* reading of what a given latent dimension leans on most. It is descriptive only: a latent dimension correlating with one or more original features is not proof that it "represents" that variable specifically — an 8-dimensional bottleneck is trained to reconstruct the whole feature vector at once, so moderate correlation with several original features simultaneously is the expected pattern, not a one-to-one mapping — and no causal claim is made in either direction.
+
+**Original vs. Autoencoder-Encoded comparison.** Raw permutation-importance magnitudes are not directly comparable across the two branches (a ~12–17-feature configuration vs. an 8-dimension one), so `run_combined_feature_importance_report.py` produces two clearly separate things rather than one blended number: a plain long-format union of both branches' raw results for anyone who wants to filter the numbers themselves (`all_representations_long.csv`), and a genuinely comparable summary (`representation_comparison_summary.csv`) built from test RMSE (the one figure that is on the same scale regardless of representation) plus within-configuration normalised importance. Across the 48 shared configurations, Autoencoder-Encoded gave the lower test RMSE in 29 and Original in 19 — a real but not one-sided result, consistent with the mixed picture already reported in [Key Results](#key-results) above.
+
+Notebook 10 itself covers the permutation-importance grid, the full original+encoded feature dictionary, the RF-vs-XGBoost ranking comparison, a plain combined ranking table, the Feature Importance Comparison tab diagnosis (below), and the RF-vs-XGBoost disagreement figures. The latent-to-original correlation analysis and the defensible RMSE-based representation comparison are currently only produced by the standalone scripts (or `python -m src.pipeline feature-importance-autoencoder`, which runs all four in sequence) — see [Reproducibility](#reproducibility) below for the exact commands. All outputs, from either route, are written under `results/feature_importance_autoencoder/`.
 
 ## Repository Structure
 
 ```text
 data/            Raw and processed data (frozen snapshot + generated feature sets)
-notebooks/       01-09 + 06b, the research/dissertation workflow
+notebooks/       01-10 + 06b, the research/dissertation workflow
 src/             Reusable implementation the notebooks import from
 models/trained/  Deployment-ready fitted models + manifest.json
 results/         Generated tables, figures, predictions, and metrics
@@ -162,75 +179,98 @@ tests/           pytest suite
 
 ## Reproducibility
 
-### 1. Clone / obtain the repository
+### 1. Extract the submitted project
+
+Extract the submitted ZIP file, then open a terminal in the extracted project directory before continuing.
+
+### 2. Create the Python 3.12 environment
+
+Confirm that Python 3.12 is installed:
 
 ```bash
-git clone <repository-url>
-cd AI_Crypto_Forecasting
+python3.12 --version
 ```
 
-### 2. Create environment
+Create and activate a virtual environment:
 
 ```bash
 python3.12 -m venv .venv
-source .venv/bin/activate          # Windows: .venv\Scripts\activate
+source .venv/bin/activate
 python -m pip install --upgrade pip
-```
-
-### 3. Install dependencies
-
-```bash
 python -m pip install -r requirements.txt
 ```
 
-### 4. Frozen data snapshot
+On Windows:
 
-`data/raw/` and `data/processed/merged_dataset.csv` are already included. **Do not re-run `01_data_collection.ipynb` for exact dissertation reproduction** — it would fetch current, different Google Trends data. Start from Notebook 02 onward if reproducing the reported results exactly; only re-run Notebook 01 if deliberately collecting a new dataset.
-
-### 5. Reproduce preprocessing / features
-
-```text
-02_data_understanding.ipynb -> 03_data_preparation.ipynb -> 04_eda.ipynb
-  -> 05_correlation_and_granger.ipynb -> 06_feature_engineering.ipynb -> 06b_autoencoder.ipynb
+```powershell
+py -3.12 -m venv .venv
+.venv\Scripts\activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-### 6. Reproduce model development
+### 3. Use the frozen data snapshot
+
+The required files in `data/raw/` and `data/processed/merged_dataset.csv` are included. Do not rerun `01_data_collection.ipynb` when reproducing the dissertation results because it would retrieve current Google Trends data. Rerun Notebook 01 only when deliberately creating a new dataset.
+
+### 4. Reproduce the complete workflow
+
+The submitted results, predictions and fitted artefacts can be inspected without retraining. Full reproduction requires running the notebooks in this order:
 
 ```text
-07_model_development.ipynb
+02_data_understanding.ipynb
+→ 03_data_preparation.ipynb
+→ 04_eda.ipynb
+→ 05_correlation_and_granger.ipynb
+→ 06_feature_engineering.ipynb
+→ 06b_autoencoder.ipynb
+→ 07_model_development.ipynb
+→ 08_evaluation.ipynb
+→ 09_feature_importance_analysis.ipynb
+→ 10_feature_importance_autoencoder_analysis.ipynb
 ```
-or, via the modular route:
+
+Notebook 07 retrains the complete model grid and may take considerable time. Notebook 08 loads the saved predictions and metrics and does not retrain models.
+
+The verified modular commands for model development and evaluation are:
+
 ```bash
 python -m src.pipeline train
-```
-This is the computationally expensive stage (multiple assets, horizons, feature configurations, and LSTM hyperparameter grids); the repository retains the full research configuration rather than a reduced version.
-
-### 7. Reproduce evaluation
-
-```text
-08_evaluation.ipynb
-```
-or:
-```bash
 python -m src.pipeline evaluate
 ```
-Evaluation only loads already-saved predictions and metrics; it does not retrain anything.
 
-### 8. Reproduce statistical / feature-importance analysis
+### 5. Reproduce feature-importance analysis
 
-```text
-09_feature_importance_analysis.ipynb
-```
-or:
+Original representation:
+
 ```bash
 python run_feature_importance_grid.py
 ```
 
-### 9. Run tests
+Autoencoder-Encoded permutation importance, latent-to-original correlations and the cross-representation comparison:
+
+```bash
+python -m src.pipeline feature-importance-autoencoder
+```
+
+This command runs the following scripts in order:
+
+```bash
+python run_feature_importance_grid_autoencoder.py
+python run_latent_original_correlation_analysis.py
+python run_combined_feature_importance_report.py
+python run_feature_importance_figures_autoencoder.py
+```
+
+These commands load existing fitted models and saved data; they do not retrain the model grid.
+
+### 6. Run the tests
 
 ```bash
 python -m pytest tests/ -q
 ```
+
+The tests cover preprocessing, feature engineering, evaluation, saved-model loading, deployment and feature-importance analysis. The exact result may depend on the installed environment and the availability of generated artefacts.
 
 ## Saved Artefacts
 
@@ -241,7 +281,8 @@ python -m pytest tests/ -q
 | `results/autoencoder/` | Encoded feature CSVs and autoencoder model artefacts |
 | `results/modeling/predictions/`, `results/modeling/metrics/` | Every model's predictions and metrics, all splits |
 | `results/evaluation/` | Decision summary, master comparison, Diebold-Mariano results |
-| `results/feature_importance/` | Permutation importance raw and processed results |
+| `results/feature_importance/` | Permutation importance raw and processed results (Original representation) |
+| `results/feature_importance_autoencoder/` | Permutation importance for the Autoencoder-Encoded representation, the latent-to-original correlation analysis, the cross-representation comparison, and their figures |
 | `results/causality_analysis/` | Correlation and Granger causality tables and figures |
 
 ## Testing
@@ -250,7 +291,7 @@ python -m pytest tests/ -q
 python -m pytest tests/ -q
 ```
 
-`pytest.ini` already sets the repository root on the import path, so no `PYTHONPATH=.` prefix is required. As audited, the suite reports **130 passed, 0 failed** on this repository state. Tests cover metrics, data preparation, feature engineering (including a regression test for a previously-identified target-alignment bug), the autoencoder, saved model loading, the unified `src.pipeline` entry point, and both deployment surfaces (the FastAPI app and CSV inference). Tests that depend on generated artefacts (trained models, saved predictions) skip cleanly rather than failing when those artefacts are not yet present; this is not a claim of 100% coverage.
+`pytest.ini` places the repository root on the import path, so no `PYTHONPATH=.` prefix is required. The suite covers metrics, preprocessing, feature engineering, model loading, deployment and Autoencoder-Encoded feature-importance analysis. Run the command above in the submitted environment to obtain the current result; tests that require unavailable generated artefacts may skip cleanly.
 
 ## Local Application
 
@@ -270,24 +311,18 @@ Open `http://localhost:8501` (Streamlit) and `http://127.0.0.1:8000/docs` (FastA
 
 ## Docker
 
-Backend (verified against `deployment/Dockerfile`):
+The simplest way to start the backend and frontend together is:
+
 ```bash
-docker build -f deployment/Dockerfile -t crypto-forecast-api .
-docker run -p 8080:8080 crypto-forecast-api
+docker compose up --build
 ```
 
-Frontend (verified against `deployment/Dockerfile.streamlit`): the container listens on port 8080 and requires a reachable FastAPI backend URL supplied through the `CRYPTO_API_URL` environment variable. `http://localhost:8080` is only correct if the backend is reachable from the frontend container under that address (e.g. `--network host`, or an equivalent Docker network setup) — inside a standard Docker network, `localhost` refers to the frontend container itself, not the backend.
-```bash
-docker build -f deployment/Dockerfile.streamlit -t crypto-forecast-frontend .
-docker run -p 8501:8080 -e CRYPTO_API_URL=<reachable backend URL> crypto-forecast-frontend
-```
+The Compose configuration waits for the backend health check before starting the frontend. Once both services are running:
 
-**`docker-compose.yml`**: corrected and verified end-to-end. `docker compose up --build` starts both containers together, with the backend healthcheck (`http://localhost:8080/health`, checked from inside the backend container) confirmed returning HTTP 200 before the frontend starts. Once running:
-
-- Frontend: `http://localhost:8501`
+- Streamlit frontend: `http://localhost:8501`
 - FastAPI documentation: `http://localhost:8000/docs`
 
-Internally, the frontend reaches the backend over the Docker Compose network at `http://api:8080`.
+Within the Compose network, the frontend reaches the backend at `http://api:8080`.
 
 ## Deployment Architecture
 
@@ -324,10 +359,16 @@ GET  /csv-requirements               required/optional columns for CSV upload
 GET  /models                        trained model manifest
 GET  /decision-summary               best model per asset/horizon
 GET  /research-evidence              correlation/Granger causality evidence
-GET  /feature-importance-comparison  cross-model permutation importance
+GET  /feature-importance-comparison  cross-model permutation importance (Original)
 GET  /feature-importance-agreement-summary
 GET  /feature-group-importance
 GET  /feature-importance-for-model
+GET  /feature-importance-comparison-autoencoder   cross-model permutation importance (Autoencoder-Encoded)
+GET  /feature-importance-agreement-summary-autoencoder
+GET  /feature-group-importance-autoencoder
+GET  /latent-original-correlations                latent-vs-original-feature correlation (optional asset/horizon/feature_set filters)
+GET  /latent-original-top-associations
+GET  /representation-comparison-summary            Original vs Autoencoder-Encoded, test RMSE + normalised importance
 GET  /arima-info
 GET  /naive-info
 GET  /last-training-date
@@ -336,6 +377,16 @@ GET  /predictions                    full saved predictions table
 ```
 
 `/predict` (structured JSON inference, loading a saved fitted model) supports Random Forest, XGBoost, and LSTM only; ARIMA and Naive are rejected here, since neither has a single reusable saved fitted model to load. `/predict/csv` additionally supports ARIMA: it fits a fresh ARIMA model directly on the uploaded historical price series, using the order already selected during model development, rather than loading a saved object. Naive is not exposed through either endpoint, since it has no trainable parameters and no saved model to load for this workflow.
+
+### CSV upload inference behaviour
+
+Confirmed directly against `deployment/csv_inference.py`:
+
+- **No live external API calls.** The deployed backend's own dependency list (`deployment/requirements.txt`) deliberately excludes `pytrends`, `yfinance`, and `pycoingecko` — a prediction, whether from `/predict` or `/predict/csv`, is produced entirely from already-fitted models and the data supplied in the request; it never fetches current Google Trends data or any other live source. External-API rate limits are consequently not a factor for either endpoint.
+- **Validation is itemised, not first-error-only.** A `CSVValidationError` collects every problem found — missing required columns, unparseable or missing dates, duplicate dates, dates not in ascending order, non-numeric or out-of-range values (e.g. Search Interest / Fear & Greed Index outside 0–100, negative price/volume/market cap), an unrecognised `Market_Sentiment` category, or fewer rows than the selected model needs — and returns them together as a single HTTP 422 response, so a user fixing their upload doesn't have to re-submit once per error.
+- **No imputation.** Missing or invalid values are reported as validation errors; they are never filled in, interpolated, or silently dropped.
+- **Minimum history**: 30 rows for Random Forest, XGBoost, and LSTM (the longest lookback used by feature engineering is a 30-day rolling window); 11 rows for ARIMA, which only needs a usable return series. An LSTM-specific check additionally confirms the exact sequence window it needs is free of missing values, and explains that a gap is often a deliberately-preserved data anomaly rather than a malformed upload — suggesting Random Forest or XGBoost as an alternative for that same upload, since both tolerate missing values internally where LSTM cannot.
+- **Unsupported selections are reported clearly, not silently substituted**: Naive is rejected with an explicit message (no trainable parameters, no fitted model to load); an unrecognised feature-configuration override is rejected with the specific missing column(s) it needs.
 
 ## Live Demonstration
 
@@ -346,17 +397,22 @@ The frontend is deployed on Google Cloud Run.
 ## Limitations
 
 - The evaluation covers a single historical period, two assets, and the feature engineering already fixed in Notebooks 06/06b/07; it does not establish how these models would perform in a different market regime.
-- Cryptocurrency return series are close to non-stationary/near-random-walk in practice, which limits how much signal any model — including the more complex ones — can realistically extract; the negative R² values throughout the results reflect this directly.
+- The chronological split (70% train / 15% validation / 15% test, in date order) preserves temporal order and helps prevent leakage, but final evaluation still rests on one held-out historical period. Results may be sensitive to the specific market regime that period happened to represent, and the reported comparisons between models, feature configurations, and representations should not automatically be generalised to every future regime.
+- The transformed series used for correlation, Granger causality, and modelling (log returns for prices, first differences for the other variables) were tested with ADF and KPSS and treated as stationary based on that evidence — see [Statistical Evidence](#statistical-evidence) above. Cryptocurrency returns nevertheless remain noisy and only weakly predictable in practice; the negative R² values throughout the results reflect that weak predictability, not a stationarity problem, and near-random-walk / efficient-market-like behaviour here refers specifically to that weak predictability rather than to non-stationarity.
 - Google Trends search interest is independently normalised per collection window; Bitcoin and Ethereum search-interest levels are not directly comparable absolute quantities, and the external-feature experiments should be read as within-series forecasting tests rather than direct measures of relative public interest.
 - LSTM training involves stochastic elements (weight initialisation, and TensorFlow's own execution nondeterminism on some platforms); exact numerical reproduction of LSTM results down to the last decimal place is not guaranteed even with fixed seeds.
 - XGBoost is trained with `n_jobs=4`; its multi-threaded histogram construction can, in principle, produce very small non-bit-identical results across machines with different core counts, even with a fixed random seed.
 - Correlation and Granger causality findings indicate association and predictive value, not causation; this distinction is maintained throughout rather than implied away.
+- Permutation feature importance measures predictive reliance on a feature, not a causal effect, and its attribution can be distorted when predictors are correlated with each other; see [Explainability / Feature Importance](#explainability--feature-importance) above.
 
 ## Future Work
 
+- Expanding-window or walk-forward validation, evaluated across multiple market regimes rather than the single held-out period used here, directly addressing the chronological-split limitation above.
+- Examining the stability of model rankings and of external-signal usefulness (Google Trends, Fear & Greed) across those regimes, rather than assuming the single-period ranking reported here would hold generally. This future work has not been carried out in this repository — the single chronological split above is what the current results are based on.
 - Extending the Granger causality analysis to test cross-asset relationships between Bitcoin and Ethereum returns directly, which the current analysis does not cover.
 - Evaluating the autoencoder representation's forecasting value against a like-for-like feature-count reduction of the original features, to separate "compression" from "dimensionality reduction" as explanations for its mixed results.
 - Testing whether the AIC-preferred lag structure (as opposed to the BIC-preferred lag currently used) changes which external variables would be retained in feature selection.
+- Extending `notebooks/10_feature_importance_autoencoder_analysis.ipynb` itself to include the latent-to-original correlation analysis and the RMSE-based representation comparison, so the full autoencoder feature-importance workflow runs through one notebook rather than the notebook plus four separate scripts.
 
 ## Technology Stack
 
@@ -364,5 +420,8 @@ Python 3.12, pandas, NumPy, scikit-learn, XGBoost, TensorFlow/Keras, statsmodels
 
 ## Academic Context
 
-This repository accompanies an MSc Data Science dissertation submitted at the University of Surrey.
+This repository accompanies the MSc Data Science dissertation *AI Cryptocurrency Time-Series Analysis: Correlation, Causality, and Predictive Modelling for Bitcoin and Ethereum*, submitted at the University of Surrey.
 
+## Disclaimer
+
+This project was developed for academic research. Its forecasts do not constitute financial or investment advice.
